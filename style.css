@@ -14,9 +14,9 @@ body {
     margin: 0;
 }
 
-/* Ensure main content does not get hidden under header */
+/* Universal Fix: Ensures all pages push content down below the header */
 main {
-    padding-top: 120px; /* Pushes content down to avoid overlap */
+    padding-top: 120px; /* Pushes all content down so it's not blocked */
     padding-bottom: 60px; /* Prevents footer overlap */
 }
 
@@ -27,7 +27,7 @@ header {
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 80px; /* Ensures the header isn't too big */
+    height: 80px;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -63,63 +63,7 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Hero Section */
-.hero {
-    background: url('images/bookcover.png') no-repeat center center/cover;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #D3D3D3;
-    padding: 20px;
-    position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/* Hero Text */
-.hero h2 {
-    font-size: 36px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    animation: flicker 1.5s infinite alternate;
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    100% { opacity: 0.7; }
-}
-
-.hero p {
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 600px;
-}
-
-/* CTA Button */
-.cta-button {
-    background: #C19A6B;
-    color: #0D1B2A;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.cta-button:hover {
-    background: #0077FF;
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #0077FF;
-}
-
-/* Section Styling */
+/* Section Styling (Fix for All Pages) */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -127,14 +71,7 @@ section {
     margin: auto;
 }
 
-/* Character & City Hover Effects */
-.character-card:hover, .city-card:hover {
-    box-shadow: 0px 0px 12px #0077FF;
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
-}
-
-/* Footer */
+/* Footer Fix for All Pages */
 footer {
     background: #5C4033;
     color: #D3D3D3;
