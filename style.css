@@ -6,13 +6,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body */
 body {
-    body {
     background: linear-gradient(to bottom, #D3D3D3, #5C4033);
     color: #0D1B2A;
     line-height: 1.6;
-    padding-bottom: 80px; /* Ensures space for footer */
-    padding-top: 100px; /* Ensures content is not hidden under header */
+    padding-bottom: 80px; /* Prevents content from overlapping the footer */
+    margin: 0;
+}
+
+/* Ensure main content doesn't get hidden by fixed header */
+main {
+    margin-top: 120px;
 }
 
 /* Header */
@@ -59,8 +64,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    .hero {
-    background: url('images/bookcover.png.png') no-repeat center center/cover;
+    background: url('images/bookcover.png') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -70,8 +74,11 @@ nav ul li a:hover {
     color: #D3D3D3;
     padding: 20px;
     position: relative;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
+/* Hero Text */
 .hero h2 {
     font-size: 36px;
     text-transform: uppercase;
@@ -127,13 +134,12 @@ section {
 
 /* Footer */
 footer {
-    footer {
     background: #5C4033;
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    position: relative; /* Change from fixed to relative */
-    bottom: 0;
+    position: relative; /* Prevents floating issues */
     width: 100%;
     font-size: 14px;
+    margin-top: 50px;
 }
