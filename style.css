@@ -1,68 +1,4 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Body */
-body {
-    background: linear-gradient(to bottom, #D3D3D3, #5C4033);
-    color: #0D1B2A;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header */
-header {
-    background: #5C4033;
-    padding: 35px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    height: 130px;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    color: #C19A6B;
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    padding-bottom: 8px;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #D3D3D3;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #0077FF;
-    text-shadow: 0px 0px 10px #0077FF;
-}
-
-/* Hero Section - Glitching Background */
+/* Hero Section - Intense Glitching Background */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
     height: 90vh;
@@ -74,47 +10,55 @@ nav ul li a:hover {
     color: #D3D3D3;
     padding: 20px;
     position: relative;
-    animation: glitchBackground 2s infinite steps(1);
+    overflow: hidden;
+    animation: glitchBackground 1.5s infinite steps(2);
 }
 
-/* Keyframes - Faster and Sharper Glitch Effect */
+/* Keyframes - True Glitch Effect */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); filter: hue-rotate(10deg); transform: scale(1.01); }
-    40% { background-image: url('hallway3.png'); filter: contrast(1.2) brightness(1.1); transform: translateX(2px); }
-    60% { background-image: url('hallway4.png'); filter: hue-rotate(-10deg); transform: scale(0.99); }
-    80% { background-image: url('hallway1.png'); }
+    0% { background-image: url('hallway1.png'); transform: translateX(0) translateY(0); }
+    10% { background-image: url('hallway2.png'); transform: translateX(2px); filter: hue-rotate(15deg) blur(1px); }
+    20% { background-image: url('hallway3.png'); transform: translateX(-2px); filter: contrast(1.2) brightness(1.1); }
+    30% { background-image: url('hallway4.png'); transform: translateY(2px); filter: hue-rotate(-10deg); }
+    40% { background-image: url('hallway1.png'); filter: grayscale(1); }
+    50% { background-image: url('hallway2.png'); transform: scale(1.02); filter: contrast(1.4); }
+    60% { background-image: url('hallway3.png'); transform: translateX(-3px); }
+    70% { background-image: url('hallway4.png'); filter: hue-rotate(10deg) blur(1px); }
+    80% { background-image: url('hallway1.png'); transform: translateY(-2px); }
+    100% { background-image: url('hallway1.png'); transform: translateX(0) translateY(0); }
 }
 
-/* Call to Action Button */
-.cta-button {
-    display: inline-block;
-    background: #C19A6B;
-    color: #0D1B2A;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.cta-button:hover {
-    background: #0077FF;
-    color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #0077FF;
-}
-
-/* Footer */
-footer {
-    background: #5C4033;
-    color: #D3D3D3;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
+/* Adding a Crack Effect to the Entire Page */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    font-size: 14px;
-    margin-top: auto;
+    height: 100%;
+    background: url('crack-overlay.png') repeat center center;
+    opacity: 0.2;
+    mix-blend-mode: screen;
+    animation: crackGlitch 2s infinite alternate;
+}
+
+/* Keyframes for Crack Overlay Movement */
+@keyframes crackGlitch {
+    0% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.02); }
+    100% { opacity: 0.2; transform: scale(1); }
+}
+
+/* Glitching Text Effect */
+.hero h2, .hero p {
+    display: inline-block;
+    position: relative;
+    animation: glitchText 1s infinite steps(2);
+}
+
+@keyframes glitchText {
+    0% { transform: translateX(0) translateY(0); }
+    30% { transform: translateX(-2px) translateY(1px); }
+    60% { transform: translateX(2px) translateY(-1px); }
+    90% { transform: translateX(0) translateY(0); }
 }
