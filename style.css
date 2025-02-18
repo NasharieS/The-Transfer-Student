@@ -14,9 +14,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Prevents scroll issues */
 }
 
-/* 🔥 Hero Section - FULLSCREEN on Load */
+/* 🔥 Hero Section - Fullscreen on Load */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
     height: 100vh; /* Fullscreen effect */
@@ -24,56 +25,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Move content towards the bottom */
     text-align: center;
     color: #D3D3D3;
     padding: 20px;
-    position: fixed;  /* Stays on top initially */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;  /* Ensures it's above everything */
+    z-index: 9999;
     overflow: hidden;
-    animation: heroZoomOut 1.8s ease-out 1.2s forwards, glitchBackground 3s linear infinite;
+    animation: heroZoomOut 3s ease-out forwards, glitchBackground 5s infinite steps(1) 3s;
 }
 
-/* 🎥 Keyframes - Fullscreen Zoom-Out Effect */
+/* 🎥 Keyframes - Slow Zoom Out Effect */
 @keyframes heroZoomOut {
     0% {
-        height: 100vh; /* Fully covering everything */
-        width: 100vw;
+        height: 110vh; /* Starts bigger */
+        width: 110vw;
         opacity: 1;
     }
     100% {
-        height: 90vh;  /* Returns to normal */
+        height: 90vh;  /* Shrinks to make space for title & one-liner */
         width: 100%;
-        position: relative;  /* Allows other elements to appear */
+        position: relative;
     }
 }
 
-/* 📌 Hide Navigation & Other Elements Initially */
-header, .content-container, footer {
-    opacity: 0;
-    animation: fadeInContent 1.2s ease-in 2.2s forwards; /* Delayed fade-in */
-}
-
-@keyframes fadeInContent {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* ✨ Keyframes - True Continuous Glitch Effect */
+/* 🔄 Keyframes - Maintain Glitch Effect Every 5 Sec */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); transform: translateX(0) translateY(0); }
-    10% { background-image: url('hallway2.png'); transform: translateX(1px) rotate(0.5deg); filter: hue-rotate(10deg) blur(0.5px); }
-    20% { background-image: url('hallway3.png'); transform: translateX(-1px) rotate(-0.5deg); filter: contrast(1.1) brightness(1.05); }
-    30% { background-image: url('hallway4.png'); transform: translateY(1px); filter: hue-rotate(-5deg); }
-    40% { background-image: url('hallway1.png'); filter: grayscale(0.8); }
-    50% { background-image: url('hallway2.png'); transform: scale(1.01); filter: contrast(1.2); }
-    60% { background-image: url('hallway3.png'); transform: translateX(-1.5px) rotate(0.3deg); }
-    70% { background-image: url('hallway4.png'); filter: hue-rotate(5deg) blur(0.3px); }
-    80% { background-image: url('hallway1.png'); transform: translateY(-1px); }
-    90% { background-image: url('hallway2.png'); transform: scale(1.02); filter: contrast(1.15); }
-    100% { background-image: url('hallway3.png'); transform: translateX(0) translateY(0); }
+    0% { background-image: url('hallway1.png'); }
+    25% { background-image: url('hallway2.png'); filter: hue-rotate(10deg) blur(1px); }
+    50% { background-image: url('hallway3.png'); filter: contrast(1.2) brightness(1.1); }
+    75% { background-image: url('hallway4.png'); }
+    100% { background-image: url('hallway1.png'); }
 }
 
 /* Crack Overlay - Continuous Movement */
@@ -87,159 +71,47 @@ header, .content-container, footer {
     background: url('crack-overlay.png') repeat center center;
     opacity: 0.2;
     mix-blend-mode: screen;
-    animation: crackGlitch 3s linear infinite;
+    animation: crackGlitch 5s linear infinite;
 }
 
-/* 🎭 Keyframes for Crack Overlay Movement */
+/* 🎭 Keyframes for Crack Overlay */
 @keyframes crackGlitch {
     0% { opacity: 0.1; transform: scale(1); }
     50% { opacity: 0.3; transform: scale(1.01) rotate(0.2deg); }
     100% { opacity: 0.2; transform: scale(1); }
 }
 
-/* Glitching Text Effect (Seamless) */
-.hero h2, .hero p {
-    display: inline-block;
-    position: relative;
-    animation: glitchText 2s linear infinite;
-}
-
-@keyframes glitchText {
-    0% { transform: translateX(0) translateY(0); }
-    25% { transform: translateX(-1px) translateY(1px); }
-    50% { transform: translateX(1px) translateY(-1px); }
-    75% { transform: translateX(-0.5px) translateY(0.5px); }
-    100% { transform: translateX(0) translateY(0); }
-}
-
-/* 🔥 One-Liner Style (Hero Title) */
-.one-liner {
-    font-size: 36px;
-    text-align: center;
+/* ✨ Title & One-Liner Styling */
+.hero h1 {
+    font-size: 42px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.one-liner {
+    font-size: 26px;
+    text-align: center;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    animation: fadeInText 2s ease-in 1s forwards;
+    animation: fadeInText 3s ease-in 2s forwards;
 }
 
-/* 🎥 Fade-In Effect for One-Liner */
+/* 🔥 Fade-In Effect for One-Liner */
 @keyframes fadeInText {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 🏠 Navigation Container (Moves to Bottom) */
+/* 📌 Navigation Container - Tabs Appear on Image */
 .nav-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    opacity: 0;
-    animation: fadeInNav 1.5s ease-in 2s forwards;
-}
-
-/* 📌 Navigation Button Styles */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    background: rgba(92, 64, 51, 0.9);
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #D3D3D3;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* 🚀 Hover Effect */
-nav ul li:hover {
-    background: #0077FF;
-    transform: scale(1.05);
-}
-
-/* 🎥 Navigation Fade-In */
-@keyframes fadeInNav {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-} 
-
-/* 🔥 Glitching Fullscreen Background */
-.glitch-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    bottom: 15px; /* Moves tabs to bottom of the image */
     width: 100%;
-    height: 100vh;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     text-align: center;
-    z-index: 10000;
-    animation: fadeOutGlitch 4s ease-out 6s forwards;
-}
-
-/* 🎥 Glitching Background Animation */
-.glitch-background {
-    width: 100%;
-    height: 100%;
-    background: url('hallway1.png') no-repeat center center/cover;
-    animation: intenseGlitch 4s steps(3) infinite, freezeGlitch 6s ease-in-out 4s infinite;
-}
-
-/* 🖋️ Glitch Effect (Intense at First, Then Slower Every 5 Sec) */
-@keyframes intenseGlitch {
-    0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); filter: hue-rotate(10deg) blur(1px); }
-    40% { background-image: url('hallway3.png'); filter: contrast(1.2) brightness(1.1); }
-    60% { background-image: url('hallway4.png'); filter: grayscale(1); }
-    80% { background-image: url('hallway1.png'); transform: scale(1.02); }
-    100% { background-image: url('hallway2.png'); }
-}
-
-/* 🛑 After 4s, Slows Down to Every 5 Sec */
-@keyframes freezeGlitch {
-    0% { filter: brightness(1); }
-    50% { filter: brightness(1.3) hue-rotate(20deg); }
-    100% { filter: brightness(1); }
-}
-
-/* 🎭 One-Liner at Top */
-.one-liner {
-    font-size: 36px;
-    text-align: center;
-    color: #D3D3D3;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    animation: fadeInText 4s ease-in 5s forwards;
-}
-
-/* 🔥 Fade Out Glitch & Show Website */
-@keyframes fadeOutGlitch {
-    0% { opacity: 1; }
-    100% { opacity: 0; display: none; }
-}
-
-/* 📌 Navigation Buttons at Bottom (Appear After Glitch) */
-.nav-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    opacity: 0;
-    animation: fadeInNav 2s ease-in 6s forwards;
+    animation: fadeInNav 2s ease-in 3s forwards;
 }
 
 /* 📌 Navigation Button Styles */
