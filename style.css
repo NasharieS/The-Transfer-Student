@@ -70,20 +70,111 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Section Styling (Fix for All Pages) */
-section {
-    padding: 110px 20px; /* More top padding so text isn’t crowded */
+/* Hero Section */
+.hero {
     text-align: center;
-    max-width: 900px;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #0D1B2A;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 600px;
     margin: auto;
 }
 
-/* Writing Process Page Specific Fix */
-.writing-process {
-    padding-top: 180px; /* Extra space at the top for better readability */
+/* About & Sneak Peek Section */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 40px;
 }
 
-/* Footer Fix for All Pages */
+/* About Section */
+.about-section {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h3 {
+    font-size: 24px;
+    color: #5C4033;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Sneak Peek Section */
+.sneak-peek-section {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.sneak-peek-section h3 {
+    font-size: 24px;
+    color: #5C4033;
+}
+
+.sneak-peek-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background: #C19A6B;
+    color: #0D1B2A;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #0077FF;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #0077FF;
+}
+
+/* Responsive Fix: Stack on Small Screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section, .sneak-peek-section {
+        width: 90%;
+    }
+}
+
+/* Footer */
 footer {
     background: #5C4033;
     color: #D3D3D3;
