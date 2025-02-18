@@ -62,15 +62,27 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Hero Section */
+/* Hero Section - Glitching Background */
 .hero {
-    background: white;
-    padding: 60px 20px;
+    background: url('A_high_school_hallway_with_a_subtle,_eerie_glitchi.png') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    max-width: 1000px;
-    margin: 140px auto 20px auto; /* Space from the header */
+    color: #D3D3D3;
+    padding: 20px;
+    position: relative;
+    animation: glitchEffect 3s infinite alternate;
+}
+
+/* Subtle Glitch Animation */
+@keyframes glitchEffect {
+    0% { filter: none; }
+    30% { filter: hue-rotate(10deg) blur(1px); transform: scale(1.01); }
+    60% { filter: hue-rotate(-10deg) blur(1px); transform: scale(1.02); }
+    100% { filter: none; }
 }
 
 /* Content Section (Left-Right Layout) */
