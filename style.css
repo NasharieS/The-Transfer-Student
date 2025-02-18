@@ -11,34 +11,35 @@ body {
     background: linear-gradient(to bottom, #D3D3D3, #5C4033);
     color: #0D1B2A;
     line-height: 1.6;
-    min-height: 100vh; /* Makes sure content takes up full screen height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Universal Fix: Ensures all pages push content below the header */
+/* Universal Fix: Push content below the header */
 main {
     flex: 1;
-    padding-top: 120px; /* Increased from 100px to ensure no text gets covered */
+    padding-top: 140px; /* Increased from 120px so header doesn't overlap text */
     padding-bottom: 60px; /* Prevents footer overlap */
 }
 
-/* Header Fix (Now Taller) */
+/* Header Fix (Now Larger) */
 header {
     background: #5C4033;
-    padding: 30px 0; /* Increased padding to make the header taller */
+    padding: 40px 0; /* Increased padding */
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 100px; /* Made header taller */
+    height: 130px; /* Increased height for a more substantial look */
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Header Title */
 header h1 {
     color: #C19A6B;
-    font-size: 24px;
+    font-size: 30px; /* Larger text */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -48,17 +49,18 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 5px;
-    padding-bottom: 10px; /* Added padding to prevent tabs from feeling cut off */
+    margin-top: 10px;
+    padding-bottom: 12px; /* Added padding for balance */
 }
 
 nav ul li {
-    margin: 0 12px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #D3D3D3;
+    font-size: 18px; /* Increased font size for menu items */
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
@@ -70,15 +72,15 @@ nav ul li a:hover {
 
 /* Section Styling (Fix for All Pages) */
 section {
-    padding: 80px 20px; /* Increased padding from 60px to 80px */
+    padding: 100px 20px; /* Increased padding */
     text-align: center;
     max-width: 900px;
     margin: auto;
 }
 
-/* Specific Fix for Writing Process Page */
+/* Writing Process Page Specific Fix */
 .writing-process {
-    padding-top: 140px; /* More space so words aren't too close to the header */
+    padding-top: 160px; /* Extra space for better readability */
 }
 
 /* Footer Fix for All Pages */
@@ -87,8 +89,8 @@ footer {
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    position: relative; /* Ensures footer stays below content */
+    position: relative;
     width: 100%;
     font-size: 14px;
-    margin-top: auto; /* Pushes footer to bottom when content is short */
+    margin-top: auto;
 }
