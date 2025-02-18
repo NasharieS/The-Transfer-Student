@@ -16,21 +16,21 @@ body {
     flex-direction: column;
 }
 
-/* Ensures content is properly spaced below the header */
+/* Main Content (Fixes spacing issue) */
 main {
     flex: 1;
-    padding-top: 160px; /* Increased to fully clear header */
-    padding-bottom: 80px; /* Prevents footer overlap */
+    padding-top: 120px; /* Adjusted to bring content closer */
+    padding-bottom: 60px; /* Prevents footer overlap */
 }
 
-/* Header (Balanced Size) */
+/* Header */
 header {
     background: #5C4033;
-    padding: 35px 0; /* Adjusted to be taller */
+    padding: 25px 0; /* Reduced padding to bring it all closer */
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 130px; /* Slightly increased for balance */
+    height: 100px; /* Decreased height slightly */
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -39,9 +39,10 @@ header {
 /* Header Title */
 header h1 {
     color: #C19A6B;
-    font-size: 30px; /* Increased for better visibility */
+    font-size: 32px; /* Stands out more */
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 5px; /* Pulls content slightly closer */
 }
 
 /* Navigation Menu */
@@ -49,12 +50,12 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 5px;
-    padding-bottom: 8px; /* Just enough padding to feel balanced */
+    margin-top: 2px; /* Brings navigation closer */
+    padding-bottom: 5px;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -70,79 +71,28 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Hero Section */
+/* Hero Section (Fix for spacing) */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    background: #fff;
+    padding: 40px 20px; /* Reduced padding to bring it up */
+    margin: 20px auto; /* Adjusted spacing to prevent floating gaps */
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Hero Title */
 .hero h2 {
     font-size: 36px;
-    color: #0D1B2A;
     text-transform: uppercase;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px; /* Pulls it closer */
 }
 
-.hero p {
-    font-size: 18px;
-    margin-top: 10px;
-    max-width: 600px;
-    margin: auto;
-}
-
-/* About & Sneak Peek Section */
-.content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    gap: 40px;
-}
-
-/* About Section */
-.about-section {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.about-section h3 {
-    font-size: 24px;
-    color: #5C4033;
-}
-
-.about-section p {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Sneak Peek Section */
-.sneak-peek-section {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.sneak-peek-section h3 {
-    font-size: 24px;
-    color: #5C4033;
-}
-
-.sneak-peek-section p {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Call to Action Button */
+/* CTA Button (Sneak Peek) */
 .cta-button {
-    display: inline-block;
     background: #C19A6B;
     color: #0D1B2A;
     padding: 12px 24px;
@@ -150,7 +100,8 @@ nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px; /* Slightly reduced spacing */
+    display: inline-block;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -161,17 +112,12 @@ nav ul li a:hover {
     box-shadow: 0px 0px 15px #0077FF;
 }
 
-/* Responsive Fix: Stack on Small Screens */
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-section, .sneak-peek-section {
-        width: 90%;
-    }
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
 }
 
 /* Footer */
