@@ -62,9 +62,9 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Hero Section - Glitching Background */
+/* Hero Section - Faster Glitching Background */
 .hero {
-    background: url('A_high_school_hallway_with_a_subtle,_eerie_glitchi.png') no-repeat center center/cover;
+    background: url('hallway1.png') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -74,33 +74,16 @@ nav ul li a:hover {
     color: #D3D3D3;
     padding: 20px;
     position: relative;
-    animation: glitchEffect 3s infinite alternate;
+    animation: glitchBackground 3s infinite steps(1);
 }
 
-/* Subtle Glitch Animation */
-@keyframes glitchEffect {
-    0% { filter: none; }
-    30% { filter: hue-rotate(10deg) blur(1px); transform: scale(1.01); }
-    60% { filter: hue-rotate(-10deg) blur(1px); transform: scale(1.02); }
-    100% { filter: none; }
-}
-
-/* Content Section (Left-Right Layout) */
-.content-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-.left-section,
-.right-section {
-    width: 48%;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Keyframes - Swap Between Hallway Images */
+@keyframes glitchBackground {
+    0% { background-image: url('hallway1.png'); }
+    25% { background-image: url('hallway2.png'); }
+    50% { background-image: url('hallway3.png'); }
+    75% { background-image: url('hallway4.png'); }
+    100% { background-image: url('hallway1.png'); }
 }
 
 /* Call to Action Button */
