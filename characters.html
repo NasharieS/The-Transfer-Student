@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Map - The Transfer Student</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showCharacterInfo(character) {
+            const info = {
+                "amara": "Trapped between past and future, desperate to find her way home.",
+                "niko": "The one who seems too good to be true. Because he is.",
+                "brandon": "The boy who gets under her skin. And maybe into her heart.",
+                "archive": "An agency built to keep the uneducated uneducated."
+            };
+            document.getElementById("character-info").innerText = info[character];
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>The Transfer Student</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sneak-peek.html">Sneak Peek</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="process.html">Writing Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="character-map">
+        <h2>Character Map</h2>
+        <p>Hover over or click a character to reveal their role in the story.</p>
+        <div class="characters">
+            <button onclick="showCharacterInfo('amara')">Amara</button>
+            <button onclick="showCharacterInfo('niko')">Niko</button>
+            <button onclick="showCharacterInfo('brandon')">Brandon</button>
+            <button onclick="showCharacterInfo('archive')">The Archive (A131)</button>
+        </div>
+        <div id="character-info" class="character-info-box">
+            <p>Click a character to reveal more.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
