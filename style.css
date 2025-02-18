@@ -109,7 +109,7 @@ body {
 /* 📌 Navigation Container - Tabs Appear on Image */
 .nav-container {
     position: absolute;
-    bottom: 10px; /* Moves tabs to bottom of the image */
+    top: 75vh; /* Moves tabs closer to one-liner */
     width: 100%;
     text-align: center;
     opacity: 0;
@@ -157,9 +157,10 @@ footer {
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     font-size: 14px;
-    margin-top: auto;
+    margin-top: 0; /* Ensures it touches the bottom */
     z-index: 1;
 }
