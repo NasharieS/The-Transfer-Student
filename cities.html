@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities & Lessons | The Transfer Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cities & Lessons</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sneak-peek.html">Sneak Peek</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="process.html">Writing Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="cities-intro">
+        <p>Each city Amara visits holds a lesson about education, inspired by real-world research.</p>
+    </section>
+
+    <section class="cities-grid">
+        <div class="city" onclick="showLesson('dubai')">
+            <h2>📍 Dubai (Fictional Name)</h2>
+            <p class="lesson" id="dubai">The power of family in education.</p>
+        </div>
+        <div class="city" onclick="showLesson('finland')">
+            <h2>📍 Finland (Fictional Name)</h2>
+            <p class="lesson" id="finland">Education as a right, not a privilege.</p>
+        </div>
+        <div class="city" onclick="showLesson('philadelphia')">
+            <h2>📍 Philadelphia</h2>
+            <p class="lesson" id="philadelphia">The struggle for equity in the U.S.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showLesson(city) {
+            let lesson = document.getElementById(city);
+            lesson.style.display = lesson.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
