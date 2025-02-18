@@ -62,7 +62,7 @@ nav ul li a:hover {
     text-shadow: 0px 0px 10px #0077FF;
 }
 
-/* Hero Section - Intense Glitching Background */
+/* Hero Section - Slower Glitching Background */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
     height: 90vh;
@@ -75,24 +75,21 @@ nav ul li a:hover {
     padding: 20px;
     position: relative;
     overflow: hidden;
-    animation: glitchBackground 1.5s infinite steps(2);
+    animation: glitchBackground 3s infinite steps(3); /* Slowed down */
 }
 
-/* Keyframes - True Glitch Effect */
+/* Keyframes - Slower Glitch Effect */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); transform: translateX(0) translateY(0); }
-    10% { background-image: url('hallway2.png'); transform: translateX(2px); filter: hue-rotate(15deg) blur(1px); }
-    20% { background-image: url('hallway3.png'); transform: translateX(-2px); filter: contrast(1.2) brightness(1.1); }
-    30% { background-image: url('hallway4.png'); transform: translateY(2px); filter: hue-rotate(-10deg); }
-    40% { background-image: url('hallway1.png'); filter: grayscale(1); }
-    50% { background-image: url('hallway2.png'); transform: scale(1.02); filter: contrast(1.4); }
-    60% { background-image: url('hallway3.png'); transform: translateX(-3px); }
-    70% { background-image: url('hallway4.png'); filter: hue-rotate(10deg) blur(1px); }
-    80% { background-image: url('hallway1.png'); transform: translateY(-2px); }
+    15% { background-image: url('hallway2.png'); transform: translateX(1px); filter: hue-rotate(10deg) blur(0.5px); }
+    30% { background-image: url('hallway3.png'); transform: translateX(-1px); filter: contrast(1.1) brightness(1.05); }
+    50% { background-image: url('hallway4.png'); transform: translateY(1px); filter: hue-rotate(-5deg); }
+    70% { background-image: url('hallway1.png'); filter: grayscale(0.8); }
+    90% { background-image: url('hallway2.png'); transform: scale(1.01); filter: contrast(1.2); }
     100% { background-image: url('hallway1.png'); transform: translateX(0) translateY(0); }
 }
 
-/* Adding a Crack Effect to the Entire Page */
+/* Slower Crack Effect */
 .hero::after {
     content: "";
     position: absolute;
@@ -101,30 +98,30 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.2;
+    opacity: 0.15;
     mix-blend-mode: screen;
-    animation: crackGlitch 2s infinite alternate;
+    animation: crackGlitch 4s infinite alternate; /* Slowed down */
 }
 
-/* Keyframes for Crack Overlay Movement */
+/* Keyframes for Slower Crack Overlay Movement */
 @keyframes crackGlitch {
     0% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.02); }
-    100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.01); }
+    100% { opacity: 0.15; transform: scale(1); }
 }
 
-/* Glitching Text Effect */
+/* Glitching Text Effect (Smoother) */
 .hero h2, .hero p {
     display: inline-block;
     position: relative;
-    animation: glitchText 1s infinite steps(2);
+    animation: glitchText 2s infinite steps(3); /* Slower text effect */
 }
 
 @keyframes glitchText {
     0% { transform: translateX(0) translateY(0); }
-    30% { transform: translateX(-2px) translateY(1px); }
-    60% { transform: translateX(2px) translateY(-1px); }
-    90% { transform: translateX(0) translateY(0); }
+    40% { transform: translateX(-1px) translateY(1px); }
+    80% { transform: translateX(1px) translateY(-1px); }
+    100% { transform: translateX(0) translateY(0); }
 
 }
 
