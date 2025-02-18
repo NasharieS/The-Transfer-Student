@@ -11,23 +11,26 @@ body {
     background: linear-gradient(to bottom, #D3D3D3, #5C4033);
     color: #0D1B2A;
     line-height: 1.6;
-    margin: 0;
+    min-height: 100vh; /* Makes sure content takes up full screen height */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Universal Fix: Ensures all pages push content down below the header */
+/* Universal Fix: Ensures all pages push content below the header */
 main {
-    padding-top: 120px; /* Pushes all content down so it's not blocked */
+    flex: 1;
+    padding-top: 100px; /* Ensures content is visible below the header */
     padding-bottom: 60px; /* Prevents footer overlap */
 }
 
-/* Header */
+/* Header Fix */
 header {
     background: #5C4033;
     padding: 20px 0;
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 80px;
+    height: 80px; /* Ensures header is not too large */
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -80,5 +83,5 @@ footer {
     position: relative; /* Ensures footer stays below content */
     width: 100%;
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: auto; /* Pushes footer to bottom when content is short */
 }
