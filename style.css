@@ -16,21 +16,21 @@ body {
     flex-direction: column;
 }
 
-/* Universal Fix: Push content below the header */
+/* Ensures content is properly spaced below the header */
 main {
     flex: 1;
-    padding-top: 140px; /* Increased from 120px so header doesn't overlap text */
-    padding-bottom: 60px; /* Prevents footer overlap */
+    padding-top: 160px; /* Increased to fully clear header */
+    padding-bottom: 80px; /* Prevents footer overlap */
 }
 
-/* Header Fix (Now Larger) */
+/* Header (Balanced Size) */
 header {
     background: #5C4033;
-    padding: 40px 0; /* Increased padding */
+    padding: 35px 0; /* Adjusted to be taller */
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 130px; /* Increased height for a more substantial look */
+    height: 130px; /* Slightly increased for balance */
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -39,7 +39,7 @@ header {
 /* Header Title */
 header h1 {
     color: #C19A6B;
-    font-size: 30px; /* Larger text */
+    font-size: 30px; /* Increased for better visibility */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -49,18 +49,18 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    padding-bottom: 12px; /* Added padding for balance */
+    margin-top: 5px;
+    padding-bottom: 8px; /* Just enough padding to feel balanced */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #D3D3D3;
-    font-size: 18px; /* Increased font size for menu items */
+    font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
@@ -72,7 +72,7 @@ nav ul li a:hover {
 
 /* Section Styling (Fix for All Pages) */
 section {
-    padding: 100px 20px; /* Increased padding */
+    padding: 110px 20px; /* More top padding so text isn’t crowded */
     text-align: center;
     max-width: 900px;
     margin: auto;
@@ -80,7 +80,7 @@ section {
 
 /* Writing Process Page Specific Fix */
 .writing-process {
-    padding-top: 160px; /* Extra space for better readability */
+    padding-top: 180px; /* Extra space at the top for better readability */
 }
 
 /* Footer Fix for All Pages */
