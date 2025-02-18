@@ -32,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     overflow: hidden;
     animation: heroZoomOut 3s ease-out forwards, glitchBackground 5s infinite steps(1) 2s;
 }
@@ -109,11 +109,12 @@ body {
 /* 📌 Navigation Container - Tabs Appear on Image */
 .nav-container {
     position: absolute;
-    top: 80vh; /* Moves tabs closer to one-liner */
+    top: 85vh; /* Moves tabs closer to one-liner */
     width: 100%;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
+    z-index: 1000; /* Ensures it's above everything */
 }
 
 /* 📌 Navigation Button Styles */
@@ -139,6 +140,8 @@ nav ul li a {
     color: #D3D3D3;
     font-size: 18px;
     font-weight: bold;
+    display: block;
+    z-index: 1000; /* Fixes clicking issue */
 }
 
 /* 🚀 Hover Effect */
@@ -163,6 +166,6 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
-    margin-top: 0;
-    z-index: 1;
+    margin: 0; /* Removed spacing to meet image */
+    z-index: 999;
 }
