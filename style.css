@@ -27,7 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #D3D3D3;
+    color: #FFF;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -70,27 +70,27 @@ body {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.1;
+    opacity: 0.08;
     mix-blend-mode: screen;
     animation: crackGlitch 6s linear infinite;
 }
 
 /* 🎭 Keyframes for Crack Overlay */
 @keyframes crackGlitch {
-    0% { opacity: 0.08; transform: scale(1); }
-    50% { opacity: 0.15; transform: scale(1.01) rotate(0.2deg); }
-    100% { opacity: 0.08; transform: scale(1); }
+    0% { opacity: 0.05; transform: scale(1); }
+    50% { opacity: 0.12; transform: scale(1.01) rotate(0.2deg); }
+    100% { opacity: 0.05; transform: scale(1); }
 }
 
-/* ✨ Title - Make "The Transfer Student" Pop More */
+/* ✨ Title - No Black Background */
 .hero h1 {
-    font-size: 60px; /* Bigger Title */
+    font-size: 60px;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 3px;
-    text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.7), -3px -3px 12px rgba(0, 0, 0, 0.7);
+    text-align: center;
     color: #FFF;
-    background: rgba(0, 0, 0, 0.5); /* Subtle Background to Make it Stand Out */
+    text-shadow: 4px 4px 12px rgba(255, 255, 255, 0.7), -4px -4px 12px rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
@@ -124,7 +124,7 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - TABS PERFECTLY CENTERED */
+/* 📌 Navigation Container - Tabs Properly Centered */
 .nav-container {
     position: absolute;
     top: 72vh;
@@ -147,7 +147,7 @@ nav ul {
     margin: 0;
 }
 
-/* 🔥 Make Tabs Feel Floating & Spacious */
+/* 🔥 Floating, Spacious Tabs */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
     padding: 15px 30px;
@@ -157,7 +157,7 @@ nav ul li {
     display: inline-block;
 }
 
-/* ✅ Fix Tab Alignment */
+/* ✅ No Underline on Tabs */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
