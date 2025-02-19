@@ -82,23 +82,40 @@ body {
     100% { opacity: 0.08; transform: scale(1); }
 }
 
-/* ✨ Title & One-Liner Styling */
+/* ✨ Title - Make "The Transfer Student" Pop More */
 .hero h1 {
-    font-size: 50px;
+    font-size: 60px; /* Bigger Title */
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.7), -3px -3px 12px rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.5); /* Subtle Background to Make it Stand Out */
+    padding: 10px 20px;
+    border-radius: 10px;
     opacity: 0;
     animation: fadeInText 1.5s ease-in 1s forwards;
 }
 
+/* 🔥 One-Liner Styling (Stacked Effect) */
 .one-liner {
     font-size: 28px;
     text-align: center;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0;
+    max-width: 900px;
+    line-height: 1.5;
     animation: fadeInText 2s ease-in 1.8s forwards;
+}
+
+/* Stacking Sentences */
+.one-liner span {
+    display: block;
+}
+
+.one-liner span:first-child {
+    display: inline;
 }
 
 /* 🔥 Fade-In Effect for Title & One-Liner */
@@ -107,13 +124,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Centered & Floating */
+/* 📌 Navigation Container - TABS PERFECTLY CENTERED */
 .nav-container {
     position: absolute;
-    top: 72vh; /* Moves tabs to perfect center below the one-liner */
+    top: 72vh;
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content; /* Prevents stretching */
+    width: fit-content;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -125,7 +142,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px; /* Extra space between tabs */
+    gap: 40px;
     padding: 0;
     margin: 0;
 }
@@ -142,7 +159,7 @@ nav ul li {
 
 /* ✅ Fix Tab Alignment */
 nav ul li a {
-    text-decoration: none !important; /* 🔥 Removes underline */
+    text-decoration: none !important;
     color: #D3D3D3;
     font-size: 18px;
     font-weight: bold;
