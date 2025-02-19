@@ -82,7 +82,7 @@ body {
     100% { opacity: 0.05; transform: scale(1); }
 }
 
-/* ✨ Title - No Black Background */
+/* ✨ Title - Make "The Transfer Student" Pop More */
 .hero h1 {
     font-size: 60px;
     text-transform: uppercase;
@@ -107,6 +107,7 @@ body {
     max-width: 900px;
     line-height: 1.5;
     animation: fadeInText 2s ease-in 1.8s forwards;
+    margin-bottom: 20px; /* Spacing between the one-liner and tabs */
 }
 
 /* Stacking Sentences */
@@ -124,10 +125,10 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Properly Centered */
+/* 📌 Navigation Container - Tabs Directly Under One-Liner */
 .nav-container {
     position: absolute;
-    top: 72vh;
+    top: 63vh; /* Moves tabs directly under the one-liner */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -142,7 +143,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px; /* Balanced spacing between tabs */
     padding: 0;
     margin: 0;
 }
