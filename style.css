@@ -154,6 +154,43 @@ nav ul li:hover {
 @keyframes fadeInNav {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
+} 
+
+/* 📌 Dropdown Menu */
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Dropdown Items */
+nav ul li ul li {
+    padding: 10px 20px;
+    text-align: left;
+    display: block;
+}
+
+/* ✅ Make Dropdown Items Clickable */
+nav ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears When Hovered */
+nav ul li:hover > ul {
+    display: block;
 }
 
 /* 📌 Footer Adjustments */
