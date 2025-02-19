@@ -17,17 +17,17 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Now Fully Covers Everything */
+/* 🔥 Hero Section - Fully Covers Everything Initially */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 150vh; /* Covers everything before zooming */
+    height: 150vh; /* Ensures full coverage */
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #D3D3D3;
+    color: #FFF;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -37,7 +37,7 @@ body {
     animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Ensure Hero Covers Footer Before Zooming */
+/* 🎥 Keyframes - Ensures Hero Covers Footer Before Zooming */
 @keyframes heroZoomOut {
     0% {
         height: 150vh; /* Covers everything */
@@ -82,23 +82,40 @@ body {
     100% { opacity: 0.08; transform: scale(1); }
 }
 
-/* ✨ Title & One-Liner Styling */
+/* ✨ Title - Make "The Transfer Student" Stand Out */
 .hero h1 {
-    font-size: 50px;
+    font-size: 60px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
     opacity: 0;
     animation: fadeInText 1.5s ease-in 1s forwards;
 }
 
+/* 🔥 One-Liner Styling (Stacked Effect) */
 .one-liner {
     font-size: 28px;
     text-align: center;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0;
+    max-width: 900px;
+    line-height: 1.5;
     animation: fadeInText 2s ease-in 1.8s forwards;
+    margin-bottom: 20px;
+}
+
+/* Stacking Sentences */
+.one-liner span {
+    display: block;
+}
+
+.one-liner span:first-child {
+    display: inline;
 }
 
 /* 🔥 Fade-In Effect for Title & One-Liner */
@@ -107,13 +124,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Now Fully Centered */
+/* 📌 Navigation Container - Tabs Now Fully Centered Below One-Liner */
 .nav-container {
     position: absolute;
-    top: calc(50% + 120px); /* Ensures tabs are under the one-liner */
+    top: calc(50% + 140px); /* Ensures tabs are below the one-liner */
     left: 50%;
     transform: translateX(-50%);
-    width: auto; /* Prevents stretching */
+    width: auto;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -124,8 +141,8 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Ensures tabs are in the middle */
-    gap: 25px;
+    justify-content: center; /* Centers tabs */
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -133,10 +150,11 @@ nav ul {
 /* 🔥 Floating, Spacious Tabs */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
-    padding: 15px 30px; /* Increased padding for **larger, roomier tabs** */
-    border-radius: 12px; /* Smoother rounded edges */
+    padding: 15px 35px; /* Increased padding for **larger, roomier tabs** */
+    border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 /* ✅ Fix Tab Alignment */
