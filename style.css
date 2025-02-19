@@ -34,14 +34,14 @@ body {
     left: 0;
     z-index: 999;
     overflow: hidden;
-    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
+    animation: heroFullCover 1.5s ease-out forwards, glitchBackground 6s infinite linear 2s;
 }
 
-/* 🎥 Keyframes - Smooth Zoom Out */
-@keyframes heroZoomOut {
+/* 🎥 Keyframes - Full Cover THEN Zoom Out */
+@keyframes heroFullCover {
     0% {
-        height: 110vh;
-        width: 110vw;
+        height: 100vh;
+        width: 100vw;
         opacity: 1;
     }
     100% {
@@ -51,14 +51,13 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect */
+/* 🎥 Keyframes - Smooth & Seamless Glitch Effect */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); }
-    40% { background-image: url('hallway3.png'); }
-    60% { background-image: url('hallway4.png'); }
-    80% { background-image: url('hallway1.png'); }
-    100% { background-image: url('hallway2.png'); }
+    25% { background-image: url('hallway2.png'); filter: hue-rotate(5deg) blur(1px); }
+    50% { background-image: url('hallway3.png'); filter: contrast(1.1) brightness(1.05); }
+    75% { background-image: url('hallway4.png'); filter: hue-rotate(-5deg) brightness(0.98); }
+    100% { background-image: url('hallway1.png'); }
 }
 
 /* Crack Overlay */
@@ -125,7 +124,7 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Now **PERFECTLY CENTERED** */
+/* 📌 Navigation Container - **Centered Under One-Liner** */
 .nav-container {
     position: absolute;
     top: calc(50% + 100px); /* Ensures it's below the one-liner */
