@@ -34,7 +34,7 @@ body {
     left: 0;
     z-index: 999;
     overflow: hidden;
-    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
+    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite steps(1) 3s;
 }
 
 /* 🎥 Keyframes - Smooth Zoom Out */
@@ -51,17 +51,21 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect (No Pause) */
+/* 🎥 Keyframes - **Seamless Glitch Effect** */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); }
-    40% { background-image: url('hallway3.png'); }
-    60% { background-image: url('hallway4.png'); }
-    80% { background-image: url('hallway1.png'); }
-    100% { background-image: url('hallway2.png'); }
+    0% { background-image: url('hallway1.png'); transform: translateX(0); }
+    10% { background-image: url('hallway2.png'); transform: translateX(-2px) skewX(2deg); filter: hue-rotate(15deg) blur(1px); }
+    20% { background-image: url('hallway3.png'); transform: translateX(2px) skewX(-2deg); filter: contrast(1.2) brightness(1.1); }
+    30% { background-image: url('hallway4.png'); transform: translateY(1px) skewY(1deg); filter: hue-rotate(-10deg); }
+    40% { background-image: url('hallway1.png'); filter: grayscale(0.9); }
+    50% { background-image: url('hallway2.png'); transform: scale(1.02); filter: contrast(1.4); }
+    60% { background-image: url('hallway3.png'); transform: translateX(-3px) skewX(3deg); }
+    70% { background-image: url('hallway4.png'); filter: hue-rotate(10deg) blur(1px); }
+    80% { background-image: url('hallway1.png'); transform: translateY(-2px) skewY(-2deg); }
+    100% { background-image: url('hallway1.png'); transform: translateX(0); }
 }
 
-/* Crack Overlay (Now Always on Images, No Blank Background) */
+/* Crack Overlay */
 .hero::after {
     content: "";
     position: absolute;
@@ -119,16 +123,10 @@ body {
     display: inline;
 }
 
-/* 🔥 Fade-In Effect for Title & One-Liner */
-@keyframes fadeInText {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
 /* 📌 Navigation Container - **Centered Below One-Liner** */
 .nav-container {
     position: absolute;
-    top: calc(50% + 115px); /* Adjusted to be properly centered */
+    top: calc(50% + 115px); /* Ensures correct spacing */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -171,39 +169,6 @@ nav ul li a {
 nav ul li:hover {
     background: #0077FF;
     transform: scale(1.1);
-}
-
-/* 📌 DROPDOWN MENU */
-nav ul li ul {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    background: rgba(92, 64, 51, 0.95);
-    border-radius: 8px;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* 🎭 DROPDOWN MENU ITEMS */
-nav ul li ul li {
-    padding: 10px 20px;
-    text-align: left;
-    display: block;
-}
-
-/* ✅ Make Dropdown Items Clickable */
-nav ul li ul li a {
-    color: #D3D3D3;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* 🎥 Dropdown Appears When Hovered */
-nav ul li:hover > ul {
-    display: block;
 }
 
 /* 🎥 Navigation Fade-In */
