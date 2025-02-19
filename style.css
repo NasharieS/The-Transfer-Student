@@ -51,7 +51,7 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect */
+/* 🎥 Keyframes - Smooth Glitch Effect (No Pause) */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
     20% { background-image: url('hallway2.png'); }
@@ -61,7 +61,7 @@ body {
     100% { background-image: url('hallway2.png'); }
 }
 
-/* Crack Overlay */
+/* Crack Overlay (Now Always on Images, No Blank Background) */
 .hero::after {
     content: "";
     position: absolute;
@@ -125,13 +125,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Perfectly Centered & Adjusted */
+/* 📌 Navigation Container - **Centered Below One-Liner** */
 .nav-container {
     position: absolute;
-    top: calc(50% + 120px); /* Ensures it's properly below the one-liner */
-    left: 52%; /* Nudged slightly to the right */
-    transform: translateX(-50%); /* Keeps it centered */
-    width: fit-content; /* Prevents spreading too wide */
+    top: calc(50% + 115px); /* Adjusted to be properly centered */
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -143,25 +143,23 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 0;
     margin: 0 auto;
     width: fit-content;
 }
 
-/* 🔥 Main Tabs */
+/* 🔥 Floating, Spacious Tabs */
 nav ul li {
-    position: relative;
     background: rgba(92, 64, 51, 0.9);
     padding: 12px 24px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     display: inline-block;
-    cursor: pointer;
 }
 
-/* ✅ Remove Underline on Links */
+/* ✅ No Underline on Tabs */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
@@ -178,11 +176,11 @@ nav ul li:hover {
 /* 📌 DROPDOWN MENU */
 nav ul li ul {
     position: absolute;
-    top: 45px; /* Makes dropdown appear below the main tab */
+    top: 45px;
     left: 0;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
-    display: none; /* Hidden by default */
+    display: none;
     padding: 10px 0;
     min-width: 200px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
