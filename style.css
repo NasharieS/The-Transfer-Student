@@ -17,10 +17,10 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Covers Full Screen on Load */
+/* 🔥 Hero Section - Now Starts Over the Footer */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 100vh; /* Covers everything including the footer */
+    height: 140vh; /* Ensures full coverage on ALL screens */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -33,31 +33,46 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
+    overflow: hidden;
     animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Zoom Out While Covering Footer */
+/* 🎥 Keyframes - Cover Footer Before Zooming Out */
 @keyframes heroZoomOut {
     0% {
-        height: 120vh; /* Starts even larger to cover the footer */
+        height: 140vh; /* Covers everything */
         width: 110vw;
         opacity: 1;
     }
     100% {
-        height: 90vh;
+        height: 90vh; /* Zooms out naturally */
         width: 100%;
         position: relative;
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect (No Harsh Flashes) */
+/* 🎥 Keyframes - Perfectly Seamless Image Loop */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); }
+    0%, 100% { background-image: url('hallway1.png'); }
     20% { background-image: url('hallway2.png'); }
     40% { background-image: url('hallway3.png'); }
     60% { background-image: url('hallway4.png'); }
     80% { background-image: url('hallway1.png'); }
-    100% { background-image: url('hallway2.png'); }
+}
+
+/* 📌 Crack Overlay - Ensure Visibility */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('crack-overlay.png') repeat center center;
+    opacity: 0.12; /* Increase slightly for better visibility */
+    mix-blend-mode: screen;
+    z-index: 2; /* Ensure it's above the images */
+    animation: crackGlitch 6s linear infinite;
 }
 
 /* ✨ Title - Make "The Transfer Student" Pop More */
@@ -102,15 +117,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - **Perfectly Centered Under One-Liner** */
+/* 📌 Navigation Container - Tabs Now Fully Centered */
 .nav-container {
     position: absolute;
-    top: calc(50% + 110px); /* Ensures it's below the one-liner */
+    top: calc(50% + 120px); /* Moves them perfectly under the one-liner */
     left: 50%;
-    transform: translateX(-50%); /* Centers it */
-    display: flex;
-    justify-content: center; /* Ensures the content aligns properly */
-    width: auto; /* Prevents unnecessary stretching */
+    transform: translateX(-50%);
+    width: auto;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -121,11 +134,10 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center; /* Centers tabs */
+    gap: 25px;
     padding: 0;
-    margin: 0 auto;
-    width: fit-content;
+    margin: 0;
 }
 
 /* 🔥 Floating, Spacious Tabs */
@@ -136,9 +148,10 @@ nav ul li {
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     display: inline-block;
+    cursor: pointer;
 }
 
-/* ✅ No Underline on Tabs */
+/* ✅ Remove Underline on Links */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
@@ -150,6 +163,39 @@ nav ul li a {
 nav ul li:hover {
     background: #0077FF;
     transform: scale(1.1);
+}
+
+/* 📌 Dropdown Menu */
+nav ul li ul {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Dropdown Items */
+nav ul li ul li {
+    padding: 10px 20px;
+    text-align: left;
+    display: block;
+}
+
+/* ✅ Make Dropdown Items Clickable */
+nav ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears When Hovered */
+nav ul li:hover > ul {
+    display: block;
 }
 
 /* 📌 Footer Adjustments */
