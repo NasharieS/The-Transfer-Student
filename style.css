@@ -107,13 +107,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - NOW CENTERED BELOW ONE-LINER */
+/* 📌 Navigation Container - TABS FLOAT BELOW ONE-LINER */
 .nav-container {
     position: absolute;
-    top: 82vh; /* Moves tabs **directly** under one-liner */
+    top: 70vh; /* Moves tabs **into** the middle of the image */
     left: 50%;
     transform: translateX(-50%);
-    width: fit-content;
+    width: 100%;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -125,21 +125,21 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px; /* Extra space between tabs for that "roomy" feel */
     padding: 0;
     margin: 0;
 }
 
-/* 🔥 Center Align All Tabs */
+/* 🔥 Make Tabs Feel **Floating & Spacious** */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 15px 25px; /* Increased padding for a **bigger, roomier** feel */
+    border-radius: 10px; /* Smoother rounded edges */
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ✅ Fix Misalignment */
+/* ✅ Fix Tab Alignment */
 nav ul li {
     display: inline-block;
     text-align: center;
@@ -149,7 +149,7 @@ nav ul li {
 /* 🚀 Hover Effect */
 nav ul li:hover {
     background: #0077FF;
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* 🎥 Navigation Fade-In */
