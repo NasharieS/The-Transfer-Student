@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /* Prevents side-to-side movement */
+    overflow: hidden;
 }
 
 /* 🔥 Hero Section - Fullscreen on Load */
@@ -54,10 +54,11 @@ body {
 /* 🎥 Keyframes - Smooth Glitch Effect */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
-    25% { background-image: url('hallway2.png'); }
-    50% { background-image: url('hallway3.png'); }
-    75% { background-image: url('hallway4.png'); }
-    100% { background-image: url('hallway1.png'); }
+    20% { background-image: url('hallway2.png'); }
+    40% { background-image: url('hallway3.png'); }
+    60% { background-image: url('hallway4.png'); }
+    80% { background-image: url('hallway1.png'); }
+    100% { background-image: url('hallway2.png'); }
 }
 
 /* Crack Overlay */
@@ -93,7 +94,7 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
-    animation: fadeInText 1.5s ease-in 1.5s forwards;
+    animation: fadeInText 1.5s ease-in 1s forwards;
 }
 
 /* 🔥 One-Liner Styling (Stacked Effect) */
@@ -118,10 +119,16 @@ body {
     display: inline;
 }
 
-/* 📌 Navigation Container - **Centered Below One-Liner** */
+/* 🔥 Fade-In Effect for Title & One-Liner */
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📌 Navigation Container - Tabs Now **PERFECTLY CENTERED** */
 .nav-container {
     position: absolute;
-    top: calc(50% + 120px); /* Ensures correct spacing */
+    top: calc(50% + 100px); /* Ensures it's below the one-liner */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -154,7 +161,7 @@ nav ul li {
     cursor: pointer;
 }
 
-/* ✅ No Underline on Tabs */
+/* ✅ Remove Underline on Links */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
@@ -168,11 +175,12 @@ nav ul li:hover {
     transform: scale(1.1);
 }
 
-/* 📌 Dropdown Menu */
+/* 📌 DROPDOWN MENU */
 nav ul li ul {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
     display: none;
@@ -181,10 +189,10 @@ nav ul li ul {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 📌 Dropdown Items */
+/* 🎭 DROPDOWN MENU ITEMS */
 nav ul li ul li {
     padding: 10px 20px;
-    text-align: left;
+    text-align: center;
     display: block;
 }
 
@@ -196,7 +204,7 @@ nav ul li ul li a {
     display: block;
 }
 
-/* 🎥 Dropdown Appears on Hover */
+/* 🎥 Dropdown Appears When Hovered */
 nav ul li:hover > ul {
     display: block;
 }
