@@ -70,7 +70,7 @@ body {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.1; /* Less opacity for subtle effect */
+    opacity: 0.1;
     mix-blend-mode: screen;
     animation: crackGlitch 6s linear infinite;
 }
@@ -107,13 +107,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - TABS PERFECTLY CENTERED */
+/* 📌 Navigation Container - Centered & Floating */
 .nav-container {
     position: absolute;
-    top: 75vh; /* Moves tabs **into** the middle of the image */
+    top: 72vh; /* Moves tabs to perfect center below the one-liner */
     left: 50%;
     transform: translateX(-50%);
-    width: auto; /* Keeps tabs from stretching too much */
+    width: fit-content; /* Prevents stretching */
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -125,24 +125,27 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px; /* Extra space between tabs for that "roomy" feel */
+    gap: 40px; /* Extra space between tabs */
     padding: 0;
     margin: 0;
 }
 
-/* 🔥 Make Tabs Feel **Floating & Spacious** */
+/* 🔥 Make Tabs Feel Floating & Spacious */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
-    padding: 15px 30px; /* Increased padding for **larger, roomier tabs** */
-    border-radius: 12px; /* Smoother rounded edges */
+    padding: 15px 30px;
+    border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    display: inline-block;
 }
 
 /* ✅ Fix Tab Alignment */
-nav ul li {
-    display: inline-block;
-    text-align: center;
+nav ul li a {
+    text-decoration: none !important; /* 🔥 Removes underline */
+    color: #D3D3D3;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* 🚀 Hover Effect */
