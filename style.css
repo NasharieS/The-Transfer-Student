@@ -17,11 +17,11 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Fullscreen on Load */
+/* 🔥 Hero Section - Starts Covering Full Page */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 100vh;
-    width: 100vw;
+    height: 110vh; /* Covers everything */
+    width: 110vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,9 +32,23 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999; /* Ensures it's fully above footer */
     overflow: hidden;
-    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite steps(1) 3s;
+    animation: heroCover 1s ease-in, heroZoomOut 2.5s ease-out 1.2s forwards, glitchBackground 6s infinite linear 3s;
+}
+
+/* 🎥 Keyframes - Full Page Cover Effect */
+@keyframes heroCover {
+    0% {
+        height: 110vh;
+        width: 110vw;
+        opacity: 1;
+    }
+    100% {
+        height: 110vh;
+        width: 110vw;
+        opacity: 1;
+    }
 }
 
 /* 🎥 Keyframes - Smooth Zoom Out */
@@ -51,7 +65,7 @@ body {
     }
 }
 
-/* 🎥 Keyframes - **Seamless Glitch Effect** */
+/* 🎥 Keyframes - Seamless Glitch Effect */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); transform: translateX(0); }
     10% { background-image: url('hallway2.png'); transform: translateX(-2px) skewX(2deg); filter: hue-rotate(15deg) blur(1px); }
@@ -98,7 +112,7 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
     opacity: 0;
-    animation: fadeInText 1.5s ease-in 1s forwards;
+    animation: fadeInText 1.5s ease-in 1.5s forwards;
 }
 
 /* 🔥 One-Liner Styling (Stacked Effect) */
@@ -126,7 +140,7 @@ body {
 /* 📌 Navigation Container - **Centered Below One-Liner** */
 .nav-container {
     position: absolute;
-    top: calc(50% + 115px); /* Ensures correct spacing */
+    top: calc(50% + 120px); /* Ensures correct spacing */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
