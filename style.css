@@ -125,11 +125,11 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Fully Centered */
+/* 📌 Navigation Container - Shifted Left into Center */
 .nav-container {
     position: absolute;
-    top: calc(50% + 100px); /* Ensures it's directly below the one-liner */
-    left: 50%;
+    top: calc(50% + 100px); /* Ensures it's below the one-liner */
+    left: 25%; /* Shifted left to align properly */
     transform: translateX(-50%);
     width: fit-content;
     text-align: center;
