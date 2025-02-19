@@ -6,45 +6,83 @@
     <title>The Transfer Student</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    
 <body>
 
-    <!-- 🔥 Fullscreen Hero Section (With Glitch Effect) -->
-    <div class="hero">
-        <h1 class="title">The Transfer Student</h1>
-        <h2 class="one-liner">
-            <span>The power to witness the past. The burden of seeing the future.</span>  
-            <span>A fight for education she never saw coming.</span>
-        </h2>
-        
-        <!-- 📌 Navigation Tabs (Now Fully Centered & With Working Dropdowns) -->
-        <nav class="nav-container">
-            <ul>
-                <li>About
-                    <ul>
-                        <li><a href="synopsis.html">Synopsis</a></li>
-                        <li><a href="world-building.html">World Building</a></li>
-                    </ul>
-                </li>
-                <li>Writing Process
-                    <ul>
-                        <li><a href="behind-the-story.html">Behind the Story</a></li>
-                        <li><a href="road-to-publication.html">Road to Publication</a></li>
-                    </ul>
-                </li>
-                <li>Take Action
-                    <ul>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="get-involved.html">Get Involved</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <!-- 🔥 Hero Wrapper (Now Covers Full Page) -->
+    <div class="hero-wrapper">
+        <div class="hero">
+            <h1 class="title">The Transfer Student</h1>
+            <h2 class="one-liner">
+                <span>The power to witness the past. The burden of seeing the future.</span>  
+                <span>A fight for education she never saw coming.</span>
+            </h2>
+            
+            <!-- 📌 Navigation Tabs (Now Fully Centered & With Working Dropdowns) -->
+            <nav class="nav-container">
+                <ul>
+                    <li>About
+                        <ul>
+                            <li><a href="synopsis.html">Synopsis</a></li>
+                            <li><a href="world-building.html">World Building</a></li>
+                        </ul>
+                    </li>
+                    <li>Writing Process
+                        <ul>
+                            <li><a href="behind-the-story.html">Behind the Story</a></li>
+                            <li><a href="road-to-publication.html">Road to Publication</a></li>
+                        </ul>
+                    </li>
+                    <li>Take Action
+                        <ul>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="get-involved.html">Get Involved</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
-    <!-- 📌 Footer -->
+    <!-- 📌 Footer (Now separate from `.container`) -->
     <footer>
         <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
     </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".nav-container ul li");
+
+        dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevents dropdown from closing immediately
+                
+                // Close other open dropdowns
+                document.querySelectorAll(".nav-container ul li ul").forEach(menu => {
+                    if (menu !== this.querySelector("ul")) {
+                        menu.style.display = "none";
+                    }
+                });
+
+                // Toggle current dropdown
+                let submenu = this.querySelector("ul");
+                if (submenu) {
+                    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+                }
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function (event) {
+            let isClickInside = [...dropdowns].some(dropdown => dropdown.contains(event.target));
+            if (!isClickInside) {
+                document.querySelectorAll(".nav-container ul li ul").forEach(menu => {
+                    menu.style.display = "none";
+                });
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
