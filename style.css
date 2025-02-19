@@ -107,7 +107,7 @@ body {
     max-width: 900px;
     line-height: 1.5;
     animation: fadeInText 2s ease-in 1.8s forwards;
-    margin-bottom: 20px; /* Spacing between the one-liner and tabs */
+    margin-bottom: 40px; /* Increased spacing between one-liner & tabs */
 }
 
 /* Stacking Sentences */
@@ -125,10 +125,10 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Directly Under One-Liner */
+/* 📌 Navigation Container - **Tabs DIRECTLY Under One-Liner & Perfectly Centered** */
 .nav-container {
     position: absolute;
-    top: 63vh; /* Moves tabs directly under the one-liner */
+    top: calc(50% + 100px); /* Moves tabs **directly** under one-liner */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -143,7 +143,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px; /* Balanced spacing between tabs */
+    gap: 40px;
     padding: 0;
     margin: 0;
 }
