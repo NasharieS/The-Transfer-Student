@@ -17,10 +17,10 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Fullscreen on Load */
+/* 🔥 Hero Section - Now Starts Fully Covering Everything */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 140vh; /* Ensures full coverage */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -37,28 +37,27 @@ body {
     animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Smooth Zoom Out */
+/* 🎥 Keyframes - Ensure Hero Covers Footer Before Zooming */
 @keyframes heroZoomOut {
     0% {
-        height: 110vh;
+        height: 140vh; /* Covers everything */
         width: 110vw;
         opacity: 1;
     }
     100% {
-        height: 90vh;
+        height: 90vh; /* Zooms out naturally */
         width: 100%;
         position: relative;
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect */
+/* 🎥 Keyframes - Smoother Image Morphing */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); }
-    40% { background-image: url('hallway3.png'); }
-    60% { background-image: url('hallway4.png'); }
-    80% { background-image: url('hallway1.png'); }
-    100% { background-image: url('hallway2.png'); }
+    0% { background-image: url('hallway1.png'); opacity: 1; transform: scale(1.02); }
+    25% { background-image: url('hallway2.png'); opacity: 0.95; transform: scale(1); }
+    50% { background-image: url('hallway3.png'); opacity: 1; transform: scale(1.02); }
+    75% { background-image: url('hallway4.png'); opacity: 0.95; transform: scale(1); }
+    100% { background-image: url('hallway1.png'); opacity: 1; transform: scale(1.02); }
 }
 
 /* Crack Overlay */
@@ -107,13 +106,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - TABS PERFECTLY CENTERED */
+/* 📌 Navigation Container - Tabs Now Fully Centered */
 .nav-container {
     position: absolute;
-    top: 75vh; /* Moves tabs **into** the middle of the image */
+    top: calc(50% + 120px); /* Ensures tabs are under the one-liner */
     left: 50%;
     transform: translateX(-50%);
-    width: auto; /* Keeps tabs from stretching too much */
+    width: auto; /* Prevents stretching */
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -124,8 +123,8 @@ body {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Extra space between tabs for that "roomy" feel */
+    justify-content: center; /* Ensures tabs are in the middle */
+    gap: 25px;
     padding: 0;
     margin: 0;
 }
