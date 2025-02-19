@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevents unwanted scrolling */
+    overflow: hidden;
 }
 
 /* 🔥 Hero Section - Fullscreen on Load */
@@ -37,7 +37,7 @@ body {
     animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Slow Zoom Out Effect */
+/* 🎥 Keyframes - Smooth Zoom Out */
 @keyframes heroZoomOut {
     0% {
         height: 110vh;
@@ -51,7 +51,7 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect (No Abrupt Cuts, No Black/White Filter) */
+/* 🎥 Keyframes - Glitch Effect */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
     20% { background-image: url('hallway2.png'); }
@@ -61,7 +61,7 @@ body {
     100% { background-image: url('hallway2.png'); }
 }
 
-/* Crack Overlay - Continuous Movement */
+/* Crack Overlay */
 .hero::after {
     content: "";
     position: absolute;
@@ -70,7 +70,7 @@ body {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.15; /* Less visible, no black & white effect */
+    opacity: 0.15;
     mix-blend-mode: screen;
     animation: crackGlitch 6s linear infinite;
 }
@@ -107,10 +107,10 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Are Now Perfectly Centered */
+/* 📌 Navigation Container - NOW CENTERED BELOW ONE-LINER */
 .nav-container {
     position: absolute;
-    top: 85vh; /* Moves tabs **below** the one-liner on the image */
+    top: 82vh; /* Moves tabs **directly** under one-liner */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -130,6 +130,7 @@ nav ul {
     margin: 0;
 }
 
+/* 🔥 Center Align All Tabs */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
     padding: 12px 20px;
@@ -138,14 +139,7 @@ nav ul li {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 🔥 Center Align All Tabs (Fixes Spacing Issue) */
-nav ul {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Fix the misaligned home, characters, and cities tabs */
+/* ✅ Fix Misalignment */
 nav ul li {
     display: inline-block;
     text-align: center;
