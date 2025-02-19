@@ -106,17 +106,17 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Appear Below One-Liner */
+/* 📌 Navigation Container - Tabs Properly Placed Below One-Liner */
 .nav-container {
     position: absolute;
-    top: 75vh; /* Adjust this value to move the tabs up */
+    top: 82vh; /* Adjusted to lower the tabs slightly */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
-    z-index: 1000; /* Ensures tabs are on top */
+    z-index: 1000; /* Ensures tabs are above other elements */
 }
 
 /* 📌 Navigation Button Styles */
