@@ -17,50 +17,51 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Fully Covers Footer Before Zooming Out */
+/* 🔥 Hero Section - Fullscreen on Load */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 140vh; /* Ensures full coverage */
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #FFF;
+    color: #D3D3D3;
     padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     overflow: hidden;
-    animation: heroZoomOut 3s ease-out forwards, glitchBackground 6s infinite linear 3s;
+    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Ensure Hero Covers Footer Before Zooming */
+/* 🎥 Keyframes - Smooth Zoom Out */
 @keyframes heroZoomOut {
     0% {
-        height: 140vh; /* Covers everything */
+        height: 110vh;
         width: 110vw;
         opacity: 1;
     }
     100% {
-        height: 90vh; /* Zooms out naturally */
+        height: 90vh;
         width: 100%;
         position: relative;
     }
 }
 
-/* 🎥 Keyframes - Smoother Image Morphing */
+/* 🎥 Keyframes - Smooth Glitch Effect */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); opacity: 1; transform: scale(1.02); }
-    25% { background-image: url('hallway2.png'); opacity: 0.95; transform: scale(1); }
-    50% { background-image: url('hallway3.png'); opacity: 1; transform: scale(1.02); }
-    75% { background-image: url('hallway4.png'); opacity: 0.95; transform: scale(1); }
-    100% { background-image: url('hallway1.png'); opacity: 1; transform: scale(1.02); }
+    0% { background-image: url('hallway1.png'); }
+    20% { background-image: url('hallway2.png'); }
+    40% { background-image: url('hallway3.png'); }
+    60% { background-image: url('hallway4.png'); }
+    80% { background-image: url('hallway1.png'); }
+    100% { background-image: url('hallway2.png'); }
 }
 
-/* 📌 Crack Overlay - Ensure Visibility */
+/* Crack Overlay */
 .hero::after {
     content: "";
     position: absolute;
@@ -69,46 +70,35 @@ body {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.1; /* Adjusted for subtle effect */
+    opacity: 0.1; /* Less opacity for subtle effect */
     mix-blend-mode: screen;
-    z-index: 2;
     animation: crackGlitch 6s linear infinite;
 }
 
-/* ✨ Title - Make "The Transfer Student" Pop More */
+/* 🎭 Keyframes for Crack Overlay */
+@keyframes crackGlitch {
+    0% { opacity: 0.08; transform: scale(1); }
+    50% { opacity: 0.15; transform: scale(1.01) rotate(0.2deg); }
+    100% { opacity: 0.08; transform: scale(1); }
+}
+
+/* ✨ Title & One-Liner Styling */
 .hero h1 {
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-align: center;
-    color: #FFF;
-    text-shadow: 4px 4px 12px rgba(255, 255, 255, 0.7), -4px -4px 12px rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
     opacity: 0;
     animation: fadeInText 1.5s ease-in 1s forwards;
 }
 
-/* 🔥 One-Liner Styling (Stacked Effect) */
 .one-liner {
     font-size: 28px;
     text-align: center;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     opacity: 0;
-    max-width: 900px;
-    line-height: 1.5;
     animation: fadeInText 2s ease-in 1.8s forwards;
-    margin-bottom: 40px;
-}
-
-/* Stacking Sentences */
-.one-liner span {
-    display: block;
-}
-
-.one-liner span:first-child {
-    display: inline;
 }
 
 /* 🔥 Fade-In Effect for Title & One-Liner */
@@ -117,13 +107,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Now Fully Centered */
+/* 📌 Navigation Container - TABS PERFECTLY CENTERED */
 .nav-container {
     position: absolute;
-    top: calc(50% + 120px); /* Ensures tabs are under the one-liner */
+    top: 75vh; /* Moves tabs **into** the middle of the image */
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
+    width: auto; /* Keeps tabs from stretching too much */
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -135,28 +125,24 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 40px; /* Extra space between tabs for that "roomy" feel */
     padding: 0;
     margin: 0;
 }
 
-/* 🔥 Floating, Spacious Tabs */
+/* 🔥 Make Tabs Feel **Floating & Spacious** */
 nav ul li {
     background: rgba(92, 64, 51, 0.9);
-    padding: 12px 24px;
-    border-radius: 12px;
+    padding: 15px 30px; /* Increased padding for **larger, roomier tabs** */
+    border-radius: 12px; /* Smoother rounded edges */
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    cursor: pointer;
 }
 
-/* ✅ Remove Underline on Links */
-nav ul li a {
-    text-decoration: none !important;
-    color: #D3D3D3;
-    font-size: 18px;
-    font-weight: bold;
+/* ✅ Fix Tab Alignment */
+nav ul li {
+    display: inline-block;
+    text-align: center;
 }
 
 /* 🚀 Hover Effect */
@@ -165,37 +151,10 @@ nav ul li:hover {
     transform: scale(1.1);
 }
 
-/* 📌 Dropdown Menu */
-nav ul li ul {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    background: rgba(92, 64, 51, 0.95);
-    border-radius: 8px;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* 🎭 Dropdown Items */
-nav ul li ul li {
-    padding: 10px 20px;
-    text-align: left;
-    display: block;
-}
-
-/* ✅ Make Dropdown Items Clickable */
-nav ul li ul li a {
-    color: #D3D3D3;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* 🎥 Dropdown Appears When Hovered */
-nav ul li:hover > ul {
-    display: block;
+/* 🎥 Navigation Fade-In */
+@keyframes fadeInNav {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* 📌 Footer Adjustments */
