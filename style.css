@@ -14,14 +14,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevents side-to-side movement */
 }
 
-/* 🔥 Hero Section - Starts Covering Full Page */
+/* 🔥 Hero Section - Fullscreen on Load */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 110vh; /* Covers everything */
-    width: 110vw;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,23 +32,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999; /* Ensures it's fully above footer */
+    z-index: 999;
     overflow: hidden;
-    animation: heroCover 1s ease-in, heroZoomOut 2.5s ease-out 1.2s forwards, glitchBackground 6s infinite linear 3s;
-}
-
-/* 🎥 Keyframes - Full Page Cover Effect */
-@keyframes heroCover {
-    0% {
-        height: 110vh;
-        width: 110vw;
-        opacity: 1;
-    }
-    100% {
-        height: 110vh;
-        width: 110vw;
-        opacity: 1;
-    }
+    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
 /* 🎥 Keyframes - Smooth Zoom Out */
@@ -65,18 +51,13 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Seamless Glitch Effect */
+/* 🎥 Keyframes - Smooth Glitch Effect */
 @keyframes glitchBackground {
-    0% { background-image: url('hallway1.png'); transform: translateX(0); }
-    10% { background-image: url('hallway2.png'); transform: translateX(-2px) skewX(2deg); filter: hue-rotate(15deg) blur(1px); }
-    20% { background-image: url('hallway3.png'); transform: translateX(2px) skewX(-2deg); filter: contrast(1.2) brightness(1.1); }
-    30% { background-image: url('hallway4.png'); transform: translateY(1px) skewY(1deg); filter: hue-rotate(-10deg); }
-    40% { background-image: url('hallway1.png'); filter: grayscale(0.9); }
-    50% { background-image: url('hallway2.png'); transform: scale(1.02); filter: contrast(1.4); }
-    60% { background-image: url('hallway3.png'); transform: translateX(-3px) skewX(3deg); }
-    70% { background-image: url('hallway4.png'); filter: hue-rotate(10deg) blur(1px); }
-    80% { background-image: url('hallway1.png'); transform: translateY(-2px) skewY(-2deg); }
-    100% { background-image: url('hallway1.png'); transform: translateX(0); }
+    0% { background-image: url('hallway1.png'); }
+    25% { background-image: url('hallway2.png'); }
+    50% { background-image: url('hallway3.png'); }
+    75% { background-image: url('hallway4.png'); }
+    100% { background-image: url('hallway1.png'); }
 }
 
 /* Crack Overlay */
@@ -163,12 +144,14 @@ nav ul {
 
 /* 🔥 Floating, Spacious Tabs */
 nav ul li {
+    position: relative;
     background: rgba(92, 64, 51, 0.9);
     padding: 12px 24px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     display: inline-block;
+    cursor: pointer;
 }
 
 /* ✅ No Underline on Tabs */
@@ -183,6 +166,39 @@ nav ul li a {
 nav ul li:hover {
     background: #0077FF;
     transform: scale(1.1);
+}
+
+/* 📌 Dropdown Menu */
+nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 📌 Dropdown Items */
+nav ul li ul li {
+    padding: 10px 20px;
+    text-align: left;
+    display: block;
+}
+
+/* ✅ Make Dropdown Items Clickable */
+nav ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears on Hover */
+nav ul li:hover > ul {
+    display: block;
 }
 
 /* 🎥 Navigation Fade-In */
