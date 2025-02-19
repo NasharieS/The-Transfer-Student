@@ -125,14 +125,13 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - **Tabs Directly Below One-Liner & Perfectly Centered** */
+/* 📌 Navigation Container - Fully Centered */
 .nav-container {
     position: absolute;
-    top: calc(50% + 110px); /* Adjusted to lower tabs under one-liner */
+    top: calc(50% + 100px); /* Ensures it's directly below the one-liner */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 700px; /* Prevents tabs from spreading too wide */
+    width: fit-content;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -144,23 +143,25 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Reduced gap for better alignment */
+    gap: 30px;
     padding: 0;
     margin: 0 auto;
     width: fit-content;
 }
 
-/* 🔥 Floating, Spacious Tabs */
+/* 🔥 Main Tabs */
 nav ul li {
+    position: relative;
     background: rgba(92, 64, 51, 0.9);
     padding: 12px 24px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     display: inline-block;
+    cursor: pointer;
 }
 
-/* ✅ No Underline on Tabs */
+/* ✅ Remove Underline on Links */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
@@ -172,6 +173,39 @@ nav ul li a {
 nav ul li:hover {
     background: #0077FF;
     transform: scale(1.1);
+}
+
+/* 📌 DROPDOWN MENU */
+nav ul li ul {
+    position: absolute;
+    top: 45px; /* Makes dropdown appear below the main tab */
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 DROPDOWN MENU ITEMS */
+nav ul li ul li {
+    padding: 10px 20px;
+    text-align: left;
+    display: block;
+}
+
+/* ✅ Make Dropdown Items Clickable */
+nav ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears When Hovered */
+nav ul li:hover > ul {
+    display: block;
 }
 
 /* 🎥 Navigation Fade-In */
