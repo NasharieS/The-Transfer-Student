@@ -17,10 +17,10 @@ body {
     overflow: hidden;
 }
 
-/* 🔥 Hero Section - Fullscreen on Load */
+/* 🔥 Hero Section - Covers Full Screen on Load */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 100vh; /* Covers everything including the footer */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -33,15 +33,14 @@ body {
     top: 0;
     left: 0;
     z-index: 999;
-    overflow: hidden;
-    animation: heroFullCover 1.5s ease-out forwards, glitchBackground 6s infinite linear 2s;
+    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
-/* 🎥 Keyframes - Full Cover THEN Zoom Out */
-@keyframes heroFullCover {
+/* 🎥 Keyframes - Zoom Out While Covering Footer */
+@keyframes heroZoomOut {
     0% {
-        height: 100vh;
-        width: 100vw;
+        height: 120vh; /* Starts even larger to cover the footer */
+        width: 110vw;
         opacity: 1;
     }
     100% {
@@ -51,34 +50,14 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth & Seamless Glitch Effect */
+/* 🎥 Keyframes - Smooth Glitch Effect (No Harsh Flashes) */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
-    25% { background-image: url('hallway2.png'); filter: hue-rotate(5deg) blur(1px); }
-    50% { background-image: url('hallway3.png'); filter: contrast(1.1) brightness(1.05); }
-    75% { background-image: url('hallway4.png'); filter: hue-rotate(-5deg) brightness(0.98); }
-    100% { background-image: url('hallway1.png'); }
-}
-
-/* Crack Overlay */
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('crack-overlay.png') repeat center center;
-    opacity: 0.08;
-    mix-blend-mode: screen;
-    animation: crackGlitch 6s linear infinite;
-}
-
-/* 🎭 Keyframes for Crack Overlay */
-@keyframes crackGlitch {
-    0% { opacity: 0.05; transform: scale(1); }
-    50% { opacity: 0.12; transform: scale(1.01) rotate(0.2deg); }
-    100% { opacity: 0.05; transform: scale(1); }
+    20% { background-image: url('hallway2.png'); }
+    40% { background-image: url('hallway3.png'); }
+    60% { background-image: url('hallway4.png'); }
+    80% { background-image: url('hallway1.png'); }
+    100% { background-image: url('hallway2.png'); }
 }
 
 /* ✨ Title - Make "The Transfer Student" Pop More */
@@ -91,7 +70,6 @@ body {
     color: #FFF;
     text-shadow: 4px 4px 12px rgba(255, 255, 255, 0.7), -4px -4px 12px rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
-    border-radius: 10px;
     opacity: 0;
     animation: fadeInText 1.5s ease-in 1s forwards;
 }
@@ -127,7 +105,7 @@ body {
 /* 📌 Navigation Container - **Centered Under One-Liner** */
 .nav-container {
     position: absolute;
-    top: calc(50% + 100px); /* Ensures it's below the one-liner */
+    top: calc(50% + 110px); /* Ensures it's below the one-liner */
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
@@ -150,17 +128,15 @@ nav ul {
 
 /* 🔥 Floating, Spacious Tabs */
 nav ul li {
-    position: relative;
     background: rgba(92, 64, 51, 0.9);
     padding: 12px 24px;
     border-radius: 12px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     display: inline-block;
-    cursor: pointer;
 }
 
-/* ✅ Remove Underline on Links */
+/* ✅ No Underline on Tabs */
 nav ul li a {
     text-decoration: none !important;
     color: #D3D3D3;
@@ -172,46 +148,6 @@ nav ul li a {
 nav ul li:hover {
     background: #0077FF;
     transform: scale(1.1);
-}
-
-/* 📌 DROPDOWN MENU */
-nav ul li ul {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(92, 64, 51, 0.95);
-    border-radius: 8px;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* 🎭 DROPDOWN MENU ITEMS */
-nav ul li ul li {
-    padding: 10px 20px;
-    text-align: center;
-    display: block;
-}
-
-/* ✅ Make Dropdown Items Clickable */
-nav ul li ul li a {
-    color: #D3D3D3;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* 🎥 Dropdown Appears When Hovered */
-nav ul li:hover > ul {
-    display: block;
-}
-
-/* 🎥 Navigation Fade-In */
-@keyframes fadeInNav {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* 📌 Footer Adjustments */
