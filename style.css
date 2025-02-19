@@ -125,12 +125,12 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Fully Centered Below One-Liner */
+/* 📌 Navigation Container - Perfectly Centered & Adjusted */
 .nav-container {
     position: absolute;
     top: calc(50% + 120px); /* Ensures it's properly below the one-liner */
-    left: 50%; /* Centers it properly */
-    transform: translateX(-50%); /* Ensures it's exactly in the middle */
+    left: 52%; /* Nudged slightly to the right */
+    transform: translateX(-50%); /* Keeps it centered */
     width: fit-content; /* Prevents spreading too wide */
     text-align: center;
     opacity: 0;
