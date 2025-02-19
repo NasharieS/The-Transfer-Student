@@ -51,12 +51,12 @@ body {
     }
 }
 
-/* 🎥 Keyframes - Smooth Glitch Effect (No Abrupt Cuts) */
+/* 🎥 Keyframes - Smooth Glitch Effect (No Abrupt Cuts, No Black/White Filter) */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); filter: hue-rotate(8deg) blur(1px); }
-    40% { background-image: url('hallway3.png'); filter: contrast(1.1) brightness(1.05); }
-    60% { background-image: url('hallway4.png'); filter: hue-rotate(-8deg); }
+    20% { background-image: url('hallway2.png'); }
+    40% { background-image: url('hallway3.png'); }
+    60% { background-image: url('hallway4.png'); }
     80% { background-image: url('hallway1.png'); }
     100% { background-image: url('hallway2.png'); }
 }
@@ -70,7 +70,7 @@ body {
     width: 100%;
     height: 100%;
     background: url('crack-overlay.png') repeat center center;
-    opacity: 0.2;
+    opacity: 0.15; /* Less visible, no black & white effect */
     mix-blend-mode: screen;
     animation: crackGlitch 6s linear infinite;
 }
@@ -78,8 +78,8 @@ body {
 /* 🎭 Keyframes for Crack Overlay */
 @keyframes crackGlitch {
     0% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.01) rotate(0.2deg); }
-    100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.2; transform: scale(1.01) rotate(0.2deg); }
+    100% { opacity: 0.1; transform: scale(1); }
 }
 
 /* ✨ Title & One-Liner Styling */
@@ -113,7 +113,7 @@ body {
     top: 85vh; /* Moves tabs **below** the one-liner on the image */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: fit-content;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
@@ -138,11 +138,18 @@ nav ul li {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #D3D3D3;
-    font-size: 18px;
-    font-weight: bold;
+/* 🔥 Center Align All Tabs (Fixes Spacing Issue) */
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Fix the misaligned home, characters, and cities tabs */
+nav ul li {
+    display: inline-block;
+    text-align: center;
+    flex: 1; /* Ensures even spacing */
 }
 
 /* 🚀 Hover Effect */
