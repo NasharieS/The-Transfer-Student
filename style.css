@@ -20,7 +20,7 @@ body {
 /* 🔥 Hero Section - Fullscreen on Load */
 .hero {
     background: url('hallway1.png') no-repeat center center/cover;
-    height: 100vh; /* Fullscreen effect */
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -32,32 +32,32 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     overflow: hidden;
-    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 5s infinite steps(1) 2s;
+    animation: heroZoomOut 2.5s ease-out forwards, glitchBackground 6s infinite linear 3s;
 }
 
 /* 🎥 Keyframes - Slow Zoom Out Effect */
 @keyframes heroZoomOut {
     0% {
-        height: 110vh; /* Ensures footer is hidden */
+        height: 110vh;
         width: 110vw;
         opacity: 1;
     }
     100% {
-        height: 90vh; /* Shrinks to leave space for text */
+        height: 90vh;
         width: 100%;
         position: relative;
     }
 }
 
-/* 🎥 Keyframes - Maintain Glitch Effect Every 5 Sec */
+/* 🎥 Keyframes - Smooth Glitch Effect (No Abrupt Cuts) */
 @keyframes glitchBackground {
     0% { background-image: url('hallway1.png'); }
-    20% { background-image: url('hallway2.png'); filter: hue-rotate(10deg) blur(0.8px); }
-    40% { background-image: url('hallway3.png'); filter: contrast(1.15) brightness(1.05); }
-    60% { background-image: url('hallway4.png'); filter: grayscale(0.9); }
-    80% { background-image: url('hallway1.png'); transform: scale(1.01); }
+    20% { background-image: url('hallway2.png'); filter: hue-rotate(8deg) blur(1px); }
+    40% { background-image: url('hallway3.png'); filter: contrast(1.1) brightness(1.05); }
+    60% { background-image: url('hallway4.png'); filter: hue-rotate(-8deg); }
+    80% { background-image: url('hallway1.png'); }
     100% { background-image: url('hallway2.png'); }
 }
 
@@ -72,7 +72,7 @@ body {
     background: url('crack-overlay.png') repeat center center;
     opacity: 0.2;
     mix-blend-mode: screen;
-    animation: crackGlitch 5s linear infinite;
+    animation: crackGlitch 6s linear infinite;
 }
 
 /* 🎭 Keyframes for Crack Overlay */
@@ -107,17 +107,17 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Navigation Container - Tabs Properly Placed Below One-Liner */
+/* 📌 Navigation Container - Tabs Are Now Perfectly Centered */
 .nav-container {
     position: absolute;
-    top: 83vh;  /* Adjusted so tabs appear under the one-liner */
+    top: 85vh; /* Moves tabs **below** the one-liner on the image */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
     opacity: 0;
     animation: fadeInNav 2s ease-in 3s forwards;
-    z-index: 1000; /* Ensures tabs are clickable */
+    z-index: 1000;
 }
 
 /* 📌 Navigation Button Styles */
@@ -157,7 +157,7 @@ nav ul li:hover {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 📌 Footer Adjustments - **Fully Meets Image** */
+/* 📌 Footer Adjustments */
 footer {
     background: #5C4033;
     color: #D3D3D3;
@@ -167,6 +167,6 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
-    margin: 0; /* Removed spacing to fully meet image */
+    margin: 0;
     z-index: 999;
 }
