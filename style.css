@@ -166,6 +166,6 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
-    margin: 0; /* Removed spacing to meet image */
+    margin: -1; /* Removed spacing to meet image */
     z-index: 999;
 }
