@@ -20,7 +20,7 @@ body.synopsis-page {
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between nav, search, and icons */
+    justify-content: space-between;
     background: #5C4033;
     padding: 15px 30px;
     position: fixed;
@@ -45,6 +45,7 @@ body.synopsis-page {
     margin: 0;
 }
 
+/* ✅ Consistent Font, Color & Size for ALL Tabs */
 .nav-container ul li {
     position: relative;
     background: none;
@@ -53,11 +54,10 @@ body.synopsis-page {
     transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Consistent Font for Tabs (Matches Home Page) */
 .nav-container ul li a {
     text-decoration: none !important;
-    color: #D3D3D3 !important; /* Same color across all tabs */
-    font-size: 18px !important; /* Same font size for consistency */
+    color: #D3D3D3 !important; /* Matches Home */
+    font-size: 18px !important; /* Ensures same size */
     font-weight: bold !important;
 }
 
