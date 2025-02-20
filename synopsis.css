@@ -7,8 +7,8 @@
 }
 
 /* Body */
-body {
-    background: white;
+body.synopsis-page {
+    background: #fff; /* Clean white background */
     color: #0D1B2A;
     line-height: 1.6;
     min-height: 100vh;
@@ -16,120 +16,175 @@ body {
     flex-direction: column;
 }
 
-/* 🔥 Top Header - Fixed Navigation */
+/* 🔥 Top Header */
 .top-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Space between nav, search, and icons */
     background: #5C4033;
-    padding: 15px 40px;
+    padding: 15px 30px;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 📌 Navigation Tabs */
+/* 📌 Navigation Tabs (Inside Header) */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
 .nav-container ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-container ul li {
     position: relative;
-    background: transparent;
-    padding: 12px 20px;
+    background: none;
+    padding: 10px 15px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
 
+/* ✅ Remove Underline on Links */
 .nav-container ul li a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #D3D3D3;
     font-size: 18px;
     font-weight: bold;
 }
 
-/* 🔍 Search Bar */
-.search-bar input {
-    padding: 8px;
-    border: none;
-    border-radius: 6px;
+/* 🚀 Hover Effect */
+.nav-container ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 📌 Dropdown Menu */
+.nav-container ul li ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Dropdown Items */
+.nav-container ul li ul li {
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-container ul li ul li a {
+    color: #D3D3D3;
     font-size: 16px;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears Without Lag */
+.nav-container ul li:hover > ul {
+    display: block;
+}
+
+/* 🔍 Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
 }
 
 .search-bar button {
-    background: #0077FF;
-    color: white;
     border: none;
-    padding: 8px 10px;
+    background: none;
     cursor: pointer;
-    border-radius: 6px;
-}
-
-/* 📌 Contact Icons */
-.contact-icons a {
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 15px;
+    font-size: 18px;
     color: #D3D3D3;
 }
 
-/* 🔹 Divider Below Header */
+/* 📌 Contact Icons */
+.contact-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-icons a {
+    color: #D3D3D3;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* 🔹 Divider Below the Header */
 .divider {
     border: none;
-    height: 3px;
-    background: #D3D3D3;
-    margin-top: 65px; /* Pushes the page content down */
+    border-top: 2px solid #C19A6B;
+    margin: 75px 0 20px 0;
+    width: 100%;
 }
 
 /* 📌 Page Content */
 .synopsis-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 60px auto;
-    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* 🔥 Page Title */
+/* 🏷️ Page Title */
 .page-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-/* 📌 Layout: Split Content */
+/* 📖 Synopsis Layout */
 .synopsis-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-/* 📌 Left Side: Synopsis Text */
+/* 📄 Left Side: Text */
 .synopsis-text {
-    flex: 1;
-    padding-right: 40px;
+    width: 55%;
+    text-align: left;
     font-size: 18px;
     line-height: 1.8;
 }
 
-/* 📌 Right Side: Book Cover */
+/* 📕 Right Side: Book Cover & Sneak Peek */
 .synopsis-image {
-    flex: 1;
+    width: 40%;
     text-align: center;
 }
 
 .synopsis-image img {
-    width: 280px;
-    height: auto;
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 📌 CTA Button */
 .cta-button {
     display: inline-block;
     background: #C19A6B;
@@ -149,13 +204,15 @@ body {
     transform: scale(1.05);
 }
 
-/* 📌 Footer */
+/* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
 footer {
     background: #5C4033;
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    width: 100%;
     position: fixed;
     bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    z-index: 999;
 }
