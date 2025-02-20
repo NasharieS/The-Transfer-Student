@@ -36,34 +36,39 @@ body.synopsis-page {
     display: flex;
     align-items: center;
     flex-grow: 1;
-} 
-
-/* 🔥 Ensure ALL Parent Tabs Are the Same Height */
-.nav-container ul > li {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 48px !important;  /* Matches all tabs to same height */
-    line-height: 48px !important; /* Ensures text is vertically centered */
-    padding: 0 20px !important; /* Keeps spacing even */
 }
 
-/* ✅ Force Dropdown Menus to Stay in Place */
-.nav-container ul li ul {
-    top: 48px !important; /* Ensures dropdowns appear right below parent tab */
-}
-
-/* ✅ Absolutely Force Uniform Text Styling */
+/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
 .nav-container ul > li > a {
-    font-size: 18px !important;  /* Exact same size for all tabs */
-    color: #D3D3D3 !important;  /* Ensures uniform color */
+    font-size: 18px !important;  /* Forces same size */
+    color: #D3D3D3 !important;  /* Matches Home & About */
     font-weight: bold !important;
     text-decoration: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 100% !important; /* Makes sure everything aligns perfectly */
-    padding: 0 18px !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
+}
+
+/* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
+.nav-container ul li,
+.nav-container ul li a {
+    position: relative;
+    padding: 12px 18px !important;  /* Uniform padding */
+    border-radius: 8px !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-size: 18px !important;  /* Ensures all tabs are the same size */
+    font-weight: bold !important;
+    display: inline-block !important;
+}
+
+/* 🔹 Active Tab Styling */
+.nav-container ul li.active-tab a {
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: rgba(255, 255, 255, 0.2) !important; /* Highlights active tab */
+    border-radius: 8px !important;
+    padding: 12px 18px !important;
 }
 
 /* 🚀 Hover Effect - Consistent Across All Tabs */
@@ -71,36 +76,36 @@ body.synopsis-page {
     background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* 🔽 Dropdown Menu (Still Works Properly) */
+/* 🔽 Dropdown Menu */
 .nav-container ul li ul {
-    position: absolute !important;
-    top: 100% !important; /* Ensures dropdown is right below parent tab */
-    left: 0 !important;
-    background: rgba(92, 64, 51, 0.95) !important;
-    border-radius: 8px !important;
-    display: none !important;
-    padding: 10px 0 !important;
-    min-width: 200px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+    position: absolute;
+    top: 100%; /* Ensures dropdown is right below parent tab */
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* 🎭 Dropdown Items */
 .nav-container ul li ul li {
-    padding: 10px 20px !important;
-    display: block !important;
+    padding: 10px 20px;
+    display: block;
 }
 
 /* ✅ Dropdown Items Styling */
 .nav-container ul li ul li a {
-    color: #D3D3D3 !important;
-    font-size: 16px !important;
-    display: block !important;
+    color: #D3D3D3;
+    font-size: 16px;
+    display: block;
 }
 
 /* 🎥 Dropdown Appears Without Lag */
 .nav-container ul li:hover > ul {
-    display: block !important;
-    opacity: 1 !important;
+    display: block;
+    opacity: 1;
 }
 
 /* 🔍 Search Bar - Now Closer to Icons & Input is White */
