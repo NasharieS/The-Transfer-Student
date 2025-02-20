@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: white;
+    color: #0D1B2A;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🔥 Top Header - Fixed Navigation */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5C4033;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 📌 Navigation Tabs */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-container ul li {
+    position: relative;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #D3D3D3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 🔍 Search Bar */
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: #0077FF;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* 📌 Contact Icons */
+.contact-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 15px;
+    color: #D3D3D3;
+}
+
+/* 🔹 Divider Below Header */
+.divider {
+    border: none;
+    height: 3px;
+    background: #D3D3D3;
+    margin-top: 65px; /* Pushes the page content down */
+}
+
+/* 📌 Page Content */
+.synopsis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+    width: 80%;
+}
+
+/* 🔥 Page Title */
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* 📌 Layout: Split Content */
+.synopsis-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* 📌 Left Side: Synopsis Text */
+.synopsis-text {
+    flex: 1;
+    padding-right: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* 📌 Right Side: Book Cover */
+.synopsis-image {
+    flex: 1;
+    text-align: center;
+}
+
+.synopsis-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 📌 CTA Button */
+.cta-button {
+    display: inline-block;
+    background: #C19A6B;
+    color: #0D1B2A;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #0077FF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* 📌 Footer */
+footer {
+    background: #5C4033;
+    color: #D3D3D3;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
