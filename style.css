@@ -225,9 +225,20 @@ footer {
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    position: fixed; /* Change from absolute to fixed */
-    bottom: 0;
+    position: fixed; /* Keeps it at the bottom */
+    bottom: -100px; /* Initially hidden off-screen */
     width: 100%;
     font-size: 14px;
     z-index: 999;
+    animation: slideUpFooter 3s ease-out forwards 3s; /* Delayed entrance */
+}
+
+/* 🎥 Footer Slides Up to Meet Image */
+@keyframes slideUpFooter {
+    0% {
+        bottom: -100px; /* Starts hidden */
+    }
+    100% {
+        bottom: 0; /* Moves into place */
+    }
 }
