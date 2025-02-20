@@ -125,15 +125,15 @@ body {
 
 /* 📌 Navigation Container - Centered Under One-Liner */
 .nav-container {
-    position: absolute !important;
-    top: calc(50% + 130px) !important; /* Ensures it's below the one-liner */
-    left: 50% !important; /* Centers it perfectly */
-    transform: translateX(-50%) !important; /* Forces absolute centering */
-    width: auto !important;
-    text-align: center !important;
-    opacity: 0 !important;
-    animation: fadeInNav 2s ease-in 3s forwards !important;
-    z-index: 1000 !important;
+    position: absolute;
+    top: calc(50% + 140px); /* Ensures tabs are under the one-liner */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+    opacity: 1; /* Ensures it's visible */
+    animation: fadeInNav 2s ease-in 3s forwards;
+    z-index: 1001; /* Higher than hero & crack overlay */
 }
 
 /* 📌 Navigation Button Styles */
