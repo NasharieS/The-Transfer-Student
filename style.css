@@ -238,4 +238,13 @@ footer {
 @keyframes fadeInFooter {
     0% { opacity: 0; }
     100% { opacity: 1; }
+} 
+
+
+/* 🛑 REMOVE ANIMATIONS ONLY ON SYNOPSIS PAGE */
+body.synopsis-page .nav-container,
+body.synopsis-page footer {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
