@@ -225,10 +225,9 @@ footer {
     color: #D3D3D3;
     text-align: center;
     padding: 15px 0;
-    position: absolute;
+    position: fixed; /* Change from absolute to fixed */
     bottom: 0;
     width: 100%;
     font-size: 14px;
-    margin: 0;
     z-index: 999;
 }
