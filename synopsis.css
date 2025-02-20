@@ -16,11 +16,11 @@ body.synopsis-page {
     flex-direction: column;
 }
 
-/* 🔥 Top Header - Ensure Everything Stays on One Line */
+/* 🔥 Top Header - Everything Stays on One Line */
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures everything stays in one line */
+    justify-content: space-between;
     background: #5C4033;
     padding: 15px 20px;
     position: fixed;
@@ -38,33 +38,71 @@ body.synopsis-page {
     flex-grow: 1; /* Allows flexibility */
 }
 
-/* ✅ Ensures all tabs stay in a row */
 .nav-container ul {
     list-style: none;
-    display: flex; /* Keeps tabs horizontal */
-    gap: 25px; /* Spacing between tabs */
+    display: flex; /* Keeps tabs in a row */
+    gap: 25px;
     padding: 0;
     margin: 0;
 }
 
-/* ✅ Ensures font, color, and size match Home */
+/* ✅ Tabs Stay Consistent & Dropdown Works */
+.nav-container ul li {
+    position: relative;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
 .nav-container ul li a {
     text-decoration: none !important;
     color: #D3D3D3 !important; /* Matches Home */
-    font-size: 18px !important; /* Ensures same size */
+    font-size: 18px !important;
     font-weight: bold !important;
 }
 
-/* 📌 Move Search Bar Closer & Adjust Width */
+/* 🔽 Dropdown Menu */
+.nav-container ul li ul {
+    position: absolute;
+    top: 100%; /* Makes dropdown appear below tab */
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Dropdown Items */
+.nav-container ul li ul li {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* ✅ Make Dropdown Items Clickable */
+.nav-container ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears Smoothly */
+.nav-container ul li:hover > ul {
+    display: block;
+    opacity: 1;
+}
+
+/* 📌 Search Bar Adjustments */
 .search-bar {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 5px;
-    margin-left: auto; /* Pushes search bar closer to the right */
-    margin-right: 15px; /* Creates space before icons */
-    width: 200px; /* Adjusted for a sleeker look */
+    margin-left: auto;
+    margin-right: 15px;
+    width: 200px;
 }
 
 .search-bar input {
@@ -75,7 +113,7 @@ body.synopsis-page {
     outline: none;
     padding: 5px;
     border-radius: 3px;
-    width: 100%; /* Ensures search input takes available space */
+    width: 100%;
 }
 
 /* 📌 Contact Icons */
