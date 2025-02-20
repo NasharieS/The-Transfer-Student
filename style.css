@@ -125,11 +125,11 @@ body {
 
 /* 📌 Navigation Container - Centered Under One-Liner */
 .nav-container {
-    position: absolute !important; /* Ensures it ignores any inherited settings */
-    top: calc(50% + 140px) !important; /* Forces it under the one-liner */
-    left: 42% !important; /* Moves it further left */
-    transform: none !important; /* Removes any unexpected shifts */
-    width: fit-content !important; /* Prevents stretching */
+    position: absolute !important;
+    top: calc(50% + 130px) !important; /* Ensures it's below the one-liner */
+    left: 50% !important; /* Centers it perfectly */
+    transform: translateX(-50%) !important; /* Forces absolute centering */
+    width: auto !important;
     text-align: center !important;
     opacity: 0 !important;
     animation: fadeInNav 2s ease-in 3s forwards !important;
