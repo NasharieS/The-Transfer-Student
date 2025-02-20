@@ -38,43 +38,34 @@ body.synopsis-page {
     flex-grow: 1;
 } 
 
-/* 🔥 Ensures All Parent Tabs Stay Aligned */
-.nav-container ul > li {
+/* 🔥 Force All Parent Tabs to Align Perfectly */
+.nav-container ul {
     display: flex;
-    align-items: center;  /* Keeps everything at the same height */
+    align-items: center;
     justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
-/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
-.nav-container ul > li > a {
-    font-size: 18px !important;  /* Forces same size */
-    color: #D3D3D3 !important;  /* Matches Home & About */
-    font-weight: bold !important;
-    text-decoration: none !important;
-    display: inline-block !important;
-    padding: 12px 18px !important;
-}
-
-/* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
-.nav-container ul li,
-.nav-container ul li a {
-    position: relative;
-    padding: 12px 18px !important;  /* Uniform padding */
+.nav-container ul > li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 50px !important;  /* Forces same height */
+    line-height: 50px !important; /* Aligns text vertically */
+    padding: 0 18px !important;
     border-radius: 8px !important;
     transition: all 0.3s ease-in-out !important;
-    text-decoration: none !important;
-    color: #D3D3D3 !important;  /* Matches Home & About */
-    font-size: 18px !important;  /* Ensures all tabs are the same size */
-    font-weight: bold !important;
-    display: inline-block !important;
 }
 
-/* 🔹 Active Tab Styling */
-.nav-container ul li.active-tab a {
-    color: #FFF !important;
+/* ✅ Force Uniform Styling on ALL Parent Navigation Tabs */
+.nav-container ul > li > a {
+    font-size: 18px !important;  /* Ensures same size */
+    color: #D3D3D3 !important;  /* Matches Home & About */
     font-weight: bold !important;
-    background: rgba(255, 255, 255, 0.2) !important; /* Highlights active tab */
-    border-radius: 8px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
     padding: 12px 18px !important;
 }
 
@@ -83,7 +74,7 @@ body.synopsis-page {
     background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* 🔽 Dropdown Menu */
+/* 🔽 Dropdown Menu (Still Works Properly) */
 .nav-container ul li ul {
     position: absolute;
     top: 100%; /* Ensures dropdown is right below parent tab */
