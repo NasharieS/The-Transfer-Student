@@ -38,27 +38,19 @@ body.synopsis-page {
     flex-grow: 1;
 } 
 
-/* 🔥 Force Parent Tabs to Be The Same Height, Size, and Alignment */
-.nav-container ul {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 25px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 50px !important;  /* Forces all tabs to match */
-}
-
-/* ✅ Absolutely Force Parent Tabs to Be the Same */
+/* 🔥 Ensure ALL Parent Tabs Are the Same Height */
 .nav-container ul > li {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 50px !important;  /* Matches all tabs to same height */
-    line-height: 50px !important; /* Ensures text is vertically centered */
-    padding: 0 20px !important; /* Ensures spacing is even */
-    border-radius: 8px !important;
-    transition: all 0.3s ease-in-out !important;
+    height: 48px !important;  /* Matches all tabs to same height */
+    line-height: 48px !important; /* Ensures text is vertically centered */
+    padding: 0 20px !important; /* Keeps spacing even */
+}
+
+/* ✅ Force Dropdown Menus to Stay in Place */
+.nav-container ul li ul {
+    top: 48px !important; /* Ensures dropdowns appear right below parent tab */
 }
 
 /* ✅ Absolutely Force Uniform Text Styling */
