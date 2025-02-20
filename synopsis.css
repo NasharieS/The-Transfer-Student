@@ -36,6 +36,13 @@ body.synopsis-page {
     display: flex;
     align-items: center;
     flex-grow: 1;
+} 
+
+/* 🔥 Ensures All Parent Tabs Stay Aligned */
+.nav-container ul > li {
+    display: flex;
+    align-items: center;  /* Keeps everything at the same height */
+    justify-content: center;
 }
 
 /* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
