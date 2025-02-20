@@ -38,35 +38,40 @@ body.synopsis-page {
     flex-grow: 1;
 } 
 
-/* 🔥 Force All Parent Tabs to Align Perfectly */
+/* 🔥 Force Parent Tabs to Be The Same Height, Size, and Alignment */
 .nav-container ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 25px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 50px !important;  /* Forces all tabs to match */
 }
 
+/* ✅ Absolutely Force Parent Tabs to Be the Same */
 .nav-container ul > li {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    height: 50px !important;  /* Forces same height */
-    line-height: 50px !important; /* Aligns text vertically */
-    padding: 0 18px !important;
+    height: 50px !important;  /* Matches all tabs to same height */
+    line-height: 50px !important; /* Ensures text is vertically centered */
+    padding: 0 20px !important; /* Ensures spacing is even */
     border-radius: 8px !important;
     transition: all 0.3s ease-in-out !important;
 }
 
-/* ✅ Force Uniform Styling on ALL Parent Navigation Tabs */
+/* ✅ Absolutely Force Uniform Text Styling */
 .nav-container ul > li > a {
-    font-size: 18px !important;  /* Ensures same size */
-    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-size: 18px !important;  /* Exact same size for all tabs */
+    color: #D3D3D3 !important;  /* Ensures uniform color */
     font-weight: bold !important;
     text-decoration: none !important;
-    display: inline-block !important;
-    padding: 12px 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important; /* Makes sure everything aligns perfectly */
+    padding: 0 18px !important;
 }
 
 /* 🚀 Hover Effect - Consistent Across All Tabs */
@@ -76,34 +81,34 @@ body.synopsis-page {
 
 /* 🔽 Dropdown Menu (Still Works Properly) */
 .nav-container ul li ul {
-    position: absolute;
-    top: 100%; /* Ensures dropdown is right below parent tab */
-    left: 0;
-    background: rgba(92, 64, 51, 0.95);
-    border-radius: 8px;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute !important;
+    top: 100% !important; /* Ensures dropdown is right below parent tab */
+    left: 0 !important;
+    background: rgba(92, 64, 51, 0.95) !important;
+    border-radius: 8px !important;
+    display: none !important;
+    padding: 10px 0 !important;
+    min-width: 200px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* 🎭 Dropdown Items */
 .nav-container ul li ul li {
-    padding: 10px 20px;
-    display: block;
+    padding: 10px 20px !important;
+    display: block !important;
 }
 
 /* ✅ Dropdown Items Styling */
 .nav-container ul li ul li a {
-    color: #D3D3D3;
-    font-size: 16px;
-    display: block;
+    color: #D3D3D3 !important;
+    font-size: 16px !important;
+    display: block !important;
 }
 
 /* 🎥 Dropdown Appears Without Lag */
 .nav-container ul li:hover > ul {
-    display: block;
-    opacity: 1;
+    display: block !important;
+    opacity: 1 !important;
 }
 
 /* 🔍 Search Bar - Now Closer to Icons & Input is White */
