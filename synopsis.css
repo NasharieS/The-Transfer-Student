@@ -38,12 +38,14 @@ body.synopsis-page {
     flex-grow: 1;
 }
 
-.nav-container ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
+/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
+.nav-container ul > li > a {
+    font-size: 18px !important;  /* Forces same size */
+    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
 }
 
 /* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
