@@ -128,7 +128,7 @@ body {
     position: absolute;
     top: calc(50% + 130px);
     left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-60%);
     width: auto;
     text-align: center;
     opacity: 0;
