@@ -128,12 +128,18 @@ body {
     position: absolute;
     top: calc(50% + 140px); /* Ensures tabs are under the one-liner */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important; /* Ensures it stays centered */
     width: auto;
     text-align: center;
-    opacity: 1; /* Ensures it's visible */
+    opacity: 0; /* Starts invisible */
     animation: fadeInNav 2s ease-in 3s forwards;
-    z-index: 1001; /* Higher than hero & crack overlay */
+    z-index: 1001;
+}
+
+/* Ensures tabs don't shift after fading in */
+@keyframes fadeInNav {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 /* 📌 Navigation Button Styles */
