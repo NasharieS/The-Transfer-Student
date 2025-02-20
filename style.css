@@ -126,9 +126,9 @@ body {
 /* 📌 Navigation Container - Centered Under One-Liner */
 .nav-container {
     position: absolute;
-    top: calc(50% + 130px); /* Keeps it below the one-liner */
-    left: 47%; /* Moves the left edge further left */
-    transform: translateX(-50%); /* Centers the container relative to its new left */
+    top: calc(50% + 140px); /* Adjusted to move exactly under the one-liner */
+    left: 50%; /* Keeps it centered horizontally */
+    transform: translateX(-58%); /* Moves it further to the left */
     width: auto;
     text-align: center;
     opacity: 0;
