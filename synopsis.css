@@ -35,6 +35,17 @@ body.synopsis-page {
 .nav-container {
     display: flex;
     align-items: center;
+    justify-content: center; /* Ensures tabs are horizontally aligned */
+    gap: 30px;
+}
+
+/* 🔹 Ensure All Tabs Match Home in Size, Color, & Weight */
+.nav-container ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Keeps tabs in a row */
+    gap: 30px; /* Spacing between tabs */
+    padding: 0;
+    margin: 0;
 }
 
 /* 🔹 Active Tab Styling */
@@ -49,11 +60,12 @@ body.synopsis-page {
 /* ✅ All Tabs Now Have Identical Styling */
 .nav-container ul li {
     position: relative;
-    padding: 12px 18px;  /* Ensures all tabs have the same spacing */
+    padding: 12px 18px; /* Ensures all tabs have the same spacing */
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
 
+/* ✅ Ensures font, color, and size match Home */
 .nav-container ul li a {
     text-decoration: none !important;
     color: #D3D3D3 !important; /* Matches Home */
