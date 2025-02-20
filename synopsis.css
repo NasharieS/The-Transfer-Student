@@ -8,7 +8,7 @@
 
 /* Body */
 body.synopsis-page {
-    background: #fff; /* Clean white background */
+    background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
     min-height: 100vh;
@@ -53,12 +53,12 @@ body.synopsis-page {
     transition: all 0.3s ease-in-out;
 }
 
-/* ✅ Remove Underline on Links */
+/* ✅ Consistent Font for Tabs (Matches Home Page) */
 .nav-container ul li a {
     text-decoration: none !important;
-    color: #D3D3D3;
-    font-size: 18px;
-    font-weight: bold;
+    color: #D3D3D3 !important; /* Same color across all tabs */
+    font-size: 18px !important; /* Same font size for consistency */
+    font-weight: bold !important;
 }
 
 /* 🚀 Hover Effect */
@@ -96,22 +96,24 @@ body.synopsis-page {
     display: block;
 }
 
-/* 🔍 Search Bar */
+/* 🔍 Search Bar - Now Closer to Icons & Input is White */
 .search-bar {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
+    margin-right: 20px; /* Moves search bar closer to icons */
 }
 
 .search-bar input {
     border: none;
-    background: none;
-    color: #fff;
+    background: white; /* Search input is now white */
+    color: #0D1B2A;
     font-size: 16px;
     outline: none;
     padding: 5px;
+    border-radius: 3px;
 }
 
 .search-bar button {
@@ -125,7 +127,7 @@ body.synopsis-page {
 /* 📌 Contact Icons */
 .contact-icons {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .contact-icons a {
