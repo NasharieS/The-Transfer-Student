@@ -82,11 +82,11 @@ body.synopsis-page {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
-/* 🚀 Hover Effect - Matches Active Tab Glow */
+/* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
 .nav-container ul li:hover,
 .nav-container ul li ul li:hover {
-    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Matches Active Tab */
-    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
+    background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
 }
 
 /* 🔽 Dropdown Menu (Locks in place) */
