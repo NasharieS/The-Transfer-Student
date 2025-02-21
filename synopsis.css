@@ -321,17 +321,18 @@ body.synopsis-page {
 }
 
 .book-container:hover .book {
-    transform: rotateY(-5deg); /* 👈 Less drastic tilt */
+    transform: rotateY(-6deg); /* 👈 Less aggressive tilt */
+    transition: transform 0.5s ease-in-out;
 }
 
 .book-container:hover .book-cover {
-    transform: rotateY(-15deg); /* 👈 Smooth transition */
-    transition: transform 0.4s ease-in-out; /* 👈 Slower for realism */
-} 
+    transform: rotateY(-14deg); /* 👈 Subtle opening effect */
+    transition: transform 0.6s ease-in-out; /* 👈 Delays slightly for realism */
+}
 
 .book-container:hover .book-cover {
-    box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.3), /* 👈 Simulates page depth */
-                10px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: inset -12px 0px 18px rgba(0, 0, 0, 0.6), /* 👈 Creates stronger depth */
+                18px 0px 18px rgba(0, 0, 0, 0.35); /* 👈 Enhances realism */
 }
 
 /* 📖 Sneak Peek Button Adjustments */
@@ -356,7 +357,8 @@ body.synopsis-page {
 }
 
 .cta-button:hover + .book .book-cover {
-    transform: rotateY(-40deg); /* 👈 Opens the book even wider */
+    transform: rotateY(-22deg); /* 👈 Slightly opens wider */
+    transition: transform 0.6s ease-in-out; /* 👈 Smoother transition */
 }
 
 /* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
