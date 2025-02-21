@@ -322,7 +322,7 @@ body.synopsis-page {
 } 
 
 /* 📖 Ensure Book Only Opens on Sneak Peek Hover */
-.cta-button:hover + .book .book-cover {
+.cta-button:hover ~ .book .book-cover {
     transform: rotateY(-22deg); /* Opens slightly */
     transition: transform 0.6s ease-in-out;
 }
