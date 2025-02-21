@@ -288,11 +288,12 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensures button is below book */
     align-items: center;
     justify-content: center;
-    perspective: 1000px; /* 👈 Adds 3D depth */
+    perspective: 1000px; /* Adds 3D depth */
     margin-top: 20px;
+    position: relative; /* Needed for positioning */
 }
 
 /* 📖 Book Cover Styling */
@@ -310,19 +311,40 @@ body.synopsis-page {
     height: 100%;
     border-radius: 5px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
-                10px 0px 10px rgba(0, 0, 0, 0.2); /* 👈 Creates the "book spine" effect */
+                10px 0px 10px rgba(0, 0, 0, 0.2); /* Creates "book spine" effect */
     transform-origin: left center;
     transition: transform 0.5s ease-in-out;
 }
 
 /* 🚀 **ONLY** Open Book When Hovering Over Sneak Peek Button */
-.cta-button:hover ~ .book .book-cover {
-    transform: rotateY(-22deg); /* 👈 Opens slightly */
+.book-container .cta-button:hover ~ .book .book-cover {
+    transform: rotateY(-22deg); /* Opens slightly */
     transition: transform 0.6s ease-in-out;
-} 
+}
+
+/* 🎯 Fix the Sneak Peek Button Alignment */
+.cta-button {
+    display: inline-block;
+    background: #C19A6B;
+    color: #0D1B2A;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px; /* Moves button closer to book */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 🔥 Hover Effect on Button - Makes Book Open More */
+.cta-button:hover {
+    background: #0077FF;
+    color: #fff;
+    transform: scale(1.05);
+}
 
 /* 📖 Ensure Book Only Opens on Sneak Peek Hover */
-.cta-button:hover ~ .book .book-cover {
+.book-container:hover .book .book-cover {
     transform: rotateY(-22deg); /* Opens slightly */
     transition: transform 0.6s ease-in-out;
 }
