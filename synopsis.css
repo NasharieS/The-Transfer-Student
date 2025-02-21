@@ -216,12 +216,14 @@ body.synopsis-page {
     text-align: center;
 }
 
-/* 🏷️ Page Title */
+/* 🏷️ Page Title - Move "Synopsis" Higher */
 .page-title {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
-}
+    margin-top: 10px !important; /* Moves the title up */
+    margin-bottom: 25px !important; /* Ensures good spacing below */
+} 
+
 
 /* 📖 Synopsis Layout */
 .synopsis-content {
@@ -230,12 +232,9 @@ body.synopsis-page {
     align-items: center;
 }
 
-/* 📄 Left Side: Text */
-.synopsis-text {
-    width: 55%;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.8;
+/* 📄 Left Side: Text - Add More Space Below the Paragraph */
+.synopsis-text p {
+    margin-bottom: 40px !important; /* Creates space before book cover & button */
 }
 
 /* 📕 Right Side: Book Cover & Sneak Peek */
