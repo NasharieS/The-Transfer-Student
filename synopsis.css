@@ -72,15 +72,28 @@ body.synopsis-page {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
-/* ✅ Properly Highlights Active Subtab (Synopsis) */
+/* ✅ Properly Highlights Active Subtab (Synopsis, News, Get Involved) */
 .nav-container ul li ul li.active-subtab > a {
     color: #FFF !important;
     font-weight: bold !important;
     background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
     border-radius: 8px !important;
-    padding: 10px 16px !important;
+    padding: 12px 20px !important; /* 👈 Adjusted padding for full width */
+    width: 100% !important; /* 👈 Forces glow to stretch across */
+    display: block !important;
+    text-align: center !important;
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
-} 
+}
+
+/* ✅ Ensure Full Glow Coverage for Dropdown Items */
+.nav-container ul li ul li a {
+    min-width: 180px !important; /* 👈 Adjusted to be wider */
+    padding: 12px 20px !important; /* 👈 Matches main tabs */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
 
 /* ✅ Force Consistent Padding & Width for Active Tabs */
 .nav-container ul li a,
