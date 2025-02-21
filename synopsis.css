@@ -63,7 +63,7 @@ body.synopsis-page {
 }
 
 /* 🔹 Active Tab Styling (Only Highlights the Current Page) */
-.nav-container ul li.active-tab a {
+.nav-container ul li.active-tab > a {
     color: #FFF !important;
     font-weight: bold !important;
     background: rgba(255, 255, 255, 0.2) !important; 
@@ -76,11 +76,11 @@ body.synopsis-page {
     background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* 🔽 Dropdown Menu */
+/* 🔽 Dropdown Menu (Locks in place) */
 .nav-container ul li ul {
-    position: absolute;
-    top: 100%; /* Ensures dropdown is right below parent tab */
-    left: 0;
+    position: absolute !important;
+    top: 48px !important; /* Keeps dropdowns perfectly below the tabs */
+    left: 0 !important;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
     display: none;
