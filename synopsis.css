@@ -321,12 +321,17 @@ body.synopsis-page {
 }
 
 .book-container:hover .book {
-    transform: rotateY(-10deg);
+    transform: rotateY(-5deg); /* 👈 Less drastic tilt */
 }
 
 .book-container:hover .book-cover {
-    transform: rotateY(-20deg);
-    transition: transform 0.3s ease-in-out; /* Makes the hover animation smoother */
+    transform: rotateY(-15deg); /* 👈 Smooth transition */
+    transition: transform 0.4s ease-in-out; /* 👈 Slower for realism */
+} 
+
+.book-container:hover .book-cover {
+    box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.3), /* 👈 Simulates page depth */
+                10px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 📖 Sneak Peek Button Adjustments */
@@ -351,7 +356,7 @@ body.synopsis-page {
 }
 
 .cta-button:hover + .book .book-cover {
-    transform: rotateY(-35deg); /* 👈 Opens the book more when hovering */
+    transform: rotateY(-40deg); /* 👈 Opens the book even wider */
 }
 
 /* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
