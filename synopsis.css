@@ -62,7 +62,7 @@ body.synopsis-page {
     display: inline-block !important;
 }
 
-/* 🔹 Active Tab Styling (Only Highlights the Current Page) */
+/* 🔹 Active Tab Styling (Now About is Highlighted) */
 .nav-container ul li.active-tab > a {
     color: #FFF !important;
     font-weight: bold !important;
