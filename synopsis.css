@@ -66,20 +66,20 @@ body.synopsis-page {
 .nav-container ul li.active-tab > a {
     color: #FFF !important;
     font-weight: bold !important;
-    background: rgba(0, 119, 255, 0.3) !important; /* 👈 Now Blue */
+    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
     border-radius: 8px !important;
     padding: 12px 18px !important;
-    box-shadow: 0px 0px 12px rgba(0, 119, 255, 0.7) !important; /* 👈 Blue Glow Effect */
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
 /* ✅ Properly Highlights Active Subtab (Synopsis) */
 .nav-container ul li ul li.active-subtab > a {
     color: #FFF !important;
     font-weight: bold !important;
-    background: rgba(0, 119, 255, 0.3) !important; /* 👈 Now Blue */
+    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
     border-radius: 8px !important;
     padding: 10px 16px !important;
-    box-shadow: 0px 0px 12px rgba(0, 119, 255, 0.7) !important; /* 👈 Blue Glow Effect */
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
 /* 🚀 Hover Effect - Now Blue Everywhere */
