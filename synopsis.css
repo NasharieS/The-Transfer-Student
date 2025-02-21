@@ -220,21 +220,30 @@ body.synopsis-page {
 .page-title {
     font-size: 32px;
     font-weight: bold;
-    margin-top: 10px !important; /* Moves the title up */
-    margin-bottom: 25px !important; /* Ensures good spacing below */
-} 
-
-
-/* 📖 Synopsis Layout */
-.synopsis-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: -10px !important; /* Moves the title up */
+    margin-bottom: 30px !important; /* Adds space below title */
 }
 
 /* 📄 Left Side: Text - Add More Space Below the Paragraph */
+.synopsis-text {
+    width: 55%;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 20px !important; /* Adds spacing below the paragraph */
+}
+
+/* 📄 Ensure the paragraph inside the text has extra bottom space */
 .synopsis-text p {
-    margin-bottom: 40px !important; /* Creates space before book cover & button */
+    margin-bottom: 50px !important; /* Ensures space before book cover */
+}
+
+/* 📖 Synopsis Layout - Keep Everything Aligned */
+.synopsis-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensures top alignment */
+    gap: 40px; /* Adds space between text & book cover */
 }
 
 /* 📕 Right Side: Book Cover & Sneak Peek */
@@ -250,6 +259,7 @@ body.synopsis-page {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 🎯 Fix the Sneak Peek Button Alignment */
 .cta-button {
     display: inline-block;
     background: #C19A6B;
