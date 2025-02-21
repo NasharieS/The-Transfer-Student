@@ -80,6 +80,23 @@ body.synopsis-page {
     border-radius: 8px !important;
     padding: 10px 16px !important;
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
+} 
+
+/* ✅ Force Consistent Padding & Width for Active Tabs */
+.nav-container ul li a,
+.nav-container ul li ul li a {
+    display: flex !important; 
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 150px !important; /* 👈 Adjust width if needed */
+    padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
+}
+
+/* ✅ Fix Blue Glow on Active Tabs */
+.nav-container ul li.active-tab > a,
+.nav-container ul li ul li.active-subtab > a {
+    width: 100% !important; /* 👈 Forces glow to stretch */
+    text-align: center !important;
 }
 
 /* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
