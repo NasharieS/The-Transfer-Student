@@ -317,7 +317,7 @@ body.synopsis-page {
 }
 
 /* 🚀 **ONLY** Open Book When Hovering Over Sneak Peek Button */
-.book-container .cta-button:hover ~ .book .book-cover {
+.book-container:hover .book-cover {
     transform: rotateY(-22deg); /* Opens slightly */
     transition: transform 0.6s ease-in-out;
 }
@@ -337,7 +337,7 @@ body.synopsis-page {
 }
 
 /* 🔥 Hover Effect on Button - Makes Book Open More */
-.cta-button:hover {
+.book-container:hover .cta-button {
     background: #0077FF;
     color: #fff;
     transform: scale(1.05);
