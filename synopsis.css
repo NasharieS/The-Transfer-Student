@@ -62,33 +62,24 @@ body.synopsis-page {
     display: inline-block !important;
 }
 
-/* 🔹 Active Tab Styling (Now About is Highlighted) */
-.nav-container ul li.active-tab > a {
-    color: #FFF !important;
-    font-weight: bold !important;
-    background: rgba(255, 255, 255, 0.2) !important; 
-    border-radius: 8px !important;
-    padding: 12px 18px !important;
-}
-
-/* 🔥 Highlights the Active Main Tab (About) */
+/* ✅ Properly Highlights Active Parent Tab (About) */
 .nav-container ul li.active-tab > a {
     color: #FFF !important;
     font-weight: bold !important;
     background: rgba(255, 255, 255, 0.2) !important;
     border-radius: 8px !important;
     padding: 12px 18px !important;
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);  /* 👈 Adds glow effect */
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5) !important; /* 👈 Adds glow effect */
 }
 
-/* 🔥 Highlights the Active Subtab (Synopsis) */
+/* ✅ Properly Highlights Active Subtab (Synopsis) */
 .nav-container ul li ul li.active-subtab > a {
     color: #FFF !important;
     font-weight: bold !important;
     background: rgba(255, 255, 255, 0.2) !important;
     border-radius: 8px !important;
     padding: 10px 16px !important;
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);  /* 👈 Adds glow effect */
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5) !important; /* 👈 Adds glow effect */
 }
 
 /* 🚀 Hover Effect - Consistent Across All Tabs */
