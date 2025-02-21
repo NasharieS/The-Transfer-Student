@@ -71,6 +71,16 @@ body.synopsis-page {
     padding: 12px 18px !important;
 }
 
+/* 🔥 Highlights the Active Subtab (Synopsis) */
+.nav-container ul li ul li.active-subtab a {
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: rgba(255, 255, 255, 0.2) !important; 
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
+}
+
+
 /* 🚀 Hover Effect - Consistent Across All Tabs */
 .nav-container ul li:hover {
     background: rgba(255, 255, 255, 0.1) !important;
