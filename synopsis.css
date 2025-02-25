@@ -295,25 +295,82 @@ body.synopsis-page {
     margin-top: 20px;
     position: relative; /* Needed for positioning */
 }
-
-/* 📖 Book Cover Styling */
+/* 📖 3D Book Structure */
 .book {
     width: 230px;
     height: 350px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+    perspective: 1200px; /* ✅ Adds depth effect */
 }
 
-/* 🚀 Default Book Cover */
+/* 📖 Book Cover (Front) */
 .book-cover {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
-                10px 0px 10px rgba(0, 0, 0, 0.2); /* Creates "book spine" effect */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+                10px 0px 10px rgba(0, 0, 0, 0.2);
     transform-origin: left center;
-    transition: transform 0.8s ease-in-out; /* Matches JavaScript timing */
+    transition: transform 0.8s ease-in-out;
+    position: absolute;
+    backface-visibility: hidden; /* ✅ Hides the back when flipped */
+    background: url('bookcover.png') center/cover no-repeat; /* ✅ Ensure cover image */
+}
+
+/* 📄 Inside Pages */
+.book-pages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ffffff; /* ✅ White pages */
+    box-shadow: inset -2px 0px 8px rgba(0, 0, 0, 0.2); /* ✅ Adds depth */
+    transform-origin: left center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📄 Left Page */
+.left-page {
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    left: 5px;
+    background: linear-gradient(to right, #fdfdfd 0%, #f5f5f5 100%);
+    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
+    transform: rotateY(0deg);
+    transition: transform 0.8s ease-in-out;
+}
+
+/* 📄 Right Page */
+.right-page {
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    right: 5px;
+    background: linear-gradient(to left, #fdfdfd 0%, #f5f5f5 100%);
+    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease-in-out;
+    backface-visibility: hidden;
+}
+
+/* 🚀 When Hovering, the Book Opens & Pages Show */
+.book-container:hover .book-cover {
+    transform: rotateY(-30deg); /* ✅ Opens book */
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4); /* ✅ Adds depth */
+}
+
+/* 🚀 Show the Pages on Hover */
+.book-container:hover .left-page {
+    transform: rotateY(-15deg);
+}
+
+.book-container:hover .right-page {
+    transform: rotateY(160deg);
 }
 
 /* 📖 Opens the book smoothly on hover */
