@@ -458,9 +458,9 @@ body.synopsis-page {
                 10px 0px 10px rgba(0, 0, 0, 0.2) !important;
     transform-origin: left center !important;
     transition: transform 0.8s ease-in-out !important;
-    z-index: 3 !important; /* ✅ Keeps it on top */
+    z-index: 3 !important; /* ✅ Ensures it stays on top */
     backface-visibility: visible !important; /* ✅ Ensures it's never hidden */
-    background: url('bookcover.png') center/cover no-repeat !important;
+    background: url('bookcover.png') center/cover no-repeat !important; /* ✅ Loads image */
 }
 
 /* ✅ FORCE Book Cover Image */
