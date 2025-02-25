@@ -318,6 +318,7 @@ body.synopsis-page {
     position: absolute;
     background: none; /* ✅ Remove background property */
     z-index: 3; /* ✅ Ensures cover stays on top */
+    backface-visibility: hidden;
 }
 
 /* ✅ Ensure Book Cover Image is Visible */
@@ -326,6 +327,54 @@ body.synopsis-page {
     height: 100%;
     border-radius: 5px;
     object-fit: cover; /* ✅ Ensures the image scales correctly */
+}
+
+/* 📄 Inside Pages */
+.book-pages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: left center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📄 Left Page */
+.left-page, .right-page {
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    background: linear-gradient(to right, #fdfdfd 0%, #f5f5f5 100%);
+    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease-in-out;
+}
+
+.left-page {
+    left: 5px;
+    transform: rotateY(0deg);
+}
+
+.right-page {
+    right: 5px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+/* 🚀 When Hovering, the Book Opens & Pages Show */
+.book-container:hover .book-cover {
+    transform: rotateY(-25deg); /* ✅ Opens book more smoothly */
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 🚀 Show the Pages on Hover */
+.book-container:hover .left-page {
+    transform: rotateY(-15deg);
+}
+
+.book-container:hover .right-page {
+    transform: rotateY(160deg);
 }
 
 /* 📖 Sneak Peek Button (Fixes Missing Button & Keeps It Below) */
