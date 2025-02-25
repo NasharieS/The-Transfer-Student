@@ -288,10 +288,10 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* ✅ Ensures button stays below book */
     align-items: center;
     justify-content: center;
-    perspective: 1500px; /* ✅ Adds 3D effect */
+    perspective: 1500px; /* ✅ Adds 3D depth */
     margin-top: 20px;
     position: relative;
     width: 230px;
@@ -318,7 +318,7 @@ body.synopsis-page {
     position: absolute;
     z-index: 3; /* ✅ Ensures cover stays on top */
     backface-visibility: hidden;
-    cursor: pointer; /* ✅ Makes sure it’s clickable */
+    cursor: pointer;
 }
 
 .book-cover img {
