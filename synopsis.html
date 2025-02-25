@@ -72,14 +72,39 @@
 
            <!-- Right: Book Cover & Sneak Peek Button -->
 <div class="book-container">
-    <a href="sneak-peek.html" class="book-link">
+    <a href="sneak-peek.html" class="book-link" id="book-link">
         <div class="book">
-            <img src="bookcover.png" alt="The Transfer Student Book Cover" class="book-cover">
+            <img id="book-cover" src="bookcover.png" alt="The Transfer Student Book Cover" class="book-cover">
         </div>
     </a>
-    <a href="sneak-peek.html" class="cta-button">Take a Sneak Peek</a>
+    <a href="sneak-peek.html" class="cta-button" id="sneak-peek-button">Take a Sneak Peek</a>
 </div>
-       
+           
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const bookCover = document.getElementById("book-cover");
+        const bookLink = document.getElementById("book-link");
+        const sneakPeekButton = document.getElementById("sneak-peek-button");
+
+        function openBookAndRedirect(event) {
+            event.preventDefault(); // Prevent immediate redirect
+
+            if (!bookCover.classList.contains("open")) {
+                bookCover.classList.add("open");
+
+                // Wait for animation to finish, then redirect
+                setTimeout(() => {
+                    window.location.href = "sneak-peek.html";
+                }, 800); // Adjust timing to match CSS transition
+            }
+        }
+
+        // Allow both the book cover and the button to trigger the animation
+        bookLink.addEventListener("click", openBookAndRedirect);
+        sneakPeekButton.addEventListener("click", openBookAndRedirect);
+    });
+</script>
+           
    </main>
 
    <!-- 📌 Footer -->
