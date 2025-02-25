@@ -306,7 +306,7 @@ body.synopsis-page {
     transition: transform 0.8s ease-in-out;
 }
 
-/* 📖 Book Cover (Front) */
+/* 📖 Book Cover */
 .book-cover {
     width: 100%;
     height: 100%;
@@ -316,7 +316,7 @@ body.synopsis-page {
     transform-origin: left center;
     transition: transform 0.8s ease-in-out;
     position: absolute;
-    background: none; /* ✅ REMOVE background property */
+    background: none; /* ✅ Remove background property */
     z-index: 3; /* ✅ Ensures cover stays on top */
 }
 
@@ -328,65 +328,7 @@ body.synopsis-page {
     object-fit: cover; /* ✅ Ensures the image scales correctly */
 }
 
-/* 📄 Inside Pages */
-.book-pages {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #ffffff; /* ✅ White pages */
-    box-shadow: inset -2px 0px 8px rgba(0, 0, 0, 0.2); /* ✅ Adds depth */
-    transform-origin: left center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2; /* ✅ Pages behind cover */
-}
-
-/* 📄 Left Page */
-.left-page {
-    width: 97%;
-    height: 92%;
-    position: absolute;
-    left: 5px;
-    background: linear-gradient(to right, #fdfdfd 0%, #f5f5f5 100%);
-    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    transform: rotateY(0deg);
-    transition: transform 0.8s ease-in-out;
-}
-
-/* 📄 Right Page */
-.right-page {
-    width: 97%;
-    height: 92%;
-    position: absolute;
-    right: 5px;
-    background: linear-gradient(to left, #fdfdfd 0%, #f5f5f5 100%);
-    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    transform: rotateY(180deg);
-    transition: transform 0.8s ease-in-out;
-    backface-visibility: hidden;
-}
-
-/* 🚀 When Hovering, the Book Opens & Pages Show */
-.book-container:hover .book-cover {
-    transform: rotateY(-30deg); /* ✅ Opens book more smoothly */
-    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4);
-}
-
-/* 🚀 Show the Pages on Hover */
-.book-container:hover .left-page {
-    transform: rotateY(-15deg);
-}
-
-.book-container:hover .right-page {
-    transform: rotateY(165deg);
-}
-
-
-/* 🎯 Fix the Sneak Peek Button Alignment */
+/* 📖 Sneak Peek Button (Fixes Missing Button & Keeps It Below) */
 .cta-button {
     display: inline-block;
     background: #C19A6B;
