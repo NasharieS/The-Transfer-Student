@@ -377,9 +377,10 @@ body.synopsis-page {
     transition: transform 0.8s ease-in-out; /* Matches JavaScript timing */
 }
 
-/* 🚀 Opens the book when clicked */
+/* 📖 Opens the book smoothly */
 .book-cover.open {
     transform: rotateY(-22deg); /* Book opening effect */
+    transition: transform 0.8s ease-in-out; /* Matches JavaScript delay */
 }
 
 /* 🎯 Adjust Sneak Peek Button to Match */
