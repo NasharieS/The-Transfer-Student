@@ -288,13 +288,13 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column; /* ✅ Keeps button below the book */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    perspective: 1500px; /* ✅ Adds 3D depth */
+    perspective: 1500px; /* ✅ Adds 3D effect */
     margin-top: 20px;
     position: relative;
-    width: 230px; /* ✅ Ensures the book stays centered */
+    width: 230px;
 }
 
 /* 📖 3D Book Structure */
@@ -306,7 +306,7 @@ body.synopsis-page {
     transition: transform 0.8s ease-in-out;
 }
 
-/* 📖 Book Cover */
+/* 📖 Book Cover (Clickable & Visible) */
 .book-cover {
     width: 100%;
     height: 100%;
@@ -316,17 +316,16 @@ body.synopsis-page {
     transform-origin: left center;
     transition: transform 0.8s ease-in-out;
     position: absolute;
-    background: none; /* ✅ Remove background property */
     z-index: 3; /* ✅ Ensures cover stays on top */
     backface-visibility: hidden;
+    cursor: pointer; /* ✅ Makes sure it’s clickable */
 }
 
-/* ✅ Ensure Book Cover Image is Visible */
 .book-cover img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    object-fit: cover; /* ✅ Ensures the image scales correctly */
+    object-fit: cover;
 }
 
 /* 📄 Inside Pages */
@@ -339,9 +338,10 @@ body.synopsis-page {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1; /* ✅ Ensures pages are behind the cover */
 }
 
-/* 📄 Left Page */
+/* 📄 Left & Right Pages */
 .left-page, .right-page {
     width: 95%;
     height: 90%;
@@ -362,9 +362,9 @@ body.synopsis-page {
     backface-visibility: hidden;
 }
 
-/* 🚀 When Hovering, the Book Opens & Pages Show */
+/* 🚀 Hovering Opens the Book & Pages */
 .book-container:hover .book-cover {
-    transform: rotateY(-25deg); /* ✅ Opens book more smoothly */
+    transform: rotateY(-25deg);
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -377,7 +377,7 @@ body.synopsis-page {
     transform: rotateY(160deg);
 }
 
-/* 📖 Sneak Peek Button (Fixes Missing Button & Keeps It Below) */
+/* 📖 Sneak Peek Button (Restored Below Book) */
 .cta-button {
     display: inline-block;
     background: #C19A6B;
@@ -387,7 +387,7 @@ body.synopsis-page {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 15px; /* ✅ Keeps button close to book */
+    margin-top: 15px;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
