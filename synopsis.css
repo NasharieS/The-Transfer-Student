@@ -288,21 +288,22 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column; /* Ensures button is below book */
+    flex-direction: column; /* ✅ Keeps button directly below book */
     align-items: center;
     justify-content: center;
-    perspective: 1000px; /* Adds 3D depth */
+    perspective: 1500px; /* ✅ Adds 3D effect */
     margin-top: 20px;
-    position: relative; /* Needed for positioning */
+    position: relative;
+    width: 230px; /* ✅ Ensures the book stays centered */
 }
+
 /* 📖 3D Book Structure */
 .book {
-    width: 230px;
+    width: 100%;
     height: 350px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
-    perspective: 1200px; /* ✅ Adds depth effect */
 }
 
 /* 📖 Book Cover (Front) */
@@ -315,8 +316,8 @@ body.synopsis-page {
     transform-origin: left center;
     transition: transform 0.8s ease-in-out;
     position: absolute;
-    backface-visibility: hidden; /* ✅ Hides the back when flipped */
-    background: url('bookcover.png') center/cover no-repeat; /* ✅ Ensure cover image */
+    background: url('bookcover.png') center/cover no-repeat; /* ✅ Keeps image as the cover */
+    backface-visibility: hidden;
 }
 
 /* 📄 Inside Pages */
@@ -334,34 +335,30 @@ body.synopsis-page {
 }
 
 /* 📄 Left Page */
-.left-page {
+.left-page, .right-page {
     width: 95%;
     height: 90%;
     position: absolute;
-    left: 5px;
     background: linear-gradient(to right, #fdfdfd 0%, #f5f5f5 100%);
     box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
-    transform: rotateY(0deg);
     transition: transform 0.8s ease-in-out;
 }
 
-/* 📄 Right Page */
+.left-page {
+    left: 5px;
+    transform: rotateY(0deg);
+}
+
 .right-page {
-    width: 95%;
-    height: 90%;
-    position: absolute;
     right: 5px;
-    background: linear-gradient(to left, #fdfdfd 0%, #f5f5f5 100%);
-    box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
     transform: rotateY(180deg);
-    transition: transform 0.8s ease-in-out;
     backface-visibility: hidden;
 }
 
 /* 🚀 When Hovering, the Book Opens & Pages Show */
 .book-container:hover .book-cover {
-    transform: rotateY(-30deg); /* ✅ Opens book */
-    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4); /* ✅ Adds depth */
+    transform: rotateY(-25deg); /* ✅ Opens book more smoothly */
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* 🚀 Show the Pages on Hover */
@@ -371,13 +368,6 @@ body.synopsis-page {
 
 .book-container:hover .right-page {
     transform: rotateY(160deg);
-}
-
-/* 📖 Opens the book smoothly on hover */
-.book-container:hover .book-cover {
-    transform: rotateY(-22deg); /* Book opening effect */
-    transition: transform 0.8s ease-in-out; /* Smooth opening */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow when open */
 }
 
 /* 🎯 Fix the Sneak Peek Button Alignment */
@@ -390,12 +380,12 @@ body.synopsis-page {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 10px; /* Moves button closer to book */
+    margin-top: 15px; /* ✅ Keeps button close to book */
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* 🔥 Hover Effect on Button - Makes Book Open More */
-.book-container:hover .cta-button {
+/* 🔥 Hover Effect on Button */
+.cta-button:hover {
     background: #0077FF;
     color: #fff;
     transform: scale(1.05);
