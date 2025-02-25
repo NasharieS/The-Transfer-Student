@@ -366,6 +366,22 @@ body.synopsis-page {
     text-decoration: none; /* Removes default link styling */
 }
 
+/* 📖 Book Cover Default */
+.book-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+                10px 0px 10px rgba(0, 0, 0, 0.2); /* Creates "book spine" effect */
+    transform-origin: left center;
+    transition: transform 0.8s ease-in-out; /* Matches JavaScript timing */
+}
+
+/* 🚀 Opens the book when clicked */
+.book-cover.open {
+    transform: rotateY(-22deg); /* Book opening effect */
+}
+
 /* 🎯 Adjust Sneak Peek Button to Match */
 .cta-button {
     display: inline-block;
