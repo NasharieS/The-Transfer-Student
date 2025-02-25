@@ -288,13 +288,13 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column; /* ✅ Keeps button directly below book */
+    flex-direction: column; /* ✅ Ensures button stays directly below book */
     align-items: center;
     justify-content: center;
-    perspective: 1500px; /* ✅ Adds 3D effect */
+    perspective: 1500px; /* ✅ Adds realistic depth */
     margin-top: 20px;
     position: relative;
-    width: 230px; /* ✅ Ensures the book stays centered */
+    width: 230px; /* ✅ Ensures book stays centered */
 }
 
 /* 📖 3D Book Structure */
@@ -316,7 +316,7 @@ body.synopsis-page {
     transform-origin: left center;
     transition: transform 0.8s ease-in-out;
     position: absolute;
-    background: url('bookcover.png') center/cover no-repeat; /* ✅ Keeps image as the cover */
+    background: url('bookcover.png') center/cover no-repeat; /* ✅ Ensures cover image */
     backface-visibility: hidden;
 }
 
@@ -336,8 +336,8 @@ body.synopsis-page {
 
 /* 📄 Left Page */
 .left-page, .right-page {
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background: linear-gradient(to right, #fdfdfd 0%, #f5f5f5 100%);
     box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.1);
@@ -345,12 +345,12 @@ body.synopsis-page {
 }
 
 .left-page {
-    left: 5px;
+    left: 0;
     transform: rotateY(0deg);
 }
 
 .right-page {
-    right: 5px;
+    right: 0;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
@@ -363,12 +363,13 @@ body.synopsis-page {
 
 /* 🚀 Show the Pages on Hover */
 .book-container:hover .left-page {
-    transform: rotateY(-15deg);
+    transform: rotateY(-12deg);
 }
 
 .book-container:hover .right-page {
     transform: rotateY(160deg);
 }
+
 
 /* 🎯 Fix the Sneak Peek Button Alignment */
 .cta-button {
