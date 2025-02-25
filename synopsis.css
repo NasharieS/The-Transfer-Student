@@ -349,6 +349,44 @@ body.synopsis-page {
     transition: transform 0.6s ease-in-out;
 }
 
+/* 📖 Remove Book Opening on Hover */
+.book-container:hover .book-cover {
+    transform: none !important; /* Prevents hover from opening */
+}
+
+/* 🚀 Book Now Opens on Click Instead */
+.book-link:active .book-cover {
+    transform: rotateY(-22deg); /* Opens slightly when clicked */
+    transition: transform 0.6s ease-in-out;
+}
+
+/* 🔗 Make the Book Cover Act Like a Button */
+.book-link {
+    display: inline-block;
+    text-decoration: none; /* Removes default link styling */
+}
+
+/* 🎯 Adjust Sneak Peek Button to Match */
+.cta-button {
+    display: inline-block;
+    background: #C19A6B;
+    color: #0D1B2A;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px; /* Moves button closer to book */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 🔥 Hover Effect on Button */
+.cta-button:hover {
+    background: #0077FF;
+    color: #fff;
+    transform: scale(1.05);
+}
+
 /* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
 footer {
     background: #5C4033;
