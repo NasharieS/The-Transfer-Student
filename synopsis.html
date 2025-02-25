@@ -89,30 +89,20 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const bookCover = document.getElementById("book-cover");
         const bookLink = document.getElementById("book-link");
         const sneakPeekButton = document.getElementById("sneak-peek-button");
 
-        function openBookAndRedirect(event) {
-            event.preventDefault(); // Prevent immediate redirect
+        function delayNavigation(event) {
+            event.preventDefault(); // Prevent immediate navigation
 
-            if (!bookCover.classList.contains("open")) {
-                bookCover.classList.add("open");
-
-                // Prevent multiple clicks while animation is running
-                bookLink.style.pointerEvents = "none";
-                sneakPeekButton.style.pointerEvents = "none";
-
-                // Wait for animation to finish, then redirect
-                setTimeout(() => {
-                    window.location.href = "sneak-peek.html";
-                }, 800); // Adjust timing to match CSS transition
-            }
+            setTimeout(() => {
+                window.location.href = "sneak-peek.html"; // Redirect after delay
+            }, 600); // Adjust timing to match CSS transition
         }
 
-        // Allow both the book cover and the button to trigger the animation
-        bookLink.addEventListener("click", openBookAndRedirect);
-        sneakPeekButton.addEventListener("click", openBookAndRedirect);
+        // Make both the book and button delay before navigation
+        bookLink.addEventListener("click", delayNavigation);
+        sneakPeekButton.addEventListener("click", delayNavigation);
     });
 </script>
     
