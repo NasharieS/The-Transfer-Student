@@ -305,7 +305,7 @@ body.synopsis-page {
     transition: transform 0.5s ease-in-out;
 }
 
-/* 📖 Actual Book Cover */
+/* 🚀 Default Book Cover */
 .book-cover {
     width: 100%;
     height: 100%;
@@ -313,13 +313,14 @@ body.synopsis-page {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
                 10px 0px 10px rgba(0, 0, 0, 0.2); /* Creates "book spine" effect */
     transform-origin: left center;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out; /* Matches JavaScript timing */
 }
 
-/* 🚀 **ONLY** Open Book When Hovering Over Sneak Peek Button */
+/* 📖 Opens the book smoothly on hover */
 .book-container:hover .book-cover {
-    transform: rotateY(-22deg); /* Opens slightly */
-    transition: transform 0.6s ease-in-out;
+    transform: rotateY(-22deg); /* Book opening effect */
+    transition: transform 0.8s ease-in-out; /* Smooth opening */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow when open */
 }
 
 /* 🎯 Fix the Sneak Peek Button Alignment */
@@ -347,11 +348,6 @@ body.synopsis-page {
 .book-container:hover .book .book-cover {
     transform: rotateY(-22deg); /* Opens slightly */
     transition: transform 0.6s ease-in-out;
-}
-
-/* 📖 Remove Book Opening on Hover */
-.book-container:hover .book-cover {
-    transform: none !important; /* Prevents hover from opening */
 }
 
 /* 🚀 Book Now Opens on Click Instead */
