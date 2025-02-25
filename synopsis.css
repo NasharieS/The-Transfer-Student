@@ -316,9 +316,16 @@ body.synopsis-page {
     transform-origin: left center;
     transition: transform 0.8s ease-in-out;
     position: absolute;
-    background: url('bookcover.png') center/cover no-repeat; /* ✅ Ensure the cover image */
-    backface-visibility: hidden; /* ✅ Hides the back when flipped */
+    background: none; /* ✅ REMOVE background property */
     z-index: 3; /* ✅ Ensures cover stays on top */
+}
+
+/* ✅ Ensure Book Cover Image is Visible */
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover; /* ✅ Ensures the image scales correctly */
 }
 
 /* 📄 Inside Pages */
