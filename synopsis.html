@@ -80,7 +80,14 @@
     <a href="sneak-peek.html" class="cta-button" id="sneak-peek-button">Take a Sneak Peek</a>
 </div>
            
-  <script>
+   </main>
+
+   <!-- 📌 Footer -->
+   <footer>
+       <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
+   </footer>
+
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         const bookCover = document.getElementById("book-cover");
         const bookLink = document.getElementById("book-link");
@@ -91,6 +98,10 @@
 
             if (!bookCover.classList.contains("open")) {
                 bookCover.classList.add("open");
+
+                // Prevent multiple clicks while animation is running
+                bookLink.style.pointerEvents = "none";
+                sneakPeekButton.style.pointerEvents = "none";
 
                 // Wait for animation to finish, then redirect
                 setTimeout(() => {
@@ -104,13 +115,6 @@
         sneakPeekButton.addEventListener("click", openBookAndRedirect);
     });
 </script>
-           
-   </main>
-
-   <!-- 📌 Footer -->
-   <footer>
-       <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
-   </footer>
-
+    
 </body>
 </html>
