@@ -98,20 +98,26 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const bookLink = document.getElementById("book-link");
-        const sneakPeekButton = document.getElementById("sneak-peek-button");
+        const bookLink = document.querySelector(".book-link");
+        const sneakPeekButton = document.querySelector(".cta-button");
 
-        function delayNavigation(event) {
-            event.preventDefault(); // Prevent immediate navigation
-
-            setTimeout(() => {
-                window.location.href = "sneak-peek.html"; // Redirect after delay
-            }, 600); // Adjust timing to match CSS transition
+        if (bookLink) {
+            bookLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                setTimeout(() => {
+                    window.location.href = "sneak-peek.html";
+                }, 600);
+            });
         }
 
-        // Make both the book and button delay before navigation
-        bookLink.addEventListener("click", delayNavigation);
-        sneakPeekButton.addEventListener("click", delayNavigation);
+        if (sneakPeekButton) {
+            sneakPeekButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                setTimeout(() => {
+                    window.location.href = "sneak-peek.html";
+                }, 600);
+            });
+        }
     });
 </script>
     
