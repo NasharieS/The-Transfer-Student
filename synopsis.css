@@ -200,6 +200,14 @@ body.synopsis-page {
     text-decoration: none;
 }
 
+/* 🔹 Divider Below the Header */
+.divider {
+    border: none;
+    border-top: 2px solid #C19A6B;
+    margin: 75px 0 20px 0;
+    width: 100%;
+}
+
 /* 📌 Page Content */
 .synopsis-container {
     max-width: 1000px;
