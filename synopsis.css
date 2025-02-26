@@ -311,6 +311,14 @@ body.synopsis-page {
     z-index: 3; /* ✅ Ensures cover stays on top */
     backface-visibility: hidden;
     cursor: pointer;
+    
+    /* ✅ Background Image Fix */
+    background: url('bookcover.png') center/cover no-repeat !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    min-height: 350px !important; /* Ensures the image is visible */
+    min-width: 230px !important;
 }
 
 .book-cover img {
