@@ -509,6 +509,13 @@ body.synopsis-page {
     transform: rotateY(160deg) !important;
 }
 
+/* 🔥 Make the Sneak Peek Button Turn Blue When Hovering Over the Book */
+.book-container:hover .cta-button {
+    background: #0077FF !important;
+    color: #fff !important;
+    transform: scale(1.05) !important;
+}
+
 /* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
 footer {
     background: #5C4033;
