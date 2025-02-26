@@ -501,6 +501,32 @@ body.synopsis-page {
     transform: rotateY(160deg) !important;
 }
 
+/* ✅ Force the Book Cover Image to Show */
+.book-cover {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: url('bookcover.png') center/cover no-repeat !important; /* ✅ Loads the image */
+    border-radius: 5px !important;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+                10px 0px 10px rgba(0, 0, 0, 0.2) !important;
+    transform-origin: left center !important;
+    z-index: 3 !important; /* ✅ Ensures it's on top */
+    backface-visibility: visible !important; /* ✅ Prevents accidental hiding */
+}
+
+/* ✅ Force the Book Cover Image to Render */
+.book-cover img {
+    display: block !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+    object-fit: cover !important;
+    z-index: 3 !important; /* ✅ Keeps it visible */
+}
+
 /* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
 footer {
     background: #5C4033;
