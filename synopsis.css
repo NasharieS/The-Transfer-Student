@@ -422,25 +422,24 @@ body.synopsis-page {
     backface-visibility: hidden;
 }
 
-/* 📄 Page Curl Effect (Top Right Corner) */
+/* 📜 Page Curl Effect - Top Right Corner */
 .right-page::after {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
     top: 0;
     right: 0;
-    border-top-right-radius: 10px;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
+    width: 30px; /* Size of curl */
+    height: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
+    border-top-right-radius: 50%;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform 0.4s ease-in-out;
 }
 
-/* 🚀 Hovering Over the Book Makes the Page Curl */
+/* 📜 Show Page Curl on Hover */
 .book-container:hover .right-page::after {
-    transform: rotate(-15deg);
-    opacity: 1;
+    transform: scale(1);
 }
 
 /* 🚀 Hovering Opens the Book & Pages */
