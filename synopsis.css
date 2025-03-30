@@ -243,6 +243,9 @@ body.synopsis-page {
 /* 📄 Ensure the paragraph inside the text has extra bottom space */
 .synopsis-text p {
     margin-bottom: 70px !important; /* Expands gap between text & book cover */
+}
+
+/* 📄 Add spacing between multiple paragraphs */
 .synopsis-text p + p {
     margin-top: 25px; /* Controls paragraph spacing */
 }
