@@ -289,11 +289,12 @@ body.synopsis-page {
 /* 📖 Book Container */
 .book-container {
     display: flex;
-    flex-direction: column; /* ✅ Keeps button below book */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    perspective: 1500px; /* ✅ Adds 3D depth */
+    perspective: 1800px; /* Increased for stronger depth */
     margin-top: 20px;
+    margin-bottom: 40px; /* ✅ Adds space above the footer */
     position: relative;
     width: 230px;
 }
