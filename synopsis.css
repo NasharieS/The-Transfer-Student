@@ -245,11 +245,6 @@ body.synopsis-page {
     margin-bottom: 70px !important; /* Expands gap between text & book cover */
 }
 
-/* 📄 Add spacing between multiple paragraphs */
-.synopsis-text p + p {
-    margin-top: 25px; /* Controls paragraph spacing */
-}
-
 /* 📖 Synopsis Layout - Increase Middle Space */
 .synopsis-content {
     display: flex;
@@ -595,11 +590,4 @@ footer {
     width: 100%;
     font-size: 14px;
     z-index: 999;
-
-}
-
-.footer-spacer {
-    height: 80px; /* 👈 Adjust as needed based on footer height */
-    width: 100%;
-    visibility: hidden;
 }
