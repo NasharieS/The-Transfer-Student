@@ -257,6 +257,7 @@ body.synopsis-page {
 .synopsis-image {
     width: 40%;
     text-align: center;
+    margin-top: -20px; 
 }
 
 .synopsis-image img {
