@@ -63,19 +63,12 @@
            <!-- Left: Synopsis Text -->
            <div class="synopsis-text">
                <p>
-                  <div class="synopsis-text">
-  <p>
-    The story of Amara begins in Philadelphia in 2005. Frustrated by the systemic disparities in her underfunded public school, she watches her teachers fight tirelessly against overcrowded classrooms and shrinking resources. At home, she’s still reeling from the loss of her father, grappling with a strained relationship with her mother, and haunted by recurring nightmares of a past she can’t explain nor control. Amara desperately wants change but feels powerless to make it happen. Until, one morning, everything shifts.
-  </p>
-
-  <p>
-    Amara never expected to wake up in someone else’s life. But now, in the body of a different student, in a different country with a new school awaiting her, everything changes. She’s thrown into unfamiliar education systems that challenge everything she thought she knew about opportunity, privilege, and the future. As she jumps from student to student, learning what education looks like elsewhere while still being chased by the past, she realizes one truth: the fight for education is bigger than her, and she may be the only one who can change it.
-  </p>
-
-  <p>
-    But when every attempt at reform back home leads to a dead end, the idea of staying–permanently taking over a body to access a world-class education and a future she could never have–becomes dangerously tempting. Then, the visions start. Glimpses of what lies ahead for public education in the U.S. and the alarming direction it is headed in. Now, Amara faces a choice: Does she return to fight for her little brother and the students she left behind? Or will a system that controls who gets access to knowledge–and who doesn’t–ensure she never makes it home?
-  </p>
-</div>
+                   Amara never expected to wake up in someone else’s life. But after transferring bodies with a student across the world, 
+                   she’s thrown into an unfamiliar education system—one that challenges everything she thought she knew about opportunity, 
+                   privilege, and the future. As she jumps from student to student, witnessing the past and glimpsing a future she can’t control, 
+                   she realizes one truth: the fight for education is bigger than her, and she may be the only one who can change it.
+               </p>
+           </div>
 
            <!-- Right: Book Cover & Sneak Peek Button -->
 <div class="book-container">
@@ -100,35 +93,27 @@
 
    <!-- 📌 Footer -->
    <footer>
-       <p>&copy; 2025 Nasharie Stewart | All Views are My Own</p>
+       <p>&copy; 2025 Nasharie Stewart | All Views are my Own</p>
    </footer>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const bookLink = document.querySelector(".book-link");
-        const sneakPeekButton = document.querySelector(".cta-button");
+        const bookLink = document.getElementById("book-link");
+        const sneakPeekButton = document.getElementById("sneak-peek-button");
 
-        if (bookLink) {
-            bookLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                setTimeout(() => {
-                    window.location.href = "sneak-peek.html";
-                }, 600);
-            });
+        function delayNavigation(event) {
+            event.preventDefault(); // Prevent immediate navigation
+
+            setTimeout(() => {
+                window.location.href = "sneak-peek.html"; // Redirect after delay
+            }, 600); // Adjust timing to match CSS transition
         }
 
-        if (sneakPeekButton) {
-            sneakPeekButton.addEventListener("click", function (event) {
-                event.preventDefault();
-                setTimeout(() => {
-                    window.location.href = "sneak-peek.html";
-                }, 600);
-            });
-        }
+        // Make both the book and button delay before navigation
+        bookLink.addEventListener("click", delayNavigation);
+        sneakPeekButton.addEventListener("click", delayNavigation);
     });
 </script>
-    
- <div class="footer-spacer"></div>
     
 </body>
 </html>
