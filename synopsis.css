@@ -590,4 +590,11 @@ footer {
     width: 100%;
     font-size: 14px;
     z-index: 999;
+
+}
+
+.footer-spacer {
+    height: 80px; /* 👈 Adjust as needed based on footer height */
+    width: 100%;
+    visibility: hidden;
 }
