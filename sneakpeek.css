@@ -33,6 +33,7 @@ body.sneakpeek {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Navigation Container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -47,6 +48,7 @@ body.sneakpeek {
 }
 
 .nav-container ul li {
+    position: relative; /* Needed for dropdown positioning */
     margin-right: 20px; /* Spacing between the navigation items */
 }
 
@@ -62,6 +64,7 @@ body.sneakpeek {
     transition: all 0.3s ease-in-out !important;
 }
 
+/* Active Tab Styling */
 .nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
     color: #FFF !important;
@@ -69,6 +72,26 @@ body.sneakpeek {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important;
 }
 
+/* Dropdown Menu (Initially Hidden) */
+.nav-container ul li ul {
+    position: absolute;
+    top: 48px; /* Positioned directly below the parent item */
+    left: 0;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Show Dropdown on Hover */
+.nav-container ul li:hover > ul {
+    display: block;
+    opacity: 1;
+}
+
+/* Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
