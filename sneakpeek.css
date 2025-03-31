@@ -27,7 +27,6 @@ body.sneakpeek .top-header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px; /* Fixed height for header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -73,9 +72,55 @@ body.sneakpeek .nav-container ul li a {
 
 /* Highlight Active Parent Tab */
 body.sneakpeek .nav-container ul li.active-tab > a {
-    color: #FFF;
-    background: rgba(0, 119, 255, 0.6);
-    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
+    border-radius: 8px !important;
+    padding: 12px 18px !important;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
+}
+
+/* ✅ Ensures Full Glow Coverage for ALL Dropdown Items */
+.nav-container ul li ul li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;  /* 👈 Stretches glow across */
+    min-width: 100% !important;
+    padding: 12px 20px !important;  /* 👈 Same padding as main tabs */
+    text-align: center !important;
+}
+
+/* 🚀 Ensures Hover Effect Stretches Fully */
+.nav-container ul li ul li:hover {
+    background: rgba(0, 84, 204, 1) !important;  /* 👈 Exact Dark Blue */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;  /* 👈 Stronger Glow */
+    width: 100% !important;  /* 👈 Forces hover effect to cover entire tab */
+    min-width: 100% !important;
+}
+
+/* ✅ Force Consistent Padding & Width for Active Tabs */
+.nav-container ul li a,
+.nav-container ul li ul li a {
+    display: flex !important; 
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 150px !important; /* 👈 Adjust width if needed */
+    padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
+}
+
+/* ✅ Fix Blue Glow on Active Tabs */
+.nav-container ul li.active-tab > a,
+.nav-container ul li ul li.active-subtab > a {
+    width: 100% !important; /* 👈 Forces glow to stretch */
+    text-align: center !important;
+}
+
+/* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
+.nav-container ul li:hover,
+.nav-container ul li ul li:hover {
+    background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
 }
 
 /* Dropdown Menu */
