@@ -15,7 +15,7 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 50px; /* Reduced padding for better header placement */
+    padding-top: 0; /* Remove extra padding on body */
 }
 
 /* 🔥 Top Header */
@@ -33,7 +33,6 @@ body.sneakpeek {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Container */
 .nav-container {
     display: flex;
     align-items: center;
@@ -133,7 +132,7 @@ body.sneakpeek {
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
-    margin: 75px 0 20px 0;
+    margin: 80px 0 20px 0; /* Adjusted to ensure space between header and divider */
     width: 100%;
 }
 
