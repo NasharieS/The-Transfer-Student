@@ -15,7 +15,8 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 120px; /* Create space for the fixed header */
+    padding-top: 90px; /* Create space for the fixed header */
+    position: relative;
 }
 
 /* 🔥 Top Header */
@@ -32,6 +33,12 @@ body.sneakpeek {
     height: 90px; /* Set a fixed height for the header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Force header to always cover the top */
+body.sneakpeek .top-header {
+    top: 0;
+    width: 100%;
 }
 
 /* Navigation Container */
