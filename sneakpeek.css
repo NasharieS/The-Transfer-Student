@@ -183,8 +183,9 @@ body.sneakpeek .contact-icons a {
 .book-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between pages */
+    gap: 0px; /* Remove the gap between pages */
     margin-top: 150px; /* Ensure the book appears below the header */
+    perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 .book-page {
@@ -196,17 +197,20 @@ body.sneakpeek .contact-icons a {
     border-radius: 8px;
     padding: 20px;
     position: relative;
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out;
 }
 
 .left-page {
     /* Left page specific styles */
-    transform: rotateY(0deg);
+    transform: rotateY(0deg); /* No rotation for the left page */
+    margin-right: -5px; /* Bring the left page closer to the right page */
 }
 
 .right-page {
     /* Right page specific styles */
-    transform: rotateY(0deg);
-    margin-left: -5px;
+    transform: rotateY(0deg); /* No rotation for the right page */
+    margin-left: -5px; /* Bring the right page closer to the left page */
 }
 
 /* Page Content Styling */
@@ -220,6 +224,15 @@ body.sneakpeek .contact-icons a {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+/* Adding a 3D effect when hovered (like flipping a page) */
+.book-container:hover .left-page {
+    transform: rotateY(-10deg);
+}
+
+.book-container:hover .right-page {
+    transform: rotateY(10deg);
 }
 
 /* Footer */
