@@ -1,4 +1,4 @@
-/* ✅ General Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body styling */
+/* Body */
 body.sneakpeek {
     background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding-top: 0; /* No padding needed for fixed header */
 }
 
-/* 🔥 Top Header */
+/* 🔥 Top Header - Everything Stays on One Line */
 .top-header {
     display: flex;
     align-items: center;
@@ -28,50 +27,60 @@ body.sneakpeek {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px; /* Fixed height for header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Container */
+/* Navigation Tabs Inside Header */
 .nav-container {
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-.nav-container ul {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+/* Force Uniform Styling for All Parent Navigation Tabs */
+.nav-container ul > li > a {
+    font-size: 18px !important;
+    color: #D3D3D3 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
 }
 
-.nav-container ul li {
-    position: relative;
-    margin-right: 20px;
-}
-
+/* Ensure All Parent Tabs Are Identical */
+.nav-container ul li,
 .nav-container ul li a {
-    font-size: 18px;
-    color: #D3D3D3;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 18px;
-    display: inline-block;
     position: relative;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
+    padding: 12px 18px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    color: #D3D3D3 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    display: inline-block !important;
 }
 
-/* Active Tab Styling */
-.nav-container ul li.active-tab > a,
-.nav-container ul li ul li.active-subtab > a {
+/* Highlight Active Parent Tab */
+.nav-container ul li.active-tab > a {
     color: #FFF;
     background: rgba(0, 119, 255, 0.6);
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
 }
 
-/* Dropdown Menu (Initially Hidden) */
+/* Highlight Active Subtab */
+.nav-container ul li ul li.active-subtab > a {
+    color: #FFF;
+    background: rgba(0, 119, 255, 0.6);
+    padding: 12px 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+}
+
+/* Dropdown Menu */
 .nav-container ul li ul {
     position: absolute;
     top: 48px;
@@ -174,7 +183,7 @@ footer {
     z-index: 999;
 }
 
-/* 🛑 Remove Animations */
+/* Remove Animations */
 body.sneakpeek .nav-container,
 body.sneakpeek footer {
     animation: none !important;
