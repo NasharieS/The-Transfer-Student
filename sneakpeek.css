@@ -227,6 +227,50 @@ body.sneakpeek .contact-icons a {
     margin-bottom: 20px;
 }
 
+/* Apply a vintage bookshelf background */
+body.sneakpeek {
+    background-image: url('vintage_bookshelf.jpg'); /* This image should be a vintage bookshelf texture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Page style with burn effect */
+.sneakpeek-book {
+    position: relative;
+    max-width: 800px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    margin-top: 120px;
+    overflow: hidden; /* Hide anything overflowing */
+}
+
+/* Animation for burning off effect on pages */
+.page {
+    animation: burn-off 10s infinite; /* Slow burn effect */
+    opacity: 1;
+}
+
+/* Keyframe animation for burning effect */
+@keyframes burn-off {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7; /* Slight burn effect */
+        transform: scale(1.05); /* Slight distortion */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1); /* Full burn-out effect */
+    }
+}
+
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
