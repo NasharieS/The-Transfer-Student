@@ -229,7 +229,7 @@ body.sneakpeek .contact-icons a {
 
 /* Apply a vintage bookshelf background */
 body.sneakpeek {
-    background-image: url('vintage_bookshelf.jpg'); /* This image should be a vintage bookshelf texture */
+    background-image: url('vintage_bookshelf.jpg.png'); /* This image should be a vintage bookshelf texture */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
