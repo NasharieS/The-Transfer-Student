@@ -54,8 +54,9 @@ body.sneakpeek .nav-container ul > li > a {
     color: #D3D3D3 !important;
     font-weight: bold !important;
     text-decoration: none !important;
-    display: inline-block !important;
     padding: 12px 18px !important;
+    display: block; /* Ensures it stretches */
+    text-align: center; /* Ensures text is centered */
 }
 
 /* Ensure All Parent Tabs Are Identical */
@@ -72,29 +73,22 @@ body.sneakpeek .nav-container ul li a {
     display: inline-block !important;
 }
 
-/* Force All Navigation Tabs to Stretch on Hover and Active */
-body.sneakpeek .nav-container ul li > a {
-    display: block;
-    padding: 12px 18px;
-    text-align: center; /* Ensure text is centered */
-    width: 100%; /* Make sure it stretches to full width */
-}
-
-/* Hover Effect on Navigation Tabs (Stretch Glow & Background) */
-body.sneakpeek .nav-container ul li:hover > a,
-body.sneakpeek .nav-container ul li:hover {
+/* Hover Effect on Navigation Tabs (Full Stretch Blue Background) */
+body.sneakpeek .nav-container ul li:hover > a {
     background: rgba(0, 119, 255, 0.6);  /* Blue background */
     box-shadow: 0px 0px 20px rgba(0, 119, 255, 0.9);  /* Stronger, darker blue glow */
     color: #FFF;  /* White text on hover */
     width: 100%; /* Ensure it stretches across the full width */
+    text-align: center; /* Ensures text is centered */
 }
 
-/* Highlight Active Parent Tab (Stretch Glow & Background) */
+/* Highlight Active Parent Tab (Full Stretch Blue Background) */
 body.sneakpeek .nav-container ul li.active-tab > a {
     color: #FFF;
     background: rgba(0, 119, 255, 0.6);
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
     width: 100%; /* Ensure it stretches across the full width */
+    text-align: center; /* Ensures text is centered */
 }
 
 /* Remove highlight for Synopsis */
@@ -110,6 +104,7 @@ body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
     background: rgba(0, 119, 255, 0.6);
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
     width: 100%; /* Ensure it stretches across the full width */
+    text-align: center; /* Ensures text is centered */
 }
 
 /* Dropdown Menu */
@@ -128,16 +123,6 @@ body.sneakpeek .nav-container ul li ul {
 /* Show Dropdown on Hover */
 body.sneakpeek .nav-container ul li:hover > ul {
     display: block;
-}
-
-    /* Hover Effect on Navigation Tabs (Darker Glow) */
-body.sneakpeek .nav-container ul li:hover > a,
-body.sneakpeek .nav-container ul li:hover {
-    background: rgba(0, 84, 204, 1);  /* Darker blue background */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
-    color: #FFF;  /* White text on hover */
-}
-
 }
 
 /* Search Bar */
