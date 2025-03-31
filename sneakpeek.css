@@ -65,6 +65,8 @@ body.sneakpeek .nav-container ul li:hover > a {
     background: rgba(0, 84, 204, 1);  /* Darker blue background */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
     color: #FFF;  /* White text on hover */
+    width: 100%; /* Ensure it stretches across the full width */
+    text-align: center; /* Ensures text is centered */
 }
 
 /* Highlight Active Parent Tab (Full Stretch and Darker Blue Hover) */
@@ -88,7 +90,7 @@ body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu - Prevent stretching */
 body.sneakpeek .nav-container ul li ul {
     position: absolute;
     top: 48px;
@@ -104,6 +106,12 @@ body.sneakpeek .nav-container ul li ul {
 /* Show Dropdown on Hover */
 body.sneakpeek .nav-container ul li:hover > ul {
     display: block;
+}
+
+/* Prevent the glow from affecting the dropdown */
+body.sneakpeek .nav-container ul li ul li a:hover {
+    background: rgba(0, 84, 204, 1); /* Darker hover background */
+    box-shadow: 0px 0px 15px rgba(0, 84, 204, 1); /* Glow */
 }
 
 /* Search Bar */
