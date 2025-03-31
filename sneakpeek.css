@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Ensure the same font for consistency */
 }
 
 /* Sneak Peek Page Specific */
@@ -14,6 +14,7 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font here as well */
 }
 
 /* 🔥 Top Header */
@@ -66,7 +67,7 @@ body.sneakpeek .nav-container ul li a {
     transition: all 0.3s ease-in-out !important;
     text-decoration: none !important;
     color: #D3D3D3 !important;
-    font-size: 18px !important;
+    font-size: 18px !important; /* Same size for consistency */
     font-weight: bold !important;
     display: inline-block !important;
 }
