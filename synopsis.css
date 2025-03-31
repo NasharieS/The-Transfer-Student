@@ -187,6 +187,7 @@ body.synopsis-page {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 📖 Book Container */
 .book-container {
     display: flex;
     flex-direction: column;
@@ -195,73 +196,66 @@ body.synopsis-page {
     perspective: 1800px;
     margin-top: 20px;
     margin-bottom: 40px;
+    width: 300px; /* ⬆️ Slightly wider */
     position: relative;
-    width: 280px;
 }
 
+/* 📖 Book */
 .book {
     width: 100%;
-    height: 420px;
+    height: 460px; /* ⬆️ Increased to show full cover image */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
 }
 
+/* 📖 Book Cover */
 .book-cover {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 280px !important;
-    min-height: 420px !important;
-    position: absolute !important;
-    border-radius: 5px !important;
-    z-index: 3 !important;
-    backface-visibility: visible !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 3;
+    backface-visibility: hidden;
     cursor: pointer;
-    transform-origin: left center !important;
-    transition: transform 0.8s ease-in-out !important;
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4), 15px 0px 10px rgba(0, 0, 0, 0.3) !important;
+    transform-origin: left center;
+    transition: transform 0.8s ease-in-out;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4), 
+                15px 0px 10px rgba(0, 0, 0, 0.3);
+    
+    /* ✅ Background Image Fix */
     background: url('bookcover.png') center/cover no-repeat !important;
     background-size: contain !important;
-    background-repeat: no-repeat !important;
     background-position: center !important;
 }
 
+/* ✅ Book Cover Image Fallback */
 .book-cover img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 5px !important;
-    object-fit: cover !important;
-    position: absolute !important;
-    z-index: 3 !important;
-}
-
-.book-back {
+    display: block;
     width: 100%;
     height: 100%;
-    background: #3e2723;
     border-radius: 5px;
+    object-fit: cover;
     position: absolute;
-    left: 0;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    box-shadow: inset -5px 0px 10px rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }
 
+/* 📖 Pages Inside */
 .book-pages {
-    display: flex !important;
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform-origin: left center !important;
-    align-items: center !important;
-    justify-content: center !important;
+    position: absolute;
+    width: 98%;
+    height: 96%;
     background: #faf8f0;
     box-shadow: inset -2px 0px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1 !important;
+    transform-origin: left center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
+/* 📄 Left & Right Pages */
 .left-page, .right-page {
     width: 95%;
     height: 90%;
@@ -282,19 +276,7 @@ body.synopsis-page {
     backface-visibility: hidden;
 }
 
-.book-container:hover .book-cover {
-    transform: rotateY(-35deg) !important;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5) !important;
-}
-
-.book-container:hover .left-page {
-    transform: rotateY(-20deg) !important;
-}
-
-.book-container:hover .right-page {
-    transform: rotateY(150deg) !important;
-}
-
+/* ✅ Spine */
 .book-spine {
     position: absolute;
     left: 0;
@@ -304,20 +286,33 @@ body.synopsis-page {
     box-shadow: inset -2px 0px 6px rgba(0, 0, 0, 0.5);
 }
 
-.cta-button {
-    display: inline-block;
-    background: #C19A6B;
-    color: #0D1B2A;
+/* 🎯 Sneak Peek Button Under Book */
+.book-container .cta-button {
+    margin-top: 15px;
     padding: 14px 30px;
     font-size: 20px;
+    background: #C19A6B;
+    color: #0D1B2A;
+    font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.cta-button:hover,
+/* 🎯 Hover Effects */
+.book-container:hover .book-cover {
+    transform: rotateY(-25deg);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.book-container:hover .left-page {
+    transform: rotateY(-15deg);
+}
+
+.book-container:hover .right-page {
+    transform: rotateY(160deg);
+}
+
 .book-container:hover .cta-button {
     background: #0077FF !important;
     color: #fff !important;
