@@ -44,7 +44,7 @@ body.sneakpeek .nav-container ul {
     display: flex;
     list-style: none;
     padding-left: 0;
-    margin: 0;
+    margin: 0; /* Prevent extra spacing */
     width: 100%; /* Ensure the navigation bar takes up full width */
 }
 
@@ -89,7 +89,7 @@ body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
 }
 
-/* Dropdown Menu - Prevent stretching */
+/* Dropdown Menu - Make sure it doesn't stretch across the header */
 body.sneakpeek .nav-container ul li ul {
     position: absolute;
     top: 48px;
@@ -98,7 +98,7 @@ body.sneakpeek .nav-container ul li ul {
     border-radius: 8px;
     display: none;
     padding: 10px 0;
-    min-width: 200px;
+    min-width: 200px; /* Adjust the width to match the parent tab */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
