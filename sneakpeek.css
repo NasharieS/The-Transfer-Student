@@ -15,29 +15,30 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 120px; /* Increased padding-top to create space for the fixed header */
+    padding-top: 120px; /* Create space for the fixed header */
 }
 
 /* 🔥 Top Header */
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between nav and search */
+    justify-content: space-between; /* Space between navigation and search */
     background: #5C4033;
     padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px; /* Set a height for the header */
+    height: 90px; /* Set a fixed height for the header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Navigation Container */
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
     flex-grow: 1;
 }
 
@@ -130,10 +131,11 @@ body.sneakpeek {
     text-decoration: none;
 }
 
+/* Divider Adjustments */
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
-    margin: 120px 0 20px 0; /* Adjust margin to ensure space after header */
+    margin: 100px 0 20px 0; /* Ensure space after the fixed header */
     width: 100%;
 }
 
