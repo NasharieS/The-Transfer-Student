@@ -179,36 +179,47 @@ body.sneakpeek .contact-icons a {
     text-decoration: none;
 }
 
-/* 📖 Sneak Peek Book Content */
-body.sneakpeek .sneakpeek-book {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 40px;
-    background: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 12px;
+/* 📖 Open Book Effect */
+.book-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between pages */
+    margin-top: 150px; /* Ensure the book appears below the header */
+}
+
+.book-page {
+    width: 300px; /* Width of each page */
+    height: 400px; /* Height of the page */
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
     position: relative;
-    z-index: 1;
-    margin-top: 120px; /* Adjusted to ensure content starts below fixed header */
 }
 
-body.sneakpeek .page {
-    transition: opacity 0.5s ease;
+.left-page {
+    /* Left page specific styles */
+    transform: rotateY(0deg);
 }
 
-body.sneakpeek .page.hidden {
-    display: none;
+.right-page {
+    /* Right page specific styles */
+    transform: rotateY(0deg);
+    margin-left: -5px;
 }
 
-body.sneakpeek #next-page {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background: #0077FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Page Content Styling */
+.page-content {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Footer */
