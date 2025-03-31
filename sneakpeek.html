@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sneak Peek</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sneakpeek.css">
-</head>
-<body class="sneakpeek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synopsis - The Transfer Student</title>
+    <link rel="stylesheet" href="synopsis.css">
 
-<!-- 🔥 Fixed Top Header (EXACTLY like Synopsis page) -->
+</head>
+<body class="synopsis-page">
+
+<!-- 🔥 Fixed Top Header -->
 <header class="top-header">
     <!-- 📌 Navigation Tabs -->
     <nav class="nav-container">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="active-tab">
+            <li><a href="index.html">Home</a></li> <!-- ✅ Home tab added back -->
+            <li class="active-tab"> <!-- ✅ About is now highlighted -->
                 <a href="#">About</a>
                 <ul>
-                    <li class="active-subtab"><a href="synopsis.html">Synopsis</a></li>
+                    <li class="active-subtab"><a href="synopsis.html">Synopsis</a></li> <!-- ✅ Highlights Synopsis -->
                     <li><a href="world-building.html">World Building</a></li>
                 </ul>
             </li>
@@ -52,42 +54,69 @@
     </div>
 </header>
 
-<!-- 🔹 Divider Below Header -->
-<hr class="divider">
+   <!-- 🔹 Divider Below Header -->
+   <hr class="divider"> 
 
-<!-- 📖 Sneak Peek Book Flip Section -->
-<main class="sneakpeek-book">
-    <div class="page current-page">
-        <h2>Chapter One</h2>
-        <p>This is your first page of content. You can paste text here, or load it dynamically later.</p>
-    </div>
-    <div class="page next-page hidden">
-        <h2>Chapter Two</h2>
-        <p>This is another page of sneak peek content. Add as many pages as you want.</p>
-    </div>
-    <!-- ➡️ Next Page Button -->
-    <button id="next-page">→</button>
-</main>
+   <!-- 📌 Page Content -->
+   <main class="synopsis-container">
+       <h2 class="page-title">Synopsis</h2>
+       <div class="synopsis-content">
+           <!-- Left: Synopsis Text -->
+           <div class="synopsis-text">
+               <p>
+                   Frustrated by the failing public school system around her, Amara longs for change but feels powerless to create it. At home, she 
+                   struggles with grief over her father’s death and her mother's abandonment. To makes matters worse, for weeks, she has been haunted
+                   by nightmares she doesn't understand. Then one morning, she wakes up in the body of a different student in a different country, with 
+                   a new name, identity, and school awaiting her. Country after country, student after student, each education system  challenges what she 
+                   thought she knew about opportunity, privilege, and the future- a future she’s beginning to glimpse in terrifying flashes. What Amara does 
+                   know now is this: the fight for education is bigger than her, and she may be the only one who can change it. But with every answer comes 
+                   a harder question: What will it cost to make it back home?
+               </p>
+           </div>
 
-<!-- 📌 Footer -->
-<footer>
-    © 2025 Nasharie Stewart | All views are my own
-</footer>
+           <!-- Right: Book Cover & Sneak Peek Button -->
+<div class="book-container">
+    <a href="sneakpeek.html" class="book-link" id="book-link">
+        <div class="book">
+            <!-- ✅ Pages Inside -->
+            <div class="book-pages">
+                <div class="left-page"></div>
+                <div class="right-page"></div>
+            </div>
+            <!-- ✅ Book Cover -->
+            <div class="book-cover">
+                <img src="bookcover.png" alt="Book Cover">
+            </div>
+        </div>
+    </a>
+    <!-- ✅ Sneak Peek Button -->
+    <a href="sneakpeek.html" class="cta-button" id="sneak-peek-button">Take a Sneak Peek</a>
+</div>
+           
+   </main>
 
-<!-- 🚀 Flip Script -->
+   <!-- 📌 Footer -->
+   <footer>
+       <p>&copy; 2025 Nasharie Stewart | All views are my own</p>
+   </footer>
+
 <script>
-    const pages = document.querySelectorAll('.page');
-    const button = document.getElementById('next-page');
-    let currentPage = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+        const bookLink = document.getElementById("book-link");
+        const sneakPeekButton = document.getElementById("sneak-peek-button");
 
-    button.addEventListener('click', () => {
-        if (currentPage < pages.length - 1) {
-            pages[currentPage].classList.add('hidden');
-            currentPage++;
-            pages[currentPage].classList.remove('hidden');
+        function delayNavigation(event) {
+            event.preventDefault();
+
+            setTimeout(() => {
+                window.location.href = "sneakpeek.html";
+            }, 600);
         }
+
+        bookLink.addEventListener("click", delayNavigation);
+        sneakPeekButton.addEventListener("click", delayNavigation);
     });
 </script>
-
+    
 </body>
 </html>
