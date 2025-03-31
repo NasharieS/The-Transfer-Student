@@ -226,15 +226,6 @@ body.sneakpeek .contact-icons a {
     margin-bottom: 20px;
 }
 
-/* Adding a 3D effect when hovered (like flipping a page) */
-.book-container:hover .left-page {
-    transform: rotateY(-10deg);
-}
-
-.book-container:hover .right-page {
-    transform: rotateY(10deg);
-}
-
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
