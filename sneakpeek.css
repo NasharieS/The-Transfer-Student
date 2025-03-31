@@ -1,8 +1,18 @@
-/* ✅ Sneak Peek Specific Styles Only */
+/* ✅ Inherits Global Header/Footer/Body from style.css */
+
+body.synopsis-page {
+    background: #fff;
+    color: #0D1B2A;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px; /* 👈 Creates space for fixed header */
+}
 
 /* 📖 Sneak Peek Layout */
 .sneakpeek-book {
-    margin: 150px auto 80px;
+    margin: 0 auto 100px;
     max-width: 800px;
     padding: 40px;
     background: #fff;
@@ -12,7 +22,6 @@
     z-index: 1;
 }
 
-/* 🔄 Page Transitions */
 .page {
     transition: opacity 0.5s ease;
 }
@@ -21,7 +30,6 @@
     display: none;
 }
 
-/* ➡️ Next Page Button */
 #next-page {
     margin-top: 20px;
     padding: 10px 20px;
@@ -33,25 +41,7 @@
     cursor: pointer;
 }
 
-/* 🛑 Remove Animations from Header/Footer */
-body.sneakpeek .nav-container,
-body.sneakpeek footer {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-/* ✅ Page Defaults */
-body.sneakpeek {
-    background: #fff;
-    color: #0D1B2A;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 90px; /* 👈 Creates space below fixed header */
-}
-
+/* Divider */
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
