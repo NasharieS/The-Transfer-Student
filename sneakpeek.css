@@ -14,7 +14,6 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* 🔥 Top Header */
@@ -44,73 +43,68 @@ body.sneakpeek .nav-container ul {
     display: flex;
     list-style: none;
     padding-left: 0;
-    margin: 0;
-    width: 100%;
+    margin: 0; /* Prevent extra spacing */
+    width: 100%; /* Ensure the navigation bar takes up full width */
 }
 
 /* Force Uniform Styling for All Parent Navigation Tabs */
 body.sneakpeek .nav-container ul > li > a {
-    font-size: 18px;
-    color: #D3D3D3;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 18px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 8px;
-    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for background and glow */
+    font-size: 18px !important;
+    color: #D3D3D3 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
 }
 
-/* Hover Effect on Navigation Tabs (Full Stretch and Darker Blue Hover) */
-body.sneakpeek .nav-container ul li:hover > a {
-    background: rgba(0, 84, 204, 1); /* Darker blue background */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1); /* Stronger, darker blue glow */
-    color: #FFF;
+/* Ensure All Parent Tabs Are Identical */
+body.sneakpeek .nav-container ul li,
+body.sneakpeek .nav-container ul li a {
+    position: relative;
+    padding: 12px 18px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    color: #D3D3D3 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    display: inline-block !important;
 }
 
-/* Highlight Active Parent Tab (Full Stretch and Darker Blue Hover) */
+/* Highlight Active Parent Tab */
 body.sneakpeek .nav-container ul li.active-tab > a {
     color: #FFF;
-    background: rgba(0, 84, 204, 1); /* Darker blue background */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1); /* Stronger, darker blue glow */
+    background: rgba(0, 119, 255, 0.6);
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
 }
 
-/* Remove highlight for Synopsis */
-body.sneakpeek .nav-container ul li.active-tab > a[href="synopsis.html"] {
-    background: none;
-    box-shadow: none;
-    color: #D3D3D3;
-}
-
-/* Keep highlight for About */
-body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
+/* Highlight Active Subtab */
+body.sneakpeek .nav-container ul li ul li.active-subtab > a {
     color: #FFF;
-    background: rgba(0, 84, 204, 1);
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);
+    background: rgba(0, 119, 255, 0.6);
+    padding: 12px 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
 }
 
-/* Dropdown Menu - Prevent stretching */
+/* Dropdown Menu */
 body.sneakpeek .nav-container ul li ul {
     position: absolute;
-    top: 48px; /* Position it just below the parent tab */
+    top: 48px;
     left: 0;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
     display: none;
     padding: 10px 0;
-    min-width: auto; /* Adjust dropdown width to the parent tab */
+    min-width: 200px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Show Dropdown on Hover */
 body.sneakpeek .nav-container ul li:hover > ul {
     display: block;
-}
-
-/* Hover Effect on Dropdown Items (Darker Blue Hover) */
-body.sneakpeek .nav-container ul li ul li a:hover {
-    background: rgba(0, 84, 204, 1); /* Darker hover background */
-    box-shadow: 0px 0px 15px rgba(0, 84, 204, 1); /* Glow */
 }
 
 /* Search Bar */
