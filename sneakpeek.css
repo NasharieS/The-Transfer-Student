@@ -15,14 +15,14 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 0; /* Remove extra padding on body */
+    padding-top: 90px; /* Add padding to ensure space for fixed header */
 }
 
 /* 🔥 Top Header */
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between navigation and search bar */
+    justify-content: space-between; /* Space between nav and search */
     background: #5C4033;
     padding: 15px 20px;
     position: fixed;
@@ -41,13 +41,13 @@ body.sneakpeek {
 }
 
 .nav-container ul {
-    display: flex; /* Ensures horizontal alignment of tabs */
+    display: flex; /* Aligning the navigation items horizontally */
     list-style: none;
     padding-left: 0;
 }
 
 .nav-container ul li {
-    position: relative; /* Needed for dropdown positioning */
+    position: relative;
     margin-right: 20px; /* Spacing between the navigation items */
 }
 
@@ -97,7 +97,7 @@ body.sneakpeek {
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 5px;
-    margin-left: 20px; /* Ensures space between search and the navigation */
+    margin-left: 20px;
 }
 
 .search-bar input {
@@ -132,7 +132,7 @@ body.sneakpeek {
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
-    margin: 80px 0 20px 0; /* Adjusted to ensure space between header and divider */
+    margin: 100px 0 20px 0; /* Ensures space below the header */
     width: 100%;
 }
 
