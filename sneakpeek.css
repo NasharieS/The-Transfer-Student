@@ -1,10 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Sneak Peek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Include shared site-wide styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ✅ Include page-specific styles -->
+    <link rel="stylesheet" href="sneakpeek.css">
+</head>
+
 /* 🛑 REMOVE ANIMATIONS ONLY ON sneakpeek */
 body.sneakpeek .nav-container,
 body.sneakpeek footer {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    
+    body.sneakpeek {
+    background: #fff;
+    color: #0D1B2A;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+} 
 
 /* 📖 Sneak Peek Layout */
 .sneakpeek-book {
