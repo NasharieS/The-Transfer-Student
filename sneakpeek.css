@@ -14,7 +14,7 @@ body.sneakpeek {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 0; /* No padding for fixed header */
+    padding-top: 0; /* No padding needed for fixed header */
 }
 
 /* 🔥 Top Header */
@@ -33,7 +33,7 @@ body.sneakpeek {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Container (Align navigation items to the left) */
+/* Navigation Container */
 .nav-container {
     display: flex;
     align-items: center;
