@@ -1,0 +1,38 @@
+/* 🛑 REMOVE ANIMATIONS ONLY ON sneakpeek */
+body.sneakpeek .nav-container,
+body.sneakpeek footer {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* 📖 Sneak Peek Layout */
+.sneakpeek-book {
+    margin: 150px auto 80px;
+    max-width: 800px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.page {
+    transition: opacity 0.5s ease;
+}
+
+.page.hidden {
+    display: none;
+}
+
+#next-page {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #0077FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
