@@ -62,4 +62,35 @@
     <div class="sneakpeek-book">
         <div class="page current-page">
             <h2>Chapter One</h2>
-            <p>This is your first page of content.
+            <p>This is your first page of content. You can paste real excerpt text here, or load it dynamically later.</p>
+        </div>
+        <div class="page next-page hidden">
+            <h2>Chapter Two</h2>
+            <p>This is another page of sneak peek content. Add as many pages as you like.</p>
+        </div>
+        <button id="next-page">→</button>
+    </div>
+</main>
+
+<!-- 📌 Footer -->
+<footer>
+    <p>&copy; 2025 Nasharie Stewart | All views are my own</p>
+</footer>
+
+<!-- 🚀 Page Flip Script -->
+<script>
+    const pages = document.querySelectorAll('.page');
+    const button = document.getElementById('next-page');
+    let currentPage = 0;
+
+    button.addEventListener('click', () => {
+        if (currentPage < pages.length - 1) {
+            pages[currentPage].classList.add('hidden');
+            currentPage++;
+            pages[currentPage].classList.remove('hidden');
+        }
+    });
+</script>
+
+</body>
+</html>
