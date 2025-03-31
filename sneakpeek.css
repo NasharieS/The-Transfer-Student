@@ -15,7 +15,7 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 90px; /* Creates space for fixed header */
+    padding-top: 50px; /* Reduced padding for better header placement */
 }
 
 /* 🔥 Top Header */
@@ -36,6 +36,7 @@ body.sneakpeek {
 .nav-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Align items to the left */
     flex-grow: 1;
 }
 
@@ -76,11 +77,6 @@ body.sneakpeek {
     padding: 10px 0;
     min-width: 200px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-container ul li ul li {
-    padding: 10px 20px;
-    display: block;
 }
 
 .nav-container ul li:hover > ul {
