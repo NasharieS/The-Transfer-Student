@@ -108,12 +108,14 @@ body.sneakpeek .nav-container ul li:hover > ul {
     display: block;
 }
 
-/* Hover Effect on Navigation Tabs */
+    /* Hover Effect on Navigation Tabs (Darker Glow) */
 body.sneakpeek .nav-container ul li:hover > a,
 body.sneakpeek .nav-container ul li:hover {
-    background: rgba(0, 119, 255, 0.6);  /* Blue background */
-    box-shadow: 0px 0px 10px rgba(0, 119, 255, 0.9);  /* Blue glow */
+    background: rgba(0, 84, 204, 1);  /* Darker blue background */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
     color: #FFF;  /* White text on hover */
+}
+
 }
 
 /* Search Bar */
