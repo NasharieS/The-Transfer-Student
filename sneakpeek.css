@@ -51,3 +51,10 @@ body.sneakpeek {
     flex-direction: column;
     padding-top: 90px; /* 👈 Creates space below fixed header *
 }
+
+.divider {
+    border: none;
+    border-top: 2px solid #C19A6B;
+    margin: 75px 0 20px 0;
+    width: 100%;
+}
