@@ -15,35 +15,23 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 120px; /* Push content down to account for the fixed header */
-    position: relative;
+    padding-top: 0; /* No padding needed for this layout */
 }
 
 /* 🔥 Top Header */
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between navigation and search */
+    justify-content: space-between;
     background: #5C4033;
     padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px; /* Set height for the header */
+    height: 90px; /* Height of the header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Ensure the top-header background fills the page */
-body.sneakpeek .top-header {
-    background-color: #5C4033;
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
-    height: 90px; /* Ensure height is constant */
-    padding: 0; /* Eliminate any extra padding for precision */
 }
 
 /* Navigation Container */
@@ -141,14 +129,6 @@ body.sneakpeek .top-header {
     color: #D3D3D3;
     font-size: 20px;
     text-decoration: none;
-}
-
-/* Divider Fix */
-.divider {
-    border: none;
-    border-top: 2px solid #C19A6B;
-    margin: 120px 0 20px 0; /* Force space after the fixed header */
-    width: 100%;
 }
 
 /* 📖 Sneak Peek Layout */
