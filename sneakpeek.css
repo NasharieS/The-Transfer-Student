@@ -255,20 +255,49 @@ body.sneakpeek {
     opacity: 1;
 }
 
-/* Keyframe animation for burning effect */
-@keyframes burn-off {
+/* Burning effect */
+@keyframes burning {
     0% {
-        opacity: 1;
-        transform: scale(1);
+        background: #f7f7f7;
     }
     50% {
-        opacity: 0.7; /* Slight burn effect */
-        transform: scale(1.05); /* Slight distortion */
+        background: radial-gradient(circle, rgba(255, 69, 0, 0.7) 50%, transparent 70%); /* Fire-like gradient */
     }
     100% {
-        opacity: 0;
-        transform: scale(1.1); /* Full burn-out effect */
+        background: #2a2a2a; /* Burnt effect */
     }
+}
+
+/* Apply the burning effect to pages */
+.book-page {
+    width: 500px;
+    height: 600px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+    transform-origin: center center;
+    animation: burning 10s ease-in-out 1; /* 10s duration, 1 iteration */
+    animation-delay: 0s; /* No delay initially */
+}
+
+/* Left Page */
+.left-page {
+    transform: rotateY(0deg);
+    margin-right: -5px;
+}
+
+/* Right Page */
+.right-page {
+    transform: rotateY(0deg);
+    margin-left: -5px;
+}
+
+/* Restart burning effect every 10 seconds */
+.book-page {
+    animation: burning 10s ease-in-out infinite; /* Infinite loop with 10s duration */
 }
 
 /* Footer */
