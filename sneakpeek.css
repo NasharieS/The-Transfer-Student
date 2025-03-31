@@ -22,7 +22,7 @@ body.sneakpeek {
 .top-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures space between navigation and search bar */
     background: #5C4033;
     padding: 15px 20px;
     position: fixed;
@@ -40,8 +40,16 @@ body.sneakpeek {
     flex-grow: 1;
 }
 
-.nav-container ul > li > a,
-.nav-container ul li,
+.nav-container ul {
+    display: flex; /* Ensures horizontal alignment of tabs */
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-container ul li {
+    margin-right: 20px; /* Spacing between the navigation items */
+}
+
 .nav-container ul li a {
     font-size: 18px !important;
     color: #D3D3D3 !important;
@@ -61,36 +69,13 @@ body.sneakpeek {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important;
 }
 
-.nav-container ul li ul li a,
-.nav-container ul li a {
-    min-width: 150px !important;
-    text-align: center !important;
-}
-
-.nav-container ul li ul {
-    position: absolute !important;
-    top: 48px !important;
-    left: 0 !important;
-    background: rgba(92, 64, 51, 0.95);
-    border-radius: 8px;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-container ul li:hover > ul {
-    display: block;
-    opacity: 1;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 5px;
-    margin-right: 20px;
+    margin-left: 20px; /* Ensures space between search and the navigation */
 }
 
 .search-bar input {
