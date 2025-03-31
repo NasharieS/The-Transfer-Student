@@ -1,6 +1,4 @@
-/* ✅ Inherits Global Header/Footer/Body from style.css */
-
-/* General Reset */
+/* ✅ General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +6,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Body styling */
 body.sneakpeek {
     background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 0; /* No padding needed for this layout */
+    min-height: 100vh;
+    padding-top: 0; /* No padding for fixed header */
 }
 
 /* 🔥 Top Header */
@@ -29,58 +28,57 @@ body.sneakpeek {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px; /* Height of the header */
+    height: 90px; /* Fixed height for header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Container */
+/* Navigation Container (Align navigation items to the left) */
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     flex-grow: 1;
 }
 
 .nav-container ul {
-    display: flex; /* Aligning the navigation items horizontally */
+    display: flex;
     list-style: none;
     padding-left: 0;
 }
 
 .nav-container ul li {
     position: relative;
-    margin-right: 20px; /* Spacing between the navigation items */
+    margin-right: 20px;
 }
 
 .nav-container ul li a {
-    font-size: 18px !important;
-    color: #D3D3D3 !important;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    padding: 12px 18px !important;
-    display: inline-block !important;
+    font-size: 18px;
+    color: #D3D3D3;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: inline-block;
     position: relative;
-    border-radius: 8px !important;
-    transition: all 0.3s ease-in-out !important;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Active Tab Styling */
 .nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
-    color: #FFF !important;
-    background: rgba(0, 119, 255, 0.6) !important;
-    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important;
+    color: #FFF;
+    background: rgba(0, 119, 255, 0.6);
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
 }
 
 /* Dropdown Menu (Initially Hidden) */
 .nav-container ul li ul {
     position: absolute;
-    top: 48px; /* Positioned directly below the parent item */
+    top: 48px;
     left: 0;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
-    display: none; /* Initially hidden */
+    display: none;
     padding: 10px 0;
     min-width: 200px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -89,7 +87,6 @@ body.sneakpeek {
 /* Show Dropdown on Hover */
 .nav-container ul li:hover > ul {
     display: block;
-    opacity: 1;
 }
 
 /* Search Bar */
@@ -120,6 +117,7 @@ body.sneakpeek {
     color: #D3D3D3;
 }
 
+/* Contact Icons */
 .contact-icons {
     display: flex;
     gap: 12px;
@@ -131,9 +129,9 @@ body.sneakpeek {
     text-decoration: none;
 }
 
-/* 📖 Sneak Peek Layout */
+/* 📖 Sneak Peek Book Content */
 .sneakpeek-book {
-    margin: 0 auto 80px;
+    margin: 0 auto;
     max-width: 800px;
     padding: 40px;
     background: #fff;
@@ -141,6 +139,7 @@ body.sneakpeek {
     border-radius: 12px;
     position: relative;
     z-index: 1;
+    margin-top: 100px; /* Ensures content starts below fixed header */
 }
 
 .page {
@@ -162,6 +161,7 @@ body.sneakpeek {
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     background: #5C4033;
     color: #D3D3D3;
