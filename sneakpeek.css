@@ -89,6 +89,14 @@ body.sneakpeek .nav-container ul li ul li.active-subtab > a {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
 }
 
+/* Remove highlight and glow effect for Synopsis */
+body.sneakpeek .nav-container ul li.active-tab > a[href="synopsis.html"] {
+    background: none;  /* Remove background highlight */
+    box-shadow: none;  /* Remove glow effect */
+    color: #D3D3D3;  /* Keep the color same as the unhovered state */
+}
+
+
 /* Dropdown Menu */
 body.sneakpeek .nav-container ul li ul {
     position: absolute;
