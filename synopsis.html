@@ -105,14 +105,13 @@
         const sneakPeekButton = document.getElementById("sneak-peek-button");
 
         function delayNavigation(event) {
-            event.preventDefault(); // Prevent immediate navigation
+            event.preventDefault();
 
             setTimeout(() => {
-                window.location.href = "sneak-peek.html"; // Redirect after delay
-            }, 600); // Adjust timing to match CSS transition
+                window.location.href = "sneakpeek.html";
+            }, 600);
         }
 
-        // Make both the book and button delay before navigation
         bookLink.addEventListener("click", delayNavigation);
         sneakPeekButton.addEventListener("click", delayNavigation);
     });
