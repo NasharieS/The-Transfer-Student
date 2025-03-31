@@ -15,7 +15,7 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 90px; /* Add padding to ensure space for fixed header */
+    padding-top: 120px; /* Increased padding-top to create space for the fixed header */
 }
 
 /* 🔥 Top Header */
@@ -29,6 +29,7 @@ body.sneakpeek {
     top: 0;
     left: 0;
     width: 100%;
+    height: 90px; /* Set a height for the header */
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -132,7 +133,7 @@ body.sneakpeek {
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
-    margin: 100px 0 20px 0; /* Ensures space below the header */
+    margin: 120px 0 20px 0; /* Adjust margin to ensure space after header */
     width: 100%;
 }
 
