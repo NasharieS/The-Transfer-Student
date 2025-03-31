@@ -44,7 +44,7 @@ body.sneakpeek .nav-container ul {
     display: flex;
     list-style: none;
     padding-left: 0;
-    margin: 0; /* Prevent extra spacing */
+    margin: 0;
     width: 100%; /* Ensure the navigation bar takes up full width */
 }
 
@@ -57,8 +57,8 @@ body.sneakpeek .nav-container ul > li > a {
     padding: 12px 18px !important;
     display: inline-block; /* Ensures it stretches */
     text-align: center; /* Ensures text is centered */
-    width: 100%; /* Stretch to full width */
     border-radius: 8px; /* Smooth corners */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for background and glow */
 }
 
 /* Hover Effect on Navigation Tabs (Full Stretch and Darker Blue Hover) */
@@ -66,8 +66,6 @@ body.sneakpeek .nav-container ul li:hover > a {
     background: rgba(0, 84, 204, 1);  /* Darker blue background */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
     color: #FFF;  /* White text on hover */
-    width: 100%; /* Ensure it stretches across the full width */
-    text-align: center; /* Ensures text is centered */
 }
 
 /* Highlight Active Parent Tab (Full Stretch and Darker Blue Hover) */
@@ -75,7 +73,6 @@ body.sneakpeek .nav-container ul li.active-tab > a {
     color: #FFF;
     background: rgba(0, 84, 204, 1);  /* Darker blue background */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
-    width: 100%; /* Ensure it stretches across the full width */
 }
 
 /* Remove highlight for Synopsis */
@@ -90,7 +87,6 @@ body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
     color: #FFF;
     background: rgba(0, 84, 204, 1);  /* Darker blue background */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);  /* Stronger, darker blue glow */
-    width: 100%; /* Ensure it stretches across the full width */
 }
 
 /* Dropdown Menu - Prevent stretching */
@@ -111,7 +107,7 @@ body.sneakpeek .nav-container ul li:hover > ul {
     display: block;
 }
 
-/* Prevent the glow from affecting the dropdown */
+/* Hover Effect on Dropdown Items (Darker Blue Hover) */
 body.sneakpeek .nav-container ul li ul li a:hover {
     background: rgba(0, 84, 204, 1); /* Darker hover background */
     box-shadow: 0px 0px 15px rgba(0, 84, 204, 1); /* Glow */
