@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneak Peek</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Your main CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  <script defer src="sneakpeek.js"></script> <!-- Optional JS for flip logic -->
+</head>
+<body class="synopsis-page">
+  <!-- 🔥 Top Header (reuse this HTML from index.html) -->
+  <header class="top-header">
+    <div class="nav-container">
+      <!-- Your existing navigation here -->
+    </div>
+    <div class="contact-icons">
+      <!-- Your contact icons here -->
+    </div>
+  </header>
+
+  <!-- 🔽 Divider after fixed header -->
+  <hr class="divider" />
+
+  <!-- 📖 Page Flip Animation (overlay, hidden until click) -->
+  <div id="page-flip-overlay" class="page-flip-overlay hidden">
+    <div class="flip-page"></div>
+    <div class="flip-page"></div>
+    <div class="flip-page"></div>
+  </div>
+
+  <!-- 📚 Open Book Layout -->
+  <div class="sneakpeek-book">
+    <div class="page left-page">
+      <div class="page-content" id="page-left">
+        <!-- Dynamic content for left page -->
+        <h2>Chapter One</h2>
+        <p>She didn’t mean to wake up in someone else’s life...</p>
+      </div>
+    </div>
+    <div class="page right-page">
+      <div class="page-content" id="page-right">
+        <!-- Dynamic content for right page -->
+        <p>But the second she opened her eyes, Amara knew she wasn’t home.</p>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prev-page" class="page-arrow left-arrow">&#8592;</button>
+    <button id="next-page" class="page-arrow right-arrow">&#8594;</button>
+  </div>
+
+  <!-- 📌 Footer -->
+  <footer>
+    <p>© 2025 Nasharie Stewart. All rights reserved. All views are my own.</p>
+  </footer>
+</body>
+</html>
