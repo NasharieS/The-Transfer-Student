@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <title>Sneak Peek</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sneakpeek.css"> <!-- 👈 Optional, for page-specific styles -->
+    <link rel="stylesheet" href="sneakpeek.css"> <!-- 👈 Page-specific styles -->
 </head>
 <body class="sneakpeek">
 
     <!-- 🔥 Reuse Header -->
     <div class="top-header">
         <div class="nav-container">
-            <!-- Your nav content here -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="active-tab"><a href="about.html">About</a></li>
                 <li><a href="synopsis.html">Synopsis</a></li>
-                <!-- Add any other nav links -->
             </ul>
         </div>
     </div>
@@ -31,7 +29,8 @@
             <h2>Chapter Two</h2>
             <p>This is another page of sneak peek content. Add as many pages as you want.</p>
         </div>
-        <!-- More .page divs if needed -->
+
+        <!-- ➡️ Next Page Button -->
         <button id="next-page">→</button>
     </div>
 
@@ -40,7 +39,7 @@
         © 2025 Nasharie Stewart • All rights reserved • All views are my own
     </footer>
 
-    <!-- 🚀 Optional Script -->
+    <!-- 🚀 Flip Script -->
     <script>
         const pages = document.querySelectorAll('.page');
         const button = document.getElementById('next-page');
