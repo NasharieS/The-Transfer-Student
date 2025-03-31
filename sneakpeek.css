@@ -72,22 +72,44 @@ body.sneakpeek .nav-container ul li a {
     display: inline-block !important;
 }
 
-/* Highlight Active Parent Tab */
+/* Force All Navigation Tabs to Stretch on Hover and Active */
+body.sneakpeek .nav-container ul li > a {
+    display: block;
+    padding: 12px 18px;
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Make sure it stretches to full width */
+}
+
+/* Hover Effect on Navigation Tabs (Stretch Glow & Background) */
+body.sneakpeek .nav-container ul li:hover > a,
+body.sneakpeek .nav-container ul li:hover {
+    background: rgba(0, 119, 255, 0.6);  /* Blue background */
+    box-shadow: 0px 0px 20px rgba(0, 119, 255, 0.9);  /* Stronger, darker blue glow */
+    color: #FFF;  /* White text on hover */
+    width: 100%; /* Ensure it stretches across the full width */
+}
+
+/* Highlight Active Parent Tab (Stretch Glow & Background) */
 body.sneakpeek .nav-container ul li.active-tab > a {
     color: #FFF;
     background: rgba(0, 119, 255, 0.6);
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+    width: 100%; /* Ensure it stretches across the full width */
 }
 
-/* Highlight Active Subtab */
-body.sneakpeek .nav-container ul li ul li.active-subtab > a {
+/* Remove highlight for Synopsis */
+body.sneakpeek .nav-container ul li.active-tab > a[href="synopsis.html"] {
+    background: none;  /* Remove background highlight */
+    box-shadow: none;  /* Remove glow effect */
+    color: #D3D3D3;  /* Keep the color same as the unhovered state */
+}
+
+/* Keep highlight for About */
+body.sneakpeek .nav-container ul li.active-tab > a[href="about.html"] {
     color: #FFF;
     background: rgba(0, 119, 255, 0.6);
-    padding: 12px 20px;
-    width: 100%;
-    display: block;
-    text-align: center;
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+    width: 100%; /* Ensure it stretches across the full width */
 }
 
 /* Dropdown Menu */
