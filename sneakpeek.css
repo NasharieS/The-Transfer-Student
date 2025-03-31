@@ -123,11 +123,11 @@ body.sneakpeek .nav-container ul li.active-tab > a {
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
 }
 
-/* Dropdown Menu */
-body.sneakpeek .nav-container ul li ul {
-    position: absolute;
-    top: 48px;
-    left: 0;
+/* 🔽 Dropdown Menu (Locks in place) */
+.nav-container ul li ul {
+    position: absolute !important;
+    top: 48px !important; /* Keeps dropdowns perfectly below the tabs */
+    left: 0 !important;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
     display: none;
@@ -136,24 +136,17 @@ body.sneakpeek .nav-container ul li ul {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Show Dropdown on Hover */
-body.sneakpeek .nav-container ul li:hover > ul {
+/* 🎭 Dropdown Items */
+.nav-container ul li ul li {
+    padding: 10px 20px;
     display: block;
 }
 
-/* Hover Effect on Navigation Tabs (Full Stretch and Darker Blue Hover) */
-body.sneakpeek .nav-container ul li:hover > a {
-    background: rgba(0, 64, 153, 1);  /* Darker blue background */
-    box-shadow: 0px 0px 20px rgba(0, 64, 153, 1);  /* Stronger, darker blue glow */
-    color: #FFF;  /* White text on hover */
-    width: 100%; /* Ensure it stretches across the full width */
-    text-align: center; /* Ensures text is centered */
-}
-
-/* Hover Effect on Dropdown Items (Darker Blue Hover) */
-body.sneakpeek .nav-container ul li ul li a:hover {
-    background: rgba(0, 64, 153, 1); /* Darker hover background */
-    box-shadow: 0px 0px 15px rgba(0, 64, 153, 1); /* Darker glow */
+/* ✅ Dropdown Items Styling */
+.nav-container ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    display: block;
 }
 
 /* Search Bar */
