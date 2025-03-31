@@ -49,7 +49,7 @@ body.sneakpeek {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 90px; /* 👈 Creates space below fixed header *
+    padding-top: 90px; /* 👈 Creates space below fixed header */
 }
 
 .divider {
