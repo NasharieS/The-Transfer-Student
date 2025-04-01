@@ -228,6 +228,33 @@ body.sneakpeek .contact-icons a {
     margin-bottom: 20px;
 }
 
+/* 🆕 Title Spread Styling */
+.title-spread {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.title-spread h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title-spread h1 span {
+    font-weight: normal;
+}
+
+.title-spread h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
 /* Apply a vintage bookshelf background */
 body.sneakpeek {
     background-image: url('vintage_bookshelf.jpg.png');
