@@ -236,6 +236,41 @@ body.sneakpeek {
     background-repeat: no-repeat;
 }
 
+/* 🔥 Burning Animation */
+.book-page::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at bottom right, rgba(255, 87, 34, 0.8), transparent 70%);
+    animation: burn-flicker 10s infinite;
+    pointer-events: none;
+    border-bottom-right-radius: 8px;
+    z-index: 5;
+}
+
+/* 🔥 Keyframes for flickering burn drip */
+@keyframes burn-flicker {
+    0%, 90%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+    60% {
+        transform: scale(1.4);
+        opacity: 0.6;
+    }
+}
+
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
