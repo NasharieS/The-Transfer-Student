@@ -245,7 +245,9 @@ body.sneakpeek .contact-icons a {
 }
 
 .title-spread h1 span {
-    font-weight: normal;
+    font-weight: bold;
+    font-style: normal;
+    margin-left: 6px;
 }
 
 .title-spread h2 {
