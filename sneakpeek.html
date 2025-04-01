@@ -15,7 +15,7 @@
  <!-- Sneak Peek Book Content -->
 <main class="synopsis-container">
   <h2 class="page-title">Sneak Peek</h2>
-<div class="book-container" id="book"></div>
+<div id="book"></div>
   <div class="navigation-buttons">
     <button id="prev-btn">← Previous</button>
     <button id="next-btn">Next →</button>
@@ -70,17 +70,19 @@
     const nextBtn = document.getElementById('next-btn');
     let current = 0;
 
-    function renderSpread(index) {
-      const [left, right] = spreads[index];
-      book.innerHTML = `
-        <div class="book-page left-page">
-          <div class="page-content">${left}</div>
-        </div>
-        <div class="book-page right-page">
-          <div class="page-content">${right}</div>
-        </div>
-      `;
-    }
+   function renderSpread(index) {
+  const [left, right] = spreads[index];
+  book.innerHTML = `
+    <div class="book-container">
+      <div class="book-page left-page">
+        <div class="page-content">${left}</div>
+      </div>
+      <div class="book-page right-page">
+        <div class="page-content">${right}</div>
+      </div>
+    </div>
+  `;
+}
 
     prevBtn.onclick = () => {
       if (current > 0) {
