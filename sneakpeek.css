@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
     margin: 0;
@@ -12,9 +11,9 @@ body.sneakpeek {
     background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100vh; /* Full viewport height */
 }
 
 /* 🔥 Top Header */
@@ -50,8 +49,8 @@ body.sneakpeek .nav-container ul {
 
 /* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
 .nav-container ul > li > a {
-    font-size: 18px !important;  /* Forces same size */
-    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-size: 18px !important;
+    color: #D3D3D3 !important;
     font-weight: bold !important;
     text-decoration: none !important;
     display: inline-block !important;
@@ -62,12 +61,12 @@ body.sneakpeek .nav-container ul {
 .nav-container ul li,
 .nav-container ul li a {
     position: relative;
-    padding: 12px 18px !important;  /* Uniform padding */
+    padding: 12px 18px !important;
     border-radius: 8px !important;
     transition: all 0.3s ease-in-out !important;
     text-decoration: none !important;
-    color: #D3D3D3 !important;  /* Matches Home & About */
-    font-size: 18px !important;  /* Ensures all tabs are the same size */
+    color: #D3D3D3 !important;
+    font-size: 18px !important;
     font-weight: bold !important;
     display: inline-block !important;
 }
@@ -84,17 +83,17 @@ body.sneakpeek .nav-container ul li.active-tab > a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;  /* 👈 Stretches glow across */
+    width: 100% !important;
     min-width: 100% !important;
-    padding: 12px 20px !important;  /* 👈 Same padding as main tabs */
+    padding: 12px 20px !important;
     text-align: center !important;
 }
 
 /* 🚀 Ensures Hover Effect Stretches Fully */
 .nav-container ul li ul li:hover {
-    background: rgba(0, 84, 204, 1) !important;  /* 👈 Exact Dark Blue */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;  /* 👈 Stronger Glow */
-    width: 100% !important;  /* 👈 Forces hover effect to cover entire tab */
+    background: rgba(0, 84, 204, 1) !important;
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;
+    width: 100% !important;
     min-width: 100% !important;
 }
 
@@ -104,22 +103,22 @@ body.sneakpeek .nav-container ul li.active-tab > a {
     display: flex !important; 
     align-items: center !important;
     justify-content: center !important;
-    min-width: 150px !important; /* 👈 Adjust width if needed */
-    padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
+    min-width: 150px !important;
+    padding: 12px 18px !important;
 }
 
 /* ✅ Fix Blue Glow on Active Tabs */
 .nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
-    width: 100% !important; /* 👈 Forces glow to stretch */
+    width: 100% !important;
     text-align: center !important;
 }
 
 /* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
 .nav-container ul li:hover,
 .nav-container ul li ul li:hover {
-    background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
+    background: rgba(0, 84, 204, 1) !important;
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;
 }
 
 /* Dropdown Menu */
@@ -184,52 +183,53 @@ body.sneakpeek .contact-icons a {
 .book-container {
     display: flex;
     justify-content: center;
-    gap: 0px; /* No gap between pages */
-    margin-top: 100px; /* Adjust to control space from the top */
-    perspective: 1000px; /* Add perspective for 3D effect */
+    gap: 0px;
+    perspective: 1000px;
+    width: 100%;
+    max-width: 1000px;
+    height: calc(100vh - 180px); /* 90 header + 90 footer */
+    margin: 120px auto 60px auto;
 }
 
 .book-page {
-    width: 500px; /* Increased width of each page */
-    height: 600px; /* Increased height of the page */
+    width: 480px;
+    height: 100%;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 30px; /* Increased padding for content */
+    padding: 30px;
     position: relative;
     transform-origin: center center;
     transition: transform 0.5s ease-in-out;
+    overflow-y: auto;
 }
 
-/* Left Page */
 .left-page {
     transform: rotateY(0deg);
-    margin-right: -5px; /* Bring the left page closer to the right */
+    margin-right: -5px;
 }
 
-/* Right Page */
 .right-page {
     transform: rotateY(0deg);
-    margin-left: -5px; /* Bring the right page closer to the left */
+    margin-left: -5px;
 }
 
-/* Page Content Styling */
 .page-content {
     color: #333;
-    font-size: 18px; /* Increase font size for better readability */
-    line-height: 1.8; /* Increase line height for better spacing */
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 .page-title {
-    font-size: 28px; /* Larger title for emphasis */
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 /* Apply a vintage bookshelf background */
 body.sneakpeek {
-    background-image: url('vintage_bookshelf.jpg.png'); /* This image should be a vintage bookshelf texture */
+    background-image: url('vintage_bookshelf.jpg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
