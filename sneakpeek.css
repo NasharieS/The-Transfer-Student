@@ -227,6 +227,14 @@ body.sneakpeek .contact-icons a {
     margin-bottom: 20px;
 }
 
+/* Apply a vintage bookshelf background */
+body.sneakpeek {
+    background-image: url('vintage_bookshelf.jpg'); /* This image should be a vintage bookshelf texture */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
