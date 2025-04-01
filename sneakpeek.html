@@ -158,10 +158,20 @@
       let current = 1;
 
       function renderSpread(index) {
-        const [left, right] = spreads[index];
-        leftEl.innerHTML = left;
-        rightEl.innerHTML = right;
-      }
+  const [left, right] = spreads[index];
+
+  if (index === 0) {
+    leftEl.innerHTML = `
+      <div class="title-spread">
+        <h1>Part I: <span>The Awakening</span></h1>
+        <h2>Chapter 1</h2>
+      </div>`;
+    rightEl.innerHTML = ""; // Leave right page blank on the title spread
+  } else {
+    leftEl.innerHTML = `<p>${left}</p>`;
+    rightEl.innerHTML = `<p>${right}</p>`;
+  }
+}
 
       prevBtn.onclick = () => {
         if (current > 0) {
