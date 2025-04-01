@@ -188,7 +188,7 @@ body.sneakpeek .contact-icons a {
     width: 100%;
     max-width: 1000px;
     height: calc(100vh - 180px); /* 90px header + 90px footer */
-    margin: 40px auto 60px auto; /* Top, horizontal auto, bottom */
+    margin: 60px auto 60px auto; /* Top, horizontal auto, bottom */
 }
 
 .book-page {
