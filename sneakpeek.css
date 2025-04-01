@@ -12,9 +12,9 @@ body.sneakpeek {
     background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100vh; /* Full viewport height */
 }
 
 /* 🔥 Top Header */
@@ -40,12 +40,15 @@ body.sneakpeek .nav-container {
     flex-grow: 1;
 }
 
-body.sneakpeek .nav-container ul {
+/* Main Content Area - Book Pages */
+main.sneakpeek {
     display: flex;
-    list-style: none;
-    padding-left: 0;
-    margin: 0; /* Prevent extra spacing */
-    width: 100%; /* Ensure the navigation bar takes up full width */
+    flex-grow: 1;
+    justify-content: center;
+    align-items: flex-start; /* Start content below the header */
+    padding-top: 120px; /* Adjust this based on header height */
+    padding-bottom: 50px; /* Space for footer */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
@@ -187,16 +190,18 @@ body.sneakpeek .contact-icons a {
     gap: 0px; /* No gap between pages */
     margin-top: 100px; /* Adjust to control space from the top */
     perspective: 1000px; /* Add perspective for 3D effect */
+    width: 100%;
+    max-width: 1000px; /* Control the max width of the book container */
 }
 
 .book-page {
-    width: 500px; /* Increased width of each page */
-    height: 600px; /* Increased height of the page */
+    width: 480px;
+    height: 600px;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 30px; /* Increased padding for content */
+    padding: 30px;
     position: relative;
     transform-origin: center center;
     transition: transform 0.5s ease-in-out;
