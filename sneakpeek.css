@@ -237,26 +237,26 @@ body.sneakpeek {
 }
 
 /* 🔮 Flicker + Dust Particle Overlay */
-.flicker-overlay {
+.dust-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* So it doesn't interfere with clicks */
-    z-index: 1; /* Below header and book */
+    pointer-events: none;
+    z-index: 1;
     background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.1) 100%);
     animation: flicker 10s infinite ease-in-out;
     mix-blend-mode: overlay;
     opacity: 0.2;
 }
 
-.flicker-overlay::before {
+.dust-overlay::before {
     content: '';
     position: absolute;
     width: 200%;
     height: 200%;
-    background: url('dust-particles.png'); /* Add a dust image */
+    background: url('dust-particles.png'); /* Your dust particle image */
     background-size: cover;
     animation: floatParticles 30s linear infinite;
     opacity: 0.1;
