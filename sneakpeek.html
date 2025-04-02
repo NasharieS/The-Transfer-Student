@@ -162,11 +162,9 @@ function renderSpread(index) {
     leftEl.innerHTML = `
       <div class="title-spread">
         <h1>Part I: <span>The Awakening</span></h1>
-      </div>`;
-    rightEl.innerHTML = `
-      <div class="title-spread">
         <h2>Chapter 1</h2>
       </div>`;
+    rightEl.innerHTML = ""; // Leave right page blank
   } else {
     leftEl.innerHTML = Array.isArray(left)
       ? left.map(p => `<p>${p}</p>`).join('')
@@ -176,7 +174,6 @@ function renderSpread(index) {
       ? right.map(p => `<p>${p}</p>`).join('')
       : `<p>${right}</p>`;
   }
- 
 }
 
       prevBtn.onclick = () => {
