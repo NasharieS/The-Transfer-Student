@@ -9,7 +9,8 @@
 /* Sneak Peek Page Specific */
 body.sneakpeek {
     overflow: hidden;
-    background: #fff;
+    background: url('vintage_bookshelf.jpg') no-repeat center center;
+    background-size: cover;
     color: #0D1B2A;
     line-height: 1.6;
     display: flex;
