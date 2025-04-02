@@ -73,8 +73,8 @@
   <footer>
     <p>&copy; 2025 Nasharie Stewart | All views are my own</p>
   </footer>
-
-<!-- 📚 Flip Logic -->
+  
+  <!-- 📚 Flip Logic -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
      const spreads = [
@@ -150,32 +150,33 @@
     "I woke up gasping, my breath uneven."
   ]
 ];
-      const leftEl = document.getElementById("left-content");
+
+    const leftEl = document.getElementById("left-content");
       const rightEl = document.getElementById("right-content");
       const prevBtn = document.getElementById("prev-btn");
       const nextBtn = document.getElementById("next-btn");
       let current = 0;
 
       function renderSpread(index) {
-        const [left, right] = spreads[index];
+  const [left, right] = spreads[index];
 
-        if (index === 0) {
-          leftEl.innerHTML = `
-            <div class="title-spread">
-              <h1>Part I: <span>The Awakening</span></h1>
-              <h2>Chapter 1</h2>
-            </div>`;
-          rightEl.innerHTML = "";
-        } else {
-          leftEl.innerHTML = Array.isArray(left)
-            ? left.map(p => `<p>${p}</p>`).join('')
-            : `<p>${left}</p>`;
+  if (index === 0) {
+    leftEl.innerHTML = `
+      <div class="title-spread">
+        <h1>Part I: <span>The Awakening</span></h1>
+        <h2>Chapter 1</h2>
+      </div>`;
+    rightEl.innerHTML = "";
+  } else {
+    leftEl.innerHTML = Array.isArray(left)
+      ? left.map(p => `<p>${p}</p>`).join('')
+      : `<p>${left}</p>`;
 
-          rightEl.innerHTML = Array.isArray(right)
-            ? right.map(p => `<p>${p}</p>`).join('')
-            : `<p>${right}</p>`;
-        }
-      }
+    rightEl.innerHTML = Array.isArray(right)
+      ? right.map(p => `<p>${p}</p>`).join('')
+      : `<p>${right}</p>`;
+  }
+}
 
       prevBtn.onclick = () => {
         if (current > 0) {
