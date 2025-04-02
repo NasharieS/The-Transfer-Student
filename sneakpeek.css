@@ -230,31 +230,28 @@ body.sneakpeek .contact-icons a {
 
 /* 🆕 Title Spread Styling */
 .title-spread {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
 }
 
 .title-spread h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .title-spread h1 span {
-    font-weight: bold;
-    font-style: normal;
-    margin-left: 6px;
+  margin-left: 6px;
 }
 
 .title-spread h2 {
-    font-size: 22px;
-    margin-top: 10px;
-    font-weight: 500;
-    color: #555;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* Apply a vintage bookshelf background */
