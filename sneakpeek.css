@@ -254,6 +254,16 @@ body.sneakpeek .contact-icons a {
   color: #333;
 }
 
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
 /* Apply a vintage bookshelf background */
 body.sneakpeek {
   background-image: url('vintage_bookshelf.jpg.png');
