@@ -252,6 +252,13 @@ body.sneakpeek .contact-icons a {
   text-align: center;
 }
 
+.title-spread p {
+  text-align: left;       /* override center alignment */
+  max-width: 90%;         /* keep it readable */
+  margin-top: 20px;       /* add space between h2 and paragraph */
+  line-height: 1.8;
+}
+
 .title-spread h1 {
   font-size: 22px;
   font-weight: bold;
