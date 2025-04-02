@@ -81,11 +81,10 @@
           <h2>Chapter 1</h2>
           <p>The barricades weren’t meant to protect us, they were meant to trap us. The way they were lined up created a path for us to walk through to get to our new school. However, the pale faces on the other side made it very clear that they wanted us anywhere but here. Us vs them– that was how it had always been, and as I stepped forward with my books held tightly to my chest, I wondered if that was how it would always be.</p>
         </div>`,
-        ""
+         `<p>"Police officers were facing the crowd, facing the protestors, trying to calm them down. Or at least that’s what they would say on the 5:00 news. From where I was standing, there was very little effort coming from them to remedy the situation. Other students who looked like me walked ahead, and I recognized a few of their faces from my neighborhood, an hour away.</p>`
       ];
 
 const rawParagraphs = [
-  "Police officers were facing the crowd, facing the protestors, trying to calm them down. Or at least that’s what they would say on the 5:00 news. From where I was standing, there was very little effort coming from them to remedy the situation. Other students who looked like me walked ahead, and I recognized a few of their faces from my neighborhood, an hour away.",
   "But there was one student in particular who walked with her head held high. A girl around my age, with brown glasses and her hair up in a fro. Despite the shouting, despite the slurs and balls of spit being javelined at us, she walked as if she belonged here. I took slow, unsure, and unsteady steps a few paces behind her, trying to muster the courage to walk as she was.",
   "The world around me felt like the inside of a tornado– grey and unforgiving, uprooting with all its strength everything on the ground. As the voices in the crowd grew louder, my spirit grew smaller.",
   "With their venomous screams of “Get out of here” and “We don’t want your kind,” I knew it was only a matter of seconds before things became physical. As if on cue, my world shifted from ash-grey to a hot, burning red. The kind of red that begs to be seen. Like a stop sign at the edge of disaster– a warning bell that has rung too late.",
@@ -114,29 +113,24 @@ const rawParagraphs = [
   "I woke up gasping, my breath uneven."
 ];
       
-        const spreads = [
-        introSpread,
-        ...rawParagraphs.reduce((acc, val, idx, arr) => {
-          if (idx % 2 === 0) acc.push([val, arr[idx + 1] || ""]);
-          return acc;
-        }, [])
-      ];
+       const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
+        if (i % 2 === 0) acc.push([`<p>${para}</p>`, `<p>${arr[i + 1] || ""}</p>`]);
+        return acc;
+      }, []);
 
-   const leftEl = document.getElementById("left-content");
+      const spreads = [introSpread, ...contentSpreads];
+
+      const leftEl = document.getElementById("left-content");
       const rightEl = document.getElementById("right-content");
       const prevBtn = document.getElementById("prev-btn");
       const nextBtn = document.getElementById("next-btn");
+
       let current = 0;
 
       function renderSpread(index) {
-        if (index === 0) {
-          leftEl.innerHTML = spreads[0][0];
-          rightEl.innerHTML = spreads[0][1];
-        } else {
-          const [left, right] = spreads[index] || ["", ""];
-          leftEl.innerHTML = `<p>${left}</p>`;
-          rightEl.innerHTML = `<p>${right}</p>`;
-        }
+        const [left, right] = spreads[index] || ["", ""];
+        leftEl.innerHTML = left;
+        rightEl.innerHTML = right;
       }
 
       prevBtn.onclick = () => {
