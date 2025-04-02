@@ -55,156 +55,103 @@
   <!-- Sneak Peek Book Content -->
   <main class="synopsis-container">
     <h2 class="page-title">Sneak Peek</h2>
-   <div class="book-container">
-  <div class="book-page left-page">
-    <div class="page-content" id="left-content"></div>
-    <button id="prev-btn" class="nav-btn">← Previous</button>
-  </div>
-  <div class="book-page right-page">
-    <div class="page-content" id="right-content"></div>
-    <button id="next-btn" class="nav-btn">Next →</button>
-  </div>
-</div>
+    <div class="book-container">
+      <div class="book-page left-page">
+        <div class="page-content" id="left-content"></div>
+        <button id="prev-btn" class="nav-btn">← Previous</button>
+      </div>
+      <div class="book-page right-page">
+        <div class="page-content" id="right-content"></div>
+        <button id="next-btn" class="nav-btn">Next →</button>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Nasharie Stewart | All views are my own</p>
   </footer>
-  
+
   <!-- Flip Logic -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-     const spreads = [
-  ["Part I: The Awakening", "Chapter 1"],
+      const introSpread = [
+        `<div class="title-spread">
+          <h1>Part I: <span>The Awakening</span></h1>
+          <h2>Chapter 1</h2>
+          <p>The barricades weren’t meant to protect us, they were meant to trap us. The way they were lined up created a path for us to walk through to get to our new school. However, the pale faces on the other side made it very clear that they wanted us anywhere but here. Us vs them– that was how it had always been, and as I stepped forward with my books held tightly to my chest, I wondered if that was how it would always be.</p>
+        </div>`,
+        ""
+      ];
 
-  [
-    "But there was one student in particular who walked with her head held high. A girl around my age, with brown glasses and her hair up in a fro. Despite the shouting, despite the slurs and balls of spit being javelined at us, she walked as if she belonged here. I took slow, unsure, and unsteady steps a few paces behind her, trying to muster the courage to walk as she was.",
-    "The world around me felt like the inside of a tornado– grey and unforgiving, uprooting with all its strength everything on the ground. As the voices in the crowd grew louder, my spirit grew smaller."
-  ],
-
-  [
-    "With their venomous screams of “Get out of here” and “We don’t want your kind,” I knew it was only a matter of seconds before things became physical. As if on cue, my world shifted from ash-grey to a hot, burning red. The kind of red that begs to be seen. Like a stop sign at the edge of disaster– a warning bell that has rung too late.",
-    "I could see the red clear as day, and in its path, I saw a brick hit the head of the girl in front of me. I watched as it knocked her over, stealing her courage and hijacking her pride. I gasped as her blood began to spill, splattering across the sidewalk– some of it hitting the school’s golden crest just inches away."
-  ],
-
-  [
-    "Screams erupted all over as some of my peers rushed to her side, while others began yelling back at the protestors. There were about 20 Black students and more than 100 protestors. But because the protestors were mostly made up of White families, when the police whipped out their batons, they weren’t the ones that got hit.",
-    "“You’re hitting us for no reason,” one boy huffed as he held his arms up to cover his face."
-  ],
-
-  [
-    "“They were the ones who threw a brick. A girl is bleeding out here; help us!” Another girl pleaded.",
-    "“Back up, back up,” was all an officer said in a voice so harsh the flowers around him wilted."
-  ],
-
-  [
-    "More police left their posts in front of the barricades to force us away from them, as if we were the threat. I thought of how moments before the girl got hit with that brick, she was walking so confidently. How moments before, I wanted to be her.",
-    "But now, she was lying on the cold, hard concrete, her body limp and lifeless. How ironic that in a twisted way, I now was her. Nothing had hit me, and yet there was no observable difference between myself, as I stood frozen in place, and her as she lay mummified on the ground."
-  ],
-
-  [
-    "“That one has his fists up,” I heard another officer holler as his dog bucked his chest forward, urging him towards the boy who was only protecting his face.",
-    "No adult seemed to care that a girl was hurt. They didn’t see us. These protestors, these parents, they weren’t looking at us. Not really, not enough to see that we too were children like theirs."
-  ],
-
-  [
-    "Perhaps if these people in the crowd were capable of looking at me rather than through me, they would see that I didn’t choose this. I didn’t choose to desegregate schools. I didn’t choose to be here today, yet here I was.",
-    "I wiped the tears off of my face and craned my neck back and forth, summoning the courage to do something that I knew in my core the girl on the ground would have done for me in a heartbeat if I had been the one hit."
-  ],
-
-  [
-    "“She needs medical help,” I croaked out rather timidly.",
-    "I balled my fists down by my side before realizing I shouldn’t do that, and so I wiggled my fingers instead. I found my voice and yelled “Stop for one damn second and look at the girl who’s bleeding on the ground. It’s your job to help her!”"
-  ],
-
-  [
-    "An officer quickly whipped around as if he was shocked I could speak. His eyes narrowed as he moved towards me, his hand on his hip. There it was again. The looking through me instead of at me.",
-    "His eyes were brown, like mine. Yet, when he looked at me, they were cold, and I couldn’t read his expression. A riot gear helmet sat on top of his head, and engraved on the side was a V with a line through it."
-  ],
-
-  [
-    "“Put your hands where I can see them”, he all but spit at me.",
-    "I inhaled a deep breath and took a step towards him. He quickly unholstered his gun, and before my right foot could even hit the ground in front of me, he aimed the pistol directly at my face. We were only about 3 feet apart, and I knew taking another step could cost me my life."
-  ],
-
-  [
-    "“I mean you no harm,” I said as I raised both my hands up in front of me and took another slow step forward. “She needs help, or she is going to die here. She’s going to die before she’s even had the chance to go to homeroom,” I cried out.",
-    "My words had no effect on him. His grip on the gun only tightened, and dare I say, I saw him smile. “Nigger I will kill you right here if you don’t back up.”"
-  ],
-
-  [
-    "This time, it was him who moved towards me so that the tip of the gun was touching my forehead. I glanced behind the police officer and saw the girl still lying on the ground, as a student tried their best to stop the bleeding with both of their hands on top of her head.",
-    "Although I felt exposed to the cold chill of the bottom of his barrel, I decided I would keep my head up. I would stare into his eyes. I would make him see me. “Do it. Pull the trigger.”"
-  ],
-
-  [
-    "“Nooooo!” a boy yelled as he ran over and stood in between the officer and me.",
-    "I woke up gasping, my breath uneven."
-  ]
+const rawParagraphs = [
+  "Police officers were facing the crowd, facing the protestors, trying to calm them down. Or at least that’s what they would say on the 5:00 news. From where I was standing, there was very little effort coming from them to remedy the situation. Other students who looked like me walked ahead, and I recognized a few of their faces from my neighborhood, an hour away.",
+  "But there was one student in particular who walked with her head held high. A girl around my age, with brown glasses and her hair up in a fro. Despite the shouting, despite the slurs and balls of spit being javelined at us, she walked as if she belonged here. I took slow, unsure, and unsteady steps a few paces behind her, trying to muster the courage to walk as she was.",
+  "The world around me felt like the inside of a tornado– grey and unforgiving, uprooting with all its strength everything on the ground. As the voices in the crowd grew louder, my spirit grew smaller.",
+  "With their venomous screams of “Get out of here” and “We don’t want your kind,” I knew it was only a matter of seconds before things became physical. As if on cue, my world shifted from ash-grey to a hot, burning red. The kind of red that begs to be seen. Like a stop sign at the edge of disaster– a warning bell that has rung too late.",
+  "I could see the red clear as day, and in its path, I saw a brick hit the head of the girl in front of me. I watched as it knocked her over, stealing her courage and hijacking her pride. I gasped as her blood began to spill, splattering across the sidewalk– some of it hitting the school’s golden crest just inches away.",
+  "Screams erupted all over as some of my peers rushed to her side, while others began yelling back at the protestors. There were about 20 Black students and more than 100 protestors. But because the protestors were mostly made up of White families, when the police whipped out their batons, they weren’t the ones that got hit.",
+  "“You’re hitting us for no reason,” one boy huffed as he held his arms up to cover his face.",
+  "“They were the ones who threw a brick. A girl is bleeding out here; help us!” Another girl pleaded.",
+  "“Back up, back up,” was all an officer said in a voice so harsh the flowers around him wilted.",
+  "More police left their posts in front of the barricades to force us away from them, as if we were the threat. I thought of how moments before the girl got hit with that brick, she was walking so confidently. How moments before, I wanted to be her.",
+  "But now, she was lying on the cold, hard concrete, her body limp and lifeless. How ironic that in a twisted way, I now was her. Nothing had hit me, and yet there was no observable difference between myself, as I stood frozen in place, and her as she lay mummified on the ground.",
+  "“That one has his fists up,” I heard another officer holler as his dog bucked his chest forward, urging him towards the boy who was only protecting his face.",
+  "No adult seemed to care that a girl was hurt. They didn’t see us. These protestors, these parents, they weren’t looking at us. Not really, not enough to see that we too were children like theirs.",
+  "Perhaps if these people in the crowd were capable of looking at me rather than through me, they would see that I didn’t choose this. I didn’t choose to desegregate schools. I didn’t choose to be here today, yet here I was.",
+  "I wiped the tears off of my face and craned my neck back and forth, summoning the courage to do something that I knew in my core the girl on the ground would have done for me in a heartbeat if I had been the one hit.",
+  "“She needs medical help,” I croaked out rather timidly.",
+  "I balled my fists down by my side before realizing I shouldn’t do that, and so I wiggled my fingers instead. I found my voice and yelled “Stop for one damn second and look at the girl who’s bleeding on the ground. It’s your job to help her!”",
+  "An officer quickly whipped around as if he was shocked I could speak. His eyes narrowed as he moved towards me, his hand on his hip. There it was again. The looking through me instead of at me.",
+  "His eyes were brown, like mine. Yet, when he looked at me, they were cold, and I couldn’t read his expression. A riot gear helmet sat on top of his head, and engraved on the side was a V with a line through it.",
+  "“Put your hands where I can see them”, he all but spit at me.",
+  "I inhaled a deep breath and took a step towards him. He quickly unholstered his gun, and before my right foot could even hit the ground in front of me, he aimed the pistol directly at my face. We were only about 3 feet apart, and I knew taking another step could cost me my life.",
+  "“I mean you no harm,” I said as I raised both my hands up in front of me and took another slow step forward. “She needs help, or she is going to die here. She’s going to die before she’s even had the chance to go to homeroom,” I cried out.",
+  "My words had no effect on him. His grip on the gun only tightened, and dare I say, I saw him smile. “Nigger I will kill you right here if you don’t back up.”",
+  "This time, it was him who moved towards me so that the tip of the gun was touching my forehead. I glanced behind the police officer and saw the girl still lying on the ground, as a student tried their best to stop the bleeding with both of their hands on top of her head.",
+  "Although I felt exposed to the cold chill of the bottom of his barrel, I decided I would keep my head up. I would stare into his eyes. I would make him see me. “Do it. Pull the trigger.”",
+  "“Nooooo!” a boy yelled as he ran over and stood in between the officer and me.",
+  "I woke up gasping, my breath uneven."
 ];
+      
+        const spreads = [
+        introSpread,
+        ...rawParagraphs.reduce((acc, val, idx, arr) => {
+          if (idx % 2 === 0) acc.push([val, arr[idx + 1] || ""]);
+          return acc;
+        }, [])
+      ];
 
-    const leftEl = document.getElementById("left-content");
+   const leftEl = document.getElementById("left-content");
       const rightEl = document.getElementById("right-content");
       const prevBtn = document.getElementById("prev-btn");
       const nextBtn = document.getElementById("next-btn");
       let current = 0;
 
-function renderSpread(index) {
-  const leftEl = document.getElementById("left-content");
-  const rightEl = document.getElementById("right-content");
+      function renderSpread(index) {
+        if (index === 0) {
+          leftEl.innerHTML = spreads[0][0];
+          rightEl.innerHTML = spreads[0][1];
+        } else {
+          const [left, right] = spreads[index] || ["", ""];
+          leftEl.innerHTML = `<p>${left}</p>`;
+          rightEl.innerHTML = `<p>${right}</p>`;
+        }
+      }
 
-  if (index === 0) {
-    // Page 0: Custom title + intro paragraph (left), first body paragraph (right)
-    leftEl.innerHTML = `
-      <div class="title-spread">
-        <h1>Part I: <span>The Awakening</span></h1>
-        <h2>Chapter 1</h2>
-        <p class="first-paragraph">
-          The barricades weren’t meant to protect us, they were meant to trap us. 
-          The way they were lined up created a path for us to walk through to get to our new school. 
-          However, the pale faces on the other side made it very clear that they wanted us anywhere but here. 
-          Us vs them– that was how it had always been, and as I stepped forward with my books held tightly to my chest, 
-          I wondered if that was how it would always be.
-        </p>
-      </div>`;
+      prevBtn.onclick = () => {
+        if (current > 0) {
+          current--;
+          renderSpread(current);
+        }
+      };
 
-    // Use left side of spreads[1] for the right page
-    const nextRight = spreads[1][0];
-    rightEl.innerHTML = Array.isArray(nextRight)
-      ? nextRight.map(p => `<p>${p}</p>`).join('')
-      : `<p>${nextRight}</p>`;
-  } else {
-    // Adjust index: spreads[1] already partially used, so offset by +1
-    const actualIndex = index + 1;
-
-    const [left, right] = spreads[actualIndex] || ["", ""];
-
-    leftEl.innerHTML = Array.isArray(left)
-      ? left.map(p => `<p>${p}</p>`).join('')
-      : `<p>${left}</p>`;
-
-    rightEl.innerHTML = Array.isArray(right)
-      ? right.map(p => `<p>${p}</p>`).join('')
-      : `<p>${right}</p>`;
-  }
-}
-      
-let current = 0;
-
-prevBtn.onclick = () => {
-  if (current > 0) {
-    current--;
-    renderSpread(current);
-  }
-};
-
-nextBtn.onclick = () => {
-  if (current < spreads.length - 1) {
-    current++;
-    renderSpread(current);
-  }
-};
+      nextBtn.onclick = () => {
+        if (current < spreads.length - 1) {
+          current++;
+          renderSpread(current);
+        }
+      };
 
       renderSpread(current);
     });
