@@ -259,11 +259,13 @@ body.sneakpeek .contact-icons a {
 
 /* Apply a vintage bookshelf background */
 body.sneakpeek {
-    background-image: url('vintage_bookshelf.jpg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  /* background-image: url('vintage_bookshelf.jpg.png'); */
+  background-color: #f7f7f7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 /* Footer */
 body.sneakpeek footer {
