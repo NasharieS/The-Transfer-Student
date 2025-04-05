@@ -242,6 +242,11 @@ body.sneakpeek .contact-icons a {
     margin-bottom: 20px;
 }
 
+p.indent {
+  text-indent: 2em;
+  margin-top: 1em;
+}
+
 /* Title Spread Styling */
 .title-spread {
   display: flex;
