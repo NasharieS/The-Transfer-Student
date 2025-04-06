@@ -146,11 +146,15 @@ const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
 
   let current = 0;
 
-  function renderSpread(index) {
-    const [left, right] = spreads[index] || ["", ""];
-    leftEl.innerHTML = left;
-    rightEl.innerHTML = right;
-  }
+function renderSpread(index) {
+  const [left, right] = spreads[index] || ["", ""];
+  leftEl.innerHTML = left;
+  rightEl.innerHTML = right;
+
+  // Hide/show navigation buttons based on current index
+  prevBtn.style.display = index === 0 ? "none" : "block";
+  nextBtn.style.display = index === spreads.length - 1 ? "none" : "block";
+}
 
   prevBtn.onclick = () => {
     if (current > 0) {
