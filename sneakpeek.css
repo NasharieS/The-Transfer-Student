@@ -247,6 +247,15 @@ p.indent {
   margin-top: 1em;
 }
 
+.page-number {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+
 /* Title Spread Styling */
 .title-spread {
   display: flex;
