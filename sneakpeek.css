@@ -318,17 +318,6 @@ main.synopsis-container {
   padding-bottom: 120px; /* Creates space above the fixed footer */
 }
 
-/* Page turning effect on hover */
-.book-page.left-page:hover {
-  transform: perspective(1000px) rotateY(-2deg);
-  transition: transform 0.3s ease-in-out;
-}
-
-.book-page.right-page:hover {
-  transform: perspective(1000px) rotateY(2deg);
-  transition: transform 0.3s ease-in-out;
-}
-
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
