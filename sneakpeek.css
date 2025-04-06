@@ -318,19 +318,13 @@ main.synopsis-container {
   padding-bottom: 120px; /* Creates space above the fixed footer */
 }
 
-/* === PAGE TURNING EFFECT ON HOVER === */
-#prev-btn:hover {
-  /* Apply the curl to the left page */
-  transform: perspective(800px) rotateY(-8deg);
+.curl-left {
+  transform: perspective(1000px) rotateY(-8deg);
+  transition: transform 0.4s ease;
 }
 
-#next-btn:hover {
-  /* Apply the curl to the right page */
-  transform: perspective(800px) rotateY(8deg);
-}
-
-#prev-btn,
-#next-btn {
+.curl-right {
+  transform: perspective(1000px) rotateY(8deg);
   transition: transform 0.4s ease;
 }
 
