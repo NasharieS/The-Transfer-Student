@@ -318,6 +318,30 @@ main.synopsis-container {
   padding-bottom: 120px; /* Creates space above the fixed footer */
 }
 
+/* Page Curl on Hover of Nav Buttons */
+#prev-btn:hover ~ #left-content,
+#prev-btn:hover ~ .page-content,
+#prev-btn:hover ~ #left-number,
+#left-page:hover {
+  transform: rotateY(-8deg);
+  transition: transform 0.4s ease;
+}
+
+#next-btn:hover ~ #right-content,
+#next-btn:hover ~ .page-content,
+#next-btn:hover ~ #right-number,
+#right-page:hover {
+  transform: rotateY(8deg);
+  transition: transform 0.4s ease;
+}
+
+/* Reset transform when not hovered */
+#left-page,
+#right-page {
+  transform: rotateY(0deg);
+  transition: transform 0.4s ease;
+}
+
 /* Footer */
 body.sneakpeek footer {
     background: #5C4033;
