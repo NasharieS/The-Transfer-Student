@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -316,16 +317,6 @@ p.indent {
 
 main.synopsis-container {
   padding-bottom: 120px; /* Creates space above the fixed footer */
-}
-
-.curl-left {
-  transform: perspective(1000px) rotateY(-8deg);
-  transition: transform 0.4s ease;
-}
-
-.curl-right {
-  transform: perspective(1000px) rotateY(8deg);
-  transition: transform 0.4s ease;
 }
 
 /* Footer */
