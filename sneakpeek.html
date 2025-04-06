@@ -56,17 +56,17 @@
   <main class="synopsis-container">
     <h2 class="page-title">Sneak Peek</h2>
     <div class="book-container">
-  <div class="book-page left-page" id="left-page">
-    <div class="page-number" id="left-number"></div>
-    <div class="page-content" id="left-content"></div>
-    <button id="prev-btn" class="nav-btn">← Previous</button>
-  </div>
-  <div class="book-page right-page" id="right-page">
-    <div class="page-number" id="right-number"></div>
-    <div class="page-content" id="right-content"></div>
-    <button id="next-btn" class="nav-btn">Next →</button>
-  </div>
-</div>
+      <div class="book-page left-page">
+        <div class="page-number" id="left-number"></div>
+        <div class="page-content" id="left-content"></div>
+        <button id="prev-btn" class="nav-btn">← Previous</button>
+      </div>
+      <div class="book-page right-page">
+        <div class="page-number" id="right-number"></div>
+        <div class="page-content" id="right-content"></div>
+        <button id="next-btn" class="nav-btn">Next →</button>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -150,7 +150,7 @@ const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
 
   let current = 0;
 
-   function renderSpread(index) {
+  function renderSpread(index) {
     const [left, right] = spreads[index] || ["", ""];
     leftEl.innerHTML = left;
     rightEl.innerHTML = right;
@@ -175,21 +175,6 @@ const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
   };
 
   renderSpread(current);
-
-  // Page curl effect on hover
-  prevBtn.addEventListener("mouseenter", () => {
-    document.getElementById("left-page").classList.add("curl-left");
-  });
-  prevBtn.addEventListener("mouseleave", () => {
-    document.getElementById("left-page").classList.remove("curl-left");
-  });
-
-  nextBtn.addEventListener("mouseenter", () => {
-    document.getElementById("right-page").classList.add("curl-right");
-  });
-  nextBtn.addEventListener("mouseleave", () => {
-    document.getElementById("right-page").classList.remove("curl-right");
-  });
 });
 </script>
 </body>
