@@ -150,7 +150,7 @@ const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
 
   let current = 0;
 
-  function renderSpread(index) {
+   function renderSpread(index) {
     const [left, right] = spreads[index] || ["", ""];
     leftEl.innerHTML = left;
     rightEl.innerHTML = right;
@@ -175,6 +175,21 @@ const contentSpreads = rawParagraphs.reduce((acc, para, i, arr) => {
   };
 
   renderSpread(current);
+
+  // Page curl effect on hover
+  prevBtn.addEventListener("mouseenter", () => {
+    document.getElementById("left-page").classList.add("curl-left");
+  });
+  prevBtn.addEventListener("mouseleave", () => {
+    document.getElementById("left-page").classList.remove("curl-left");
+  });
+
+  nextBtn.addEventListener("mouseenter", () => {
+    document.getElementById("right-page").classList.add("curl-right");
+  });
+  nextBtn.addEventListener("mouseleave", () => {
+    document.getElementById("right-page").classList.remove("curl-right");
+  });
 });
 </script>
 </body>
