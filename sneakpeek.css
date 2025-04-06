@@ -318,27 +318,19 @@ main.synopsis-container {
   padding-bottom: 120px; /* Creates space above the fixed footer */
 }
 
-/* Page Curl on Hover of Nav Buttons */
-#prev-btn:hover ~ #left-content,
-#prev-btn:hover ~ .page-content,
-#prev-btn:hover ~ #left-number,
-#left-page:hover {
-  transform: rotateY(-8deg);
-  transition: transform 0.4s ease;
+/* === PAGE TURNING EFFECT ON HOVER === */
+#prev-btn:hover {
+  /* Apply the curl to the left page */
+  transform: perspective(800px) rotateY(-8deg);
 }
 
-#next-btn:hover ~ #right-content,
-#next-btn:hover ~ .page-content,
-#next-btn:hover ~ #right-number,
-#right-page:hover {
-  transform: rotateY(8deg);
-  transition: transform 0.4s ease;
+#next-btn:hover {
+  /* Apply the curl to the right page */
+  transform: perspective(800px) rotateY(8deg);
 }
 
-/* Reset transform when not hovered */
-#left-page,
-#right-page {
-  transform: rotateY(0deg);
+#prev-btn,
+#next-btn {
   transition: transform 0.4s ease;
 }
 
