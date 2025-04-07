@@ -235,6 +235,10 @@ main.worldbuilding-container {
   margin-bottom: 60px;
 }
 
+.map-section {
+  padding-top: 120px; /* enough to clear the 90px header + some space */
+}
+
 #globe-placeholder {
   width: 100%;
   max-width: 600px;
@@ -308,6 +312,10 @@ main.worldbuilding-container {
   font-size: 15px;
   line-height: 1.7;
   color: #eee;
+}
+
+section {
+  padding: 40px 20px;
 }
 
 /* Footer */
