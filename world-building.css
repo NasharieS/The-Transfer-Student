@@ -39,6 +39,88 @@ body.synopsis-page {
   background-color: #ccc;
 }
 
+/* Navigation Styling */
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-container ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-container ul > li > a {
+  font-size: 18px !important;
+  color: #D3D3D3 !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  padding: 12px 18px !important;
+}
+
+.nav-container ul li,
+.nav-container ul li a {
+  position: relative;
+  padding: 12px 18px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease-in-out !important;
+  text-decoration: none !important;
+  color: #D3D3D3 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  display: inline-block !important;
+}
+
+.nav-container ul li.active-tab > a {
+  color: #FFF;
+  background: rgba(0, 119, 255, 0.6);
+  box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+}
+
+.nav-container ul li ul li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  padding: 12px 20px !important;
+  text-align: center !important;
+}
+
+.nav-container ul li ul li:hover {
+  background: rgba(0, 84, 204, 1) !important;
+  box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.nav-container ul li:hover,
+.nav-container ul li ul li:hover {
+  background: rgba(0, 84, 204, 1) !important;
+  box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;
+}
+
+.nav-container ul li ul {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background: rgba(92, 64, 51, 0.95);
+  border-radius: 8px;
+  display: none;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container ul li:hover > ul {
+  display: block;
+}
+
 /* === Section Containers === */
 main.worldbuilding-container {
   padding: 40px 20px 100px;
