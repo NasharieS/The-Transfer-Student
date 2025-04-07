@@ -209,8 +209,9 @@ body.synopsis-page {
 }
 
 body.worldbuilding {
-  overflow-y: auto; /* enables vertical scrolling */
-  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh; /* allow the page to grow */
 }
 
 /* === Section Containers === */
