@@ -16,7 +16,7 @@ body.synopsis-page {
     flex-direction: column;
 }
 
-/* 🔥 Top Header - Everything Stays on One Line */
+/* Top Header - Everything Stays on One Line */
 .top-header {
     display: flex;
     align-items: center;
@@ -31,14 +31,14 @@ body.synopsis-page {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 📌 Navigation Tabs (Inside Header) */
+/* Navigation Tabs (Inside Header) */
 .nav-container {
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
+/* FORCES Uniform Styling on ALL Parent Navigation Tabs */
 .nav-container ul > li > a {
     font-size: 18px !important;  /* Forces same size */
     color: #D3D3D3 !important;  /* Matches Home & About */
@@ -48,7 +48,7 @@ body.synopsis-page {
     padding: 12px 18px !important;
 }
 
-/* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
+/* FORCE ALL PARENT TABS TO BE IDENTICAL */
 .nav-container ul li,
 .nav-container ul li a {
     position: relative;
@@ -62,7 +62,7 @@ body.synopsis-page {
     display: inline-block !important;
 }
 
-/* ✅ Properly Highlights Active Parent Tab (About) */
+/* Properly Highlights Active Parent Tab (About) */
 .nav-container ul li.active-tab > a {
     color: #FFF !important;
     font-weight: bold !important;
@@ -85,7 +85,7 @@ body.synopsis-page {
     box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
-/* ✅ Ensures Full Glow Coverage for ALL Dropdown Items */
+/* Ensures Full Glow Coverage for ALL Dropdown Items */
 .nav-container ul li ul li a {
     display: flex !important;
     align-items: center !important;
@@ -96,7 +96,7 @@ body.synopsis-page {
     text-align: center !important;
 }
 
-/* 🚀 Ensures Hover Effect Stretches Fully */
+/* Ensures Hover Effect Stretches Fully */
 .nav-container ul li ul li:hover {
     background: rgba(0, 84, 204, 1) !important;  /* 👈 Exact Dark Blue */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;  /* 👈 Stronger Glow */
@@ -104,7 +104,7 @@ body.synopsis-page {
     min-width: 100% !important;
 }
 
-/* ✅ Force Consistent Padding & Width for Active Tabs */
+/* Force Consistent Padding & Width for Active Tabs */
 .nav-container ul li a,
 .nav-container ul li ul li a {
     display: flex !important; 
@@ -114,21 +114,21 @@ body.synopsis-page {
     padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
 }
 
-/* ✅ Fix Blue Glow on Active Tabs */
+/* Fix Blue Glow on Active Tabs */
 .nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
     width: 100% !important; /* 👈 Forces glow to stretch */
     text-align: center !important;
 }
 
-/* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
+/* Hover Effect - Now Matches the Exact Active Tab Blue */
 .nav-container ul li:hover,
 .nav-container ul li ul li:hover {
     background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
     box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
 }
 
-/* 🔽 Dropdown Menu (Locks in place) */
+/* Dropdown Menu (Locks in place) */
 .nav-container ul li ul {
     position: absolute !important;
     top: 48px !important; /* Keeps dropdowns perfectly below the tabs */
@@ -141,26 +141,26 @@ body.synopsis-page {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🎭 Dropdown Items */
+/* Dropdown Items */
 .nav-container ul li ul li {
     padding: 10px 20px;
     display: block;
 }
 
-/* ✅ Dropdown Items Styling */
+/* Dropdown Items Styling */
 .nav-container ul li ul li a {
     color: #D3D3D3;
     font-size: 16px;
     display: block;
 }
 
-/* 🎥 Dropdown Appears Without Lag */
+/* Dropdown Appears Without Lag */
 .nav-container ul li:hover > ul {
     display: block;
     opacity: 1;
 }
 
-/* 🔍 Search Bar - Now Closer to Icons & Input is White */
+/* Search Bar - Now Closer to Icons & Input is White */
 .search-bar {
     display: flex;
     align-items: center;
@@ -188,7 +188,7 @@ body.synopsis-page {
     color: #D3D3D3;
 }
 
-/* 📌 Contact Icons */
+/* Contact Icons */
 .contact-icons {
     display: flex;
     gap: 12px;
@@ -200,7 +200,7 @@ body.synopsis-page {
     text-decoration: none;
 }
 
-/* 🔹 Divider Below the Header */
+/* Divider Below the Header */
 .divider {
     border: none;
     border-top: 2px solid #C19A6B;
