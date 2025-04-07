@@ -210,7 +210,7 @@ body.synopsis-page {
 
 body.worldbuilding {
   overflow-y: auto; /* enables vertical scrolling */
-  overflow-x: hidden; /* optional: prevents horizontal scroll */
+  overflow-x: hidden; /* prevents horizontal scroll */
 }
 
 /* === Section Containers === */
