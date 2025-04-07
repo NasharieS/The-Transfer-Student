@@ -208,6 +208,11 @@ body.synopsis-page {
     width: 100%;
 }
 
+body.worldbuilding {
+  overflow-y: auto; /* enables vertical scrolling */
+  overflow-x: hidden; /* optional: prevents horizontal scroll */
+}
+
 /* === Section Containers === */
 main.worldbuilding-container {
   padding: 40px 20px 100px;
