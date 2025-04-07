@@ -268,34 +268,6 @@ main.worldbuilding-container {
   margin: 0 auto;
 }
 
-/* === Character Showcase === */
-#character-excerpts .character-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.character-card {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.character-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.character-card p {
-  font-size: 15px;
-  color: #555;
-}
-
 /* === Archive Dossier === */
 #archive-dossier .classified-box {
   background: #222;
