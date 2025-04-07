@@ -228,11 +228,15 @@ main.worldbuilding-container {
     letter-spacing: 1.5px;
     margin-top: -15px !important;
     margin-bottom: 20px !important;
-    text-align: center;
-    border-bottom: 4px solid #0077FF; /* Underline */
-    display: inline-block; /* Ensures it only covers the title width */
+    border-bottom: 4px solid #0077FF;
+    display: inline-block;
     padding-bottom: 5px;
-} 
+}
+
+.section-header {
+  text-align: center;
+  margin: 50px 0 20px;
+}
 
 
 /* === Interactive Map Section === */
