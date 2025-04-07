@@ -222,11 +222,33 @@ main.worldbuilding-container {
 }
 
 .section-title {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 40px;
   text-align: center;
-  margin: 40px 0 20px;
-  color: #333;
+  margin: 80px 0 40px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #3A1C0F;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 2px;
+  background-color: #7B3F00;
+}
+
+.section-title::before {
+  left: calc(50% - 100px);
+}
+
+.section-title::after {
+  right: calc(50% - 100px);
 }
 
 /* === Interactive Map Section === */
