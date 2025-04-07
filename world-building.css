@@ -16,27 +16,19 @@ body.synopsis-page {
     flex-direction: column;
 }
 
-/* === Header & Divider === */
+/* 🔥 Top Header - Everything Stays on One Line */
 .top-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #5C4033;
-  padding: 15px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.divider {
-  margin-top: 90px;
-  border: none;
-  height: 1px;
-  background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #5C4033;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* 📌 Navigation Tabs (Inside Header) */
