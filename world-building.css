@@ -226,12 +226,17 @@ main.worldbuilding-container {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-top: 120px; /* pushes below fixed header */
+  margin-top: 120px;
   margin-bottom: 20px;
   text-align: center;
-  width: 100%;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 80px; /* underline width */
   border-bottom: 4px solid #0077FF;
-  padding-bottom: 5px;
 }
 
 .section-header {
