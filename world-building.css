@@ -230,13 +230,16 @@ main.worldbuilding-container {
   margin-bottom: 20px;
   text-align: center;
   position: relative;
+  display: inline-block; /* ✅ ONLY applies to the title itself */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .section-title::after {
   content: "";
   display: block;
   margin: 10px auto 0;
-  width: 80px; /* Controls the length of the underline */
+  width: 80px;
   border-bottom: 4px solid #0077FF;
 }
 
