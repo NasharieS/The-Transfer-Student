@@ -248,61 +248,82 @@ main.worldbuilding-container {
   margin: 50px 0 20px;
 }
 
-/* === Interactive Map Section === */
-#interactive-map {
+/* === Archive Wall === */
+.archive-wall-section {
+  padding: 100px 20px;
+  background: #111;
+  color: #fff;
   text-align: center;
-  margin-bottom: 60px;
+  position: relative;
 }
 
-.map-section {
-  padding-top: 120px; /* enough to clear the 90px header + some space */
-}
-
-#globe-placeholder {
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  background: #e0e0e0;
-  border-radius: 20px;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #666;
-  font-size: 20px;
-}
-
-#interactive-map p {
-  font-size: 16px;
-  color: #444;
-  max-width: 700px;
+.archive-wall {
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
+  height: 700px;
+  background: url('archive-wall-bg.png') center center / cover no-repeat;
+  border: 4px dashed crimson;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  overflow: hidden;
 }
 
-/* === Archive Dossier === */
-#archive-dossier .classified-box {
-  background: #222;
-  color: #f8f8f8;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: 40px auto;
-  font-family: 'Courier New', Courier, monospace;
-  border: 2px dashed crimson;
+/* Pins on the wall */
+.archive-pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: crimson;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.classified-box h4 {
-  color: crimson;
-  font-size: 22px;
-  margin-bottom: 15px;
+.archive-pin.school { background: #0077FF; }
+.archive-pin.city { background: #FFB400; }
+.archive-pin.glitch {
+  background: #fff;
+  box-shadow: 0 0 10px red;
+  animation: glitch-blink 1.5s infinite;
 }
 
-.classified-box p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #eee;
+@keyframes glitch-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* Tooltip for pins */
+.archive-pin .tooltip {
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: -80px;
+  width: 160px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  border: 1px solid crimson;
+  font-size: 12px;
+  z-index: 999;
+  text-align: left;
+  pointer-events: none;
+}
+
+.archive-pin:hover .tooltip {
+  display: block;
+}
+
+/* Wall Background */
+.wall-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.12;
+  object-fit: cover;
+  z-index: 0;
 }
 
 section {
