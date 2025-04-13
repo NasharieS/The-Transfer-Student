@@ -222,15 +222,16 @@ main.worldbuilding-container {
 }
 
 .section-title {
-    font-size: 40px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-top: -15px !important;
-    margin-bottom: 20px !important;
-    border-bottom: 4px solid #0077FF;
-    display: inline-block;
-    padding-bottom: 5px;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 120px; /* pushes below fixed header */
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  border-bottom: 4px solid #0077FF;
+  padding-bottom: 5px;
 }
 
 .section-header {
