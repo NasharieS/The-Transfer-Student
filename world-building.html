@@ -71,24 +71,36 @@
     }
   </style>
 </head>
-<body>
-  <div class="map-container">
-    <div class="hotspot" style="top: 35%; left: 28%;" data-location="Philadelphia"></div>
-    <div class="hotspot" style="top: 55%; left: 40%;" data-location="Dubai"></div>
-    <div class="hotspot" style="top: 25%; left: 60%;" data-location="Finland"></div>
-    <div class="hotspot" style="top: 30%; left: 75%;" data-location="Tokyo"></div>
-    <div class="hotspot" style="top: 70%; left: 50%;" data-location="Glitch"></div>
 
-    <div class="popup" id="popup"></div>
+<body class="worldbuilding">
 
-    <div class="legend">
-      <strong>Legend</strong><br>
-      📍 City<br>
-      🧍 Character<br>
-      🏫 School<br>
-      ⚠️ Archive Alert<br>
-    </div>
-  </div>
+  <!-- HEADER GOES HERE (optional if you're including one) -->
+
+  <main class="worldbuilding-container">
+    <section id="education-atlas" class="atlas-section">
+      <div class="map-container">
+        <div class="hotspot" style="top: 35%; left: 28%;" data-location="Philadelphia"></div>
+        <div class="hotspot" style="top: 55%; left: 40%;" data-location="Dubai"></div>
+        <div class="hotspot" style="top: 25%; left: 60%;" data-location="Finland"></div>
+        <div class="hotspot" style="top: 30%; left: 75%;" data-location="Tokyo"></div>
+        <div class="hotspot" style="top: 70%; left: 50%;" data-location="Glitch"></div>
+
+        <div class="popup" id="popup"></div>
+
+        <div class="legend">
+          <strong>Legend</strong><br>
+          📍 City<br>
+          🧍 Character<br>
+          🏫 School<br>
+          ⚠️ Archive Alert<br>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Transfer Student • All Rights Reserved</p>
+  </footer>
 
   <script>
     const data = {
@@ -131,5 +143,6 @@
       });
     });
   </script>
+
 </body>
 </html>
