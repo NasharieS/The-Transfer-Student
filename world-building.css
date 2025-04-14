@@ -248,82 +248,77 @@ main.worldbuilding-container {
   margin: 50px 0 20px;
 }
 
-/* === Archive Wall === */
-.archive-wall-section {
-  padding: 100px 20px;
-  background: #111;
-  color: #fff;
-  text-align: center;
+/* === Education Atlas Section === */
+.atlas-section {
+  background: #f6f3ed;
+  padding: 40px 0;
   position: relative;
+  z-index: 1;
 }
 
-.archive-wall {
+.map-container {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   height: 700px;
-  background: url('archive-wall-bg.png') center center / cover no-repeat;
-  border: 4px dashed crimson;
+  background: url('map-placeholder.jpg') no-repeat center center;
+  background-size: cover;
+  border: 4px solid #c8b8a6;
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  max-width: 1100px;
   overflow: hidden;
 }
 
-/* Pins on the wall */
-.archive-pin {
+.hotspot {
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background: crimson;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2;
+  transition: transform 0.2s ease;
+  z-index: 5;
 }
 
-.archive-pin.school { background: #0077FF; }
-.archive-pin.city { background: #FFB400; }
-.archive-pin.glitch {
-  background: #fff;
-  box-shadow: 0 0 10px red;
-  animation: glitch-blink 1.5s infinite;
+.hotspot:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
 }
 
-@keyframes glitch-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
-}
-
-/* Tooltip for pins */
-.archive-pin .tooltip {
+.popup {
+  position: absolute;
+  background: #fff8ef;
+  border: 1px solid #d6cfc3;
+  border-radius: 8px;
+  padding: 12px;
+  width: 250px;
   display: none;
-  position: absolute;
-  top: -60px;
-  left: -80px;
-  width: 160px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  border: 1px solid crimson;
-  font-size: 12px;
-  z-index: 999;
-  text-align: left;
-  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
 }
 
-.archive-pin:hover .tooltip {
-  display: block;
+.popup h3 {
+  margin: 0 0 6px;
+  font-size: 1.1em;
+  color: #333;
 }
 
-/* Wall Background */
-.wall-background {
+.popup p {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+.legend {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.12;
-  object-fit: cover;
-  z-index: 0;
+  top: 20px;
+  right: 20px;
+  background: #ffffffd8;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  z-index: 20;
 }
 
 section {
