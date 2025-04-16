@@ -225,12 +225,9 @@ body.worldbuilding {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .section-title::after {
@@ -275,14 +272,6 @@ body.world-building-page::before {
   display: inline-block; /* ✅ ONLY applies to the title itself */
   left: 50%;
   transform: translateX(-50%);
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  margin: 10px auto 0;
-  width: 160px;
-  border-bottom: 4px solid #0077FF;
 }
 
 /* Boxed Map Section */
