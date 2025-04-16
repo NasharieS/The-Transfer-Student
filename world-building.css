@@ -214,6 +214,11 @@ body.worldbuilding {
   min-height: 100vh; /* allow the page to grow */
 }
 
+.worldbuilding-container {
+  position: relative;
+  z-index: 1;
+}
+
 body.world-building-page {
   background: #fff;
   color: #0D1B2A;
@@ -223,21 +228,21 @@ body.world-building-page {
   position: relative;
 }
 
-/* Watermark */
+/* Watermark shows behind all content */
 body.world-building-page::before {
   content: "ARCHIVE";
-  position: absolute;
-  top: 35%;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 80px;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
   font-weight: 900;
   font-family: 'Poppins', sans-serif;
-  color: rgba(0, 0, 0, 0.035);
+  color: rgba(0, 0, 0, 0.035); /* Adjust opacity if needed */
   z-index: 0;
   pointer-events: none;
   white-space: nowrap;
-  letter-spacing: 12px;
+  letter-spacing: 16px;
 }
 
 .map-section {
