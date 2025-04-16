@@ -7,7 +7,7 @@
 }
 
 /* Body */
-body.synopsis-page {
+body.behind-the-story-page {
     background: #fff;
     color: #0D1B2A;
     line-height: 1.6;
@@ -38,100 +38,46 @@ body.synopsis-page {
     flex-grow: 1;
 }
 
-/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
-.nav-container ul > li > a {
-    font-size: 18px !important;  /* Forces same size */
-    color: #D3D3D3 !important;  /* Matches Home & About */
-    font-weight: bold !important;
-    text-decoration: none !important;
-    display: inline-block !important;
-    padding: 12px 18px !important;
-}
-
-/* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
+.nav-container ul > li > a,
 .nav-container ul li,
 .nav-container ul li a {
-    position: relative;
-    padding: 12px 18px !important;  /* Uniform padding */
+    font-size: 18px !important;
+    color: #D3D3D3 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
     border-radius: 8px !important;
     transition: all 0.3s ease-in-out !important;
-    text-decoration: none !important;
-    color: #D3D3D3 !important;  /* Matches Home & About */
-    font-size: 18px !important;  /* Ensures all tabs are the same size */
-    font-weight: bold !important;
-    display: inline-block !important;
 }
 
-/* ✅ Properly Highlights Active Parent Tab (About) */
-.nav-container ul li.active-tab > a {
-    color: #FFF !important;
-    font-weight: bold !important;
-    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
-    border-radius: 8px !important;
-    padding: 12px 18px !important;
-    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
-}
-
-/* ✅ Properly Highlights Active Subtab (Synopsis, News, Get Involved) */
+.nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
     color: #FFF !important;
     font-weight: bold !important;
-    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
-    border-radius: 8px !important;
-    padding: 12px 20px !important; /* 👈 Adjusted padding for full width */
-    width: 100% !important; /* 👈 Forces glow to stretch across */
-    display: block !important;
-    text-align: center !important;
-    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
+    background: rgba(0, 119, 255, 0.6) !important;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important;
 }
 
-/* ✅ Ensures Full Glow Coverage for ALL Dropdown Items */
 .nav-container ul li ul li a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100% !important;  /* 👈 Stretches glow across */
+    width: 100% !important;
     min-width: 100% !important;
-    padding: 12px 20px !important;  /* 👈 Same padding as main tabs */
+    padding: 12px 20px !important;
     text-align: center !important;
 }
 
-/* 🚀 Ensures Hover Effect Stretches Fully */
-.nav-container ul li ul li:hover {
-    background: rgba(0, 84, 204, 1) !important;  /* 👈 Exact Dark Blue */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;  /* 👈 Stronger Glow */
-    width: 100% !important;  /* 👈 Forces hover effect to cover entire tab */
-    min-width: 100% !important;
+.nav-container ul li ul li:hover,
+.nav-container ul li:hover {
+    background: rgba(0, 84, 204, 1) !important;
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;
 }
 
-/* ✅ Force Consistent Padding & Width for Active Tabs */
-.nav-container ul li a,
-.nav-container ul li ul li a {
-    display: flex !important; 
-    align-items: center !important;
-    justify-content: center !important;
-    min-width: 150px !important; /* 👈 Adjust width if needed */
-    padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
-}
-
-/* ✅ Fix Blue Glow on Active Tabs */
-.nav-container ul li.active-tab > a,
-.nav-container ul li ul li.active-subtab > a {
-    width: 100% !important; /* 👈 Forces glow to stretch */
-    text-align: center !important;
-}
-
-/* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
-.nav-container ul li:hover,
-.nav-container ul li ul li:hover {
-    background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
-    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
-}
-
-/* 🔽 Dropdown Menu (Locks in place) */
 .nav-container ul li ul {
     position: absolute !important;
-    top: 48px !important; /* Keeps dropdowns perfectly below the tabs */
+    top: 48px !important;
     left: 0 !important;
     background: rgba(92, 64, 51, 0.95);
     border-radius: 8px;
@@ -141,38 +87,29 @@ body.synopsis-page {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🎭 Dropdown Items */
 .nav-container ul li ul li {
     padding: 10px 20px;
     display: block;
 }
 
-/* ✅ Dropdown Items Styling */
-.nav-container ul li ul li a {
-    color: #D3D3D3;
-    font-size: 16px;
-    display: block;
-}
-
-/* 🎥 Dropdown Appears Without Lag */
 .nav-container ul li:hover > ul {
     display: block;
     opacity: 1;
 }
 
-/* 🔍 Search Bar - Now Closer to Icons & Input is White */
+/* 🔍 Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
     border-radius: 5px;
-    margin-right: 20px; /* Moves search bar closer to icons */
+    margin-right: 20px;
 }
 
 .search-bar input {
     border: none;
-    background: white; /* Search input is now white */
+    background: white;
     color: #0D1B2A;
     font-size: 16px;
     outline: none;
@@ -206,4 +143,64 @@ body.synopsis-page {
     border-top: 2px solid #C19A6B;
     margin: 75px 0 20px 0;
     width: 100%;
+}
+
+/* 🎬 Behind the Story Page */
+body.behind-the-story-page {
+    background: #fff;
+    padding-top: 100px;
+}
+
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.story-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    width: 160px;
+    border-bottom: 4px solid #0077FF;
+}
+
+.story-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 📌 Footer */
+footer {
+    background: #5C4033;
+    color: #D3D3D3;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    z-index: 999;
 }
