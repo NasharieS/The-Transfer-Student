@@ -214,6 +214,32 @@ body.worldbuilding {
   min-height: 100vh; /* allow the page to grow */
 }
 
+body.world-building-page {
+  background: #fff;
+  color: #0D1B2A;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Watermark */
+body.world-building-page::before {
+  content: "ARCHIVE";
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(0, 0, 0, 0.035);
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 12px;
+}
+
 .map-section {
   padding-top: 160px; /* leaves space under fixed header */
   text-align: center;
