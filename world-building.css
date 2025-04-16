@@ -310,20 +310,6 @@ body.world-building-page {
   z-index: 2;
 }
 
-/* Map key styling */
-.map-key {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid #ccc;
-  padding: 10px 12px;
-  font-size: 14px;
-  border-radius: 8px;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
 /* Map Image Container */
 .map-image-container {
   width: 100%;
