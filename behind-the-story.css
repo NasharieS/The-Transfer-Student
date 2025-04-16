@@ -1,130 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body.synopsis-page {
+    background: #fff;
+    color: #0D1B2A;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* 🔥 Top Header - Everything Stays on One Line */
 .top-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #5C4033;
-  padding: 15px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #5C4033;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ✅ Header Inner Layout */
+/* 📌 Navigation Tabs (Inside Header) */
 .nav-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
-.nav-container ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* ✅ FORCES Uniform Styling on ALL Parent Navigation Tabs */
+.nav-container ul > li > a {
+    font-size: 18px !important;  /* Forces same size */
+    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 12px 18px !important;
 }
 
-.nav-container ul li {
-  position: relative;
-}
-
+/* ✅ FORCE ALL PARENT TABS TO BE IDENTICAL */
+.nav-container ul li,
 .nav-container ul li a {
-  font-size: 18px;
-  color: #D3D3D3;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
+    position: relative;
+    padding: 12px 18px !important;  /* Uniform padding */
+    border-radius: 8px !important;
+    transition: all 0.3s ease-in-out !important;
+    text-decoration: none !important;
+    color: #D3D3D3 !important;  /* Matches Home & About */
+    font-size: 18px !important;  /* Ensures all tabs are the same size */
+    font-weight: bold !important;
+    display: inline-block !important;
 }
 
-/* Dropdown Menu */
-.nav-container ul li ul {
-  position: absolute;
-  top: 48px;
-  left: 0;
-  background: rgba(92, 64, 51, 0.95);
-  border-radius: 8px;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1001;
+/* ✅ Properly Highlights Active Parent Tab (About) */
+.nav-container ul li.active-tab > a {
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
+    border-radius: 8px !important;
+    padding: 12px 18px !important;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
-.nav-container ul li:hover > ul {
-  display: block;
+/* ✅ Properly Highlights Active Subtab (Synopsis, News, Get Involved) */
+.nav-container ul li ul li.active-subtab > a {
+    color: #FFF !important;
+    font-weight: bold !important;
+    background: rgba(0, 119, 255, 0.6) !important; /* 👈 Stronger Blue */
+    border-radius: 8px !important;
+    padding: 12px 20px !important; /* 👈 Adjusted padding for full width */
+    width: 100% !important; /* 👈 Forces glow to stretch across */
+    display: block !important;
+    text-align: center !important;
+    box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9) !important; /* 👈 Stronger Glow */
 }
 
-.nav-container ul li ul li {
-  padding: 10px 20px;
-}
-
+/* ✅ Ensures Full Glow Coverage for ALL Dropdown Items */
 .nav-container ul li ul li a {
-  width: 100%;
-  text-align: center;
-  display: block;
-  font-size: 16px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;  /* 👈 Stretches glow across */
+    min-width: 100% !important;
+    padding: 12px 20px !important;  /* 👈 Same padding as main tabs */
+    text-align: center !important;
 }
 
-/* Active States */
+/* 🚀 Ensures Hover Effect Stretches Fully */
+.nav-container ul li ul li:hover {
+    background: rgba(0, 84, 204, 1) !important;  /* 👈 Exact Dark Blue */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important;  /* 👈 Stronger Glow */
+    width: 100% !important;  /* 👈 Forces hover effect to cover entire tab */
+    min-width: 100% !important;
+}
+
+/* ✅ Force Consistent Padding & Width for Active Tabs */
+.nav-container ul li a,
+.nav-container ul li ul li a {
+    display: flex !important; 
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 150px !important; /* 👈 Adjust width if needed */
+    padding: 12px 18px !important; /* 👈 Ensures full glow coverage */
+}
+
+/* ✅ Fix Blue Glow on Active Tabs */
 .nav-container ul li.active-tab > a,
 .nav-container ul li ul li.active-subtab > a {
-  color: #FFF;
-  background: rgba(0, 119, 255, 0.6);
-  box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.9);
+    width: 100% !important; /* 👈 Forces glow to stretch */
+    text-align: center !important;
 }
 
-/* Hover */
-.nav-container ul li:hover > a,
-.nav-container ul li ul li:hover > a {
-  background: rgba(0, 84, 204, 1);
-  box-shadow: 0px 0px 20px rgba(0, 84, 204, 1);
-  color: #FFF;
+/* 🚀 Hover Effect - Now Matches the Exact Active Tab Blue */
+.nav-container ul li:hover,
+.nav-container ul li ul li:hover {
+    background: rgba(0, 84, 204, 1) !important; /* 👈 Exact Dark Blue */
+    box-shadow: 0px 0px 20px rgba(0, 84, 204, 1) !important; /* 👈 Stronger Glow */
 }
 
-/* Search Bar */
+/* 🔽 Dropdown Menu (Locks in place) */
+.nav-container ul li ul {
+    position: absolute !important;
+    top: 48px !important; /* Keeps dropdowns perfectly below the tabs */
+    left: 0 !important;
+    background: rgba(92, 64, 51, 0.95);
+    border-radius: 8px;
+    display: none;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎭 Dropdown Items */
+.nav-container ul li ul li {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* ✅ Dropdown Items Styling */
+.nav-container ul li ul li a {
+    color: #D3D3D3;
+    font-size: 16px;
+    display: block;
+}
+
+/* 🎥 Dropdown Appears Without Lag */
+.nav-container ul li:hover > ul {
+    display: block;
+    opacity: 1;
+}
+
+/* 🔍 Search Bar - Now Closer to Icons & Input is White */
 .search-bar {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-left: auto;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 20px; /* Moves search bar closer to icons */
 }
 
 .search-bar input {
-  border: none;
-  background: white;
-  color: #0D1B2A;
-  font-size: 16px;
-  outline: none;
-  padding: 5px;
-  border-radius: 3px;
+    border: none;
+    background: white; /* Search input is now white */
+    color: #0D1B2A;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .search-bar button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #D3D3D3;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #D3D3D3;
 }
 
-/* Contact Icons */
+/* 📌 Contact Icons */
 .contact-icons {
-  display: flex;
-  gap: 12px;
-  margin-left: 20px;
+    display: flex;
+    gap: 12px;
 }
 
 .contact-icons a {
-  color: #D3D3D3;
-  font-size: 20px;
-  text-decoration: none;
+    color: #D3D3D3;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* 🔹 Divider Below the Header */
+.divider {
+    border: none;
+    border-top: 2px solid #C19A6B;
+    margin: 75px 0 20px 0;
+    width: 100%;
 }
