@@ -264,18 +264,6 @@ body.world-building-page::before {
   border-bottom: 4px solid #0077FF;
 }
 
-body.world-building-page {
-  background: #fff;
-  color: #0D1B2A;
-  line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-body.world-building-page::before {
-  content: none;
-}
-
 /* White Band with Title */
 .map-intro {
   background: white;
