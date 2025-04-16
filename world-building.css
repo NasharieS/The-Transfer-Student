@@ -214,35 +214,14 @@ body.worldbuilding {
   min-height: 100vh; /* allow the page to grow */
 }
 
-.worldbuilding-container {
-  position: relative;
-  z-index: 1;
-}
-
 body.world-building-page {
-  background: #fff;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+  background-color: #fdfdfb; /* soft paper tone */
   color: #0D1B2A;
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-}
-
-/* Watermark shows behind all content */
-body.world-building-page::before {
-  content: "ARCHIVE";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 120px;
-  font-weight: 900;
-  font-family: 'Poppins', sans-serif;
-  color: rgba(0, 0, 0, 0.035); /* Adjust opacity if needed */
-  z-index: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  letter-spacing: 16px;
 }
 
 .map-section {
