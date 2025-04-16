@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
     margin: 0;
@@ -247,63 +246,6 @@ main.worldbuilding-container {
 .section-header {
   text-align: center;
   margin: 50px 0 20px;
-}
-
-/* === Interactive Map Section === */
-#interactive-map {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.map-section {
-  padding-top: 120px; /* enough to clear the 90px header + some space */
-}
-
-#globe-placeholder {
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  background: #e0e0e0;
-  border-radius: 20px;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #666;
-  font-size: 20px;
-}
-
-#interactive-map p {
-  font-size: 16px;
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* === Archive Dossier === */
-#archive-dossier .classified-box {
-  background: #222;
-  color: #f8f8f8;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 700px;
-  margin: 40px auto;
-  font-family: 'Courier New', Courier, monospace;
-  border: 2px dashed crimson;
-}
-
-.classified-box h4 {
-  color: crimson;
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.classified-box p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #eee;
 }
 
 section {
