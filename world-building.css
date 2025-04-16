@@ -259,20 +259,25 @@ body.world-building-page::before {
   z-index: 1;
 }
 
-/* Blue Underline Title */
 .section-title {
   font-size: 40px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-top: 80px;
+  margin-top: 40px;      /* ← bring it closer to the header */
   margin-bottom: 20px;
   text-align: center;
-  position: relative;
-  display: inline-block; /* ✅ ONLY applies to the title itself */
-  left: 50%;
-  transform: translateX(-50%);
 }
+
+/* Underline */
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 160px;
+  border-bottom: 4px solid #0077FF;
+}
+
 
 /* Boxed Map Section */
 .map-box {
