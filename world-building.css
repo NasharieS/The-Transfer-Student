@@ -256,7 +256,7 @@ body.world-building-page::before {
 /* White Band with Title */
 .map-intro {
   background: white;
-  padding: 80px 20px 5px;
+  padding: 40px 20px 5px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -268,7 +268,7 @@ body.world-building-page::before {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-top: 120px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
