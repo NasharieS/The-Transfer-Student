@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,118 +7,74 @@
   <title>World Building</title>
   <link rel="stylesheet" href="world-building.css" />
 </head>
+<body class="world-building-page">
 
-<body class="world-building-page worldbuilding">
+ <!-- Fixed Top Header -->
+  <header class="top-header">
+    <nav class="nav-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active-tab">
+          <a href="#">About</a>
+          <ul>
+    <li><a href="synopsis.html">Synopsis</a></li>
+    <li class="active-subtab"><a href="world-building.html">World Building</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Writing Process</a>
+          <ul>
+            <li><a href="behind-the-story.html">Behind the Story</a></li>
+            <li><a href="road-to-publication.html">Road to Publication</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Take Action</a>
+          <ul>
+            <li><a href="news.html">News</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-<header class="top-header">
-  <div class="nav-container">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li class="active-tab">
-        <a href="#">About</a>
-        <ul>
-          <li><a href="synopsis.html">Synopsis</a></li>
-          <li class="active-subtab"><a href="world-building.html">World Building</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Writing Process</a>
-        <ul>
-          <li><a href="behind-the-story.html">Behind the Story</a></li>
-          <li><a href="road-to-publication.html">Road to Publication</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Take Action</a>
-        <ul>
-          <li><a href="news.html">News</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-        </ul>
-      </li>
-    </ul>
-
+    <!-- Search Bar -->
     <div class="search-bar">
       <input type="text" placeholder="Search..." />
       <button type="submit">🔎</button>
     </div>
 
+    <!-- Contact Icons -->
     <div class="contact-icons">
       <a href="mailto:your-email@example.com" target="_blank">📧</a>
       <a href="https://instagram.com/yourpage" target="_blank">📸</a>
       <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗</a>
     </div>
+  </header>
+
+<!-- 🌍 Interactive Map Section -->
+<section class="map-section">
+  <h2 class="section-title">Explore the World</h2>
+  <div class="interactive-map" id="interactive-map">
+    <!-- JS-powered globe or clickable image map goes here -->
   </div>
-</header>
+</section>
 
-  <hr class="divider" />
+<!-- 🗃️ Archive Document Section -->
+<section class="archive-section">
+  <h2 class="section-title">Classified: Archive V131</h2>
+  <div class="classified-document">
+    <p class="redacted">Subject: <span class="blackout">████████</span> – Status: ACTIVE</p>
+    <p class="redacted">Transfer capabilities verified across multiple coordinates.</p>
+    <p class="redacted">Education interference level: <span class="blackout">████</span></p>
+    <p class="glitch-text">Error: Timeline overlap detected...</p>
+  </div>
+</section>
 
-  <main class="worldbuilding-container">
-    <section id="education-atlas" class="atlas-section">
-      <div class="map-container">
-        <div class="hotspot" style="top: 35%; left: 28%;" data-location="Philadelphia"></div>
-        <div class="hotspot" style="top: 55%; left: 40%;" data-location="Dubai"></div>
-        <div class="hotspot" style="top: 25%; left: 60%;" data-location="Finland"></div>
-        <div class="hotspot" style="top: 30%; left: 75%;" data-location="Tokyo"></div>
-        <div class="hotspot" style="top: 70%; left: 50%;" data-location="Glitch"></div>
-
-        <div class="popup" id="popup"></div>
-
-        <div class="legend">
-          <strong>Legend</strong><br>
-          📍 City<br>
-          🧍 Character<br>
-          🏫 School<br>
-          ⚠️ Archive Alert<br>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 The Transfer Student • All Rights Reserved</p>
-  </footer>
-
-  <script>
-    const data = {
-      Philadelphia: {
-        title: 'Philadelphia, USA',
-        content: '📍 Belmont High (underfunded)<br>🏫 Liberty High (shut down)<br>🧍 Amara, Dre, Tia<br>⚠️ Archive Level: High'
-      },
-      Dubai: {
-        title: 'Dubai Crossing',
-        content: '📍 Academy at Dubai Crossing<br>🧍 Niko, Layla<br>⚠️ Archive Level: Moderate (Hidden Presence)'
-      },
-      Finland: {
-        title: 'Helsinki, Finland',
-        content: '🏫 Progressive Education Model<br>🧍 Transfer Experience<br>⚠️ Archive Level: Low'
-      },
-      Tokyo: {
-        title: 'Tokyo, Japan',
-        content: '🏫 High-discipline Academic Zone<br>🧍 Unknown Archive Subject<br>⚠️ Archive Level: Moderate'
-      },
-      Glitch: {
-        title: 'Future Vision Site',
-        content: '⚠️ Schools become factories. Students forget.<br>🧠 Vision Fragment<br>💥 Timeline instability detected'
-      }
-    };
-
-    const hotspots = document.querySelectorAll('.hotspot');
-    const popup = document.getElementById('popup');
-
-    hotspots.forEach(hotspot => {
-      hotspot.addEventListener('mouseenter', (e) => {
-        const location = e.target.dataset.location;
-        popup.innerHTML = `<h3>${data[location].title}</h3><p>${data[location].content}</p>`;
-        popup.style.top = `${e.target.offsetTop - 10}px`;
-        popup.style.left = `${e.target.offsetLeft + 30}px`;
-        popup.style.display = 'block';
-      });
-
-      hotspot.addEventListener('mouseleave', () => {
-        popup.style.display = 'none';
-      });
-    });
-  </script>
+<!-- 📌 Footer -->
+<footer>
+  <p>&copy; 2025 Nasharie Stewart | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
