@@ -270,6 +270,15 @@ body.world-building-page::before {
   z-index: -1;
 }
 
+/* White Band for "Explore the World" Title */
+.map-intro {
+  background: white;
+  padding: 120px 20px 60px; /* top = space below header */
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
 /* Footer */
 footer {
   background: #5C4033;
