@@ -284,6 +284,46 @@ body.world-building-page {
   padding: 0 20px 80px; /* space below map */
 }
 
+/* Gray background wrapper */
+.map-container {
+  background: #f6f6f6;
+  padding: 60px 20px 80px;
+}
+
+/* Keep "Explore the World" centered & spaced */
+.map-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hotspots */
+.hotspot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #0077FF;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.6);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Map key styling */
+.map-key {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 /* Map Image Container */
 .map-image-container {
   width: 100%;
