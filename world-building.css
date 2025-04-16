@@ -249,13 +249,22 @@ body.worldbuilding {
   border-bottom: 4px solid #0077FF;
 }
 
-/* White Band for "Explore the World" Title */
+/* White Band with Explore the World */
 .map-intro {
   background: white;
-  padding: 120px 20px 60px; /* top = space below header */
+  padding: 120px 20px 60px; /* Top space clears header */
   text-align: center;
-  z-index: 1;
   position: relative;
+  z-index: 1;
+}
+
+/* Full Map Background (no overlap, sits below .map-intro) */
+.map-background {
+  height: calc(100vh - 120px); /* subtracts the title section height */
+  background: url('map.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
 }
 
 /* Footer */
