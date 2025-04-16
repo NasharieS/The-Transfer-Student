@@ -241,7 +241,6 @@ body.worldbuilding {
   border-bottom: 4px solid #0077FF;
 }
 
-/* Make background white for the page */
 body.world-building-page {
   background: #fff;
   color: #0D1B2A;
@@ -250,7 +249,6 @@ body.world-building-page {
   overflow-x: hidden;
 }
 
-/* Remove the full-page map overlay if it exists */
 body.world-building-page::before {
   content: none;
 }
@@ -270,10 +268,11 @@ body.world-building-page::before {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 30px;
+  margin-top: 120px;
+  margin-bottom: 20px;
   text-align: center;
   position: relative;
-  display: inline-block;
+  display: inline-block; /* ✅ ONLY applies to the title itself */
   left: 50%;
   transform: translateX(-50%);
 }
