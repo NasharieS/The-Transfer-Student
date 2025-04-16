@@ -301,6 +301,18 @@ body.world-building-page {
   height: auto;
 }
 
+/* Gray container that holds both title and map box */
+.map-container {
+  background: #f6f6f6;
+  padding: 60px 0 80px; /* top space under header, bottom for breathing room */
+}
+
+/* Keep your map-intro styles if needed */
+.map-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
   background: #5C4033;
