@@ -207,3 +207,16 @@ body.synopsis-page {
     margin: 75px 0 20px 0;
     width: 100%;
 }
+
+/* 📌 Footer (Now ‘© 2025 Nasharie Stewart’) */
+footer {
+    background: #5C4033;
+    color: #D3D3D3;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    z-index: 999;
+}
